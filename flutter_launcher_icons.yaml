@@ -1,0 +1,21 @@
+dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
+
+
+# Designer: https://romannurik.github.io/AndroidAssetStudio
+# Package: https://pub.dev/packages/flutter_launcher_icons
+
+# Commands:
+#   flutter pub get
+#   flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons.yaml
+
+# Guilds:
+#   https://stackoverflow.com/questions/43928702/how-to-change-the-application-launcher-icon-on-flutter
+#   https://www.flutterbeads.com/change-app-launcher-icon-flutter/
+
+flutter_launcher_icons:
+  image_path: "assets/logos/app_logo.png"
+  web:
+    generate: true
+    icon_size: 48 # min:48, max:256, default: 48
+    background_color: "#ffffff"
