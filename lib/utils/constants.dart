@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AppInfo {
   static const String name = 'Walletika';
@@ -38,6 +39,8 @@ class AppDecoration {
   static const double sectionHeight = 400.0;
   static const double textSectionWidth = 800.0;
   static const double headerHeight = 90.0;
+  static const ResponsiveScreenSettings responsiveScreenSettings =
+      ResponsiveScreenSettings(desktopChangePoint: 1024.0);
 }
 
 class AppColors {
