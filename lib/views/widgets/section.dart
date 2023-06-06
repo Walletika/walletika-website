@@ -6,6 +6,7 @@ class CustomSection extends StatelessWidget {
   const CustomSection({
     this.stretch = false,
     this.direction = Axis.horizontal,
+    this.alignment = WrapAlignment.center,
     this.padding = AppDecoration.paddingMedium,
     this.spacing = AppDecoration.spaceLarge,
     this.height = AppDecoration.sectionHeight,
@@ -17,6 +18,7 @@ class CustomSection extends StatelessWidget {
 
   final bool stretch;
   final Axis direction;
+  final WrapAlignment alignment;
   final double padding;
   final double spacing;
   final double height;
@@ -44,7 +46,7 @@ class CustomSection extends StatelessWidget {
         minHeight: height,
       ),
       child: Wrap(
-        alignment: WrapAlignment.center,
+        alignment: alignment,
         runAlignment: WrapAlignment.center,
         crossAxisAlignment: WrapCrossAlignment.center,
         direction: direction,
