@@ -6,6 +6,7 @@ class CustomSection extends StatelessWidget {
   const CustomSection({
     this.stretch = false,
     this.direction = Axis.horizontal,
+    this.padding = AppDecoration.paddingMedium,
     this.spacing = AppDecoration.spaceLarge,
     this.height = AppDecoration.sectionHeight,
     this.borderRadius,
@@ -16,6 +17,7 @@ class CustomSection extends StatelessWidget {
 
   final bool stretch;
   final Axis direction;
+  final double padding;
   final double spacing;
   final double height;
   final BorderRadiusGeometry? borderRadius;
@@ -34,7 +36,7 @@ class CustomSection extends StatelessWidget {
     }
 
     return Container(
-      padding: const EdgeInsets.all(AppDecoration.paddingMedium),
+      padding: EdgeInsets.all(padding),
       decoration: decoration,
       constraints: BoxConstraints(
         minWidth: stretch ? double.infinity : AppDecoration.pageWidth,
