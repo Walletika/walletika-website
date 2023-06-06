@@ -5,7 +5,7 @@ import '../../utils/constants.dart';
 class CustomSection extends StatelessWidget {
   const CustomSection({
     this.stretch = false,
-    this.responsive = true,
+    this.direction = Axis.horizontal,
     this.spacing = AppDecoration.spaceLarge,
     this.height = AppDecoration.sectionHeight,
     this.borderRadius,
@@ -15,7 +15,7 @@ class CustomSection extends StatelessWidget {
   });
 
   final bool stretch;
-  final bool responsive;
+  final Axis direction;
   final double spacing;
   final double height;
   final BorderRadiusGeometry? borderRadius;
@@ -45,7 +45,7 @@ class CustomSection extends StatelessWidget {
         alignment: WrapAlignment.center,
         runAlignment: WrapAlignment.center,
         crossAxisAlignment: WrapCrossAlignment.center,
-        direction: responsive ? Axis.horizontal : Axis.vertical,
+        direction: direction,
         spacing: spacing,
         runSpacing: spacing,
         children: children,
