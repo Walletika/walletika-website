@@ -70,7 +70,7 @@ class CustomFeature extends StatelessWidget {
             ),
             child: Icon(
               icon,
-              size: AppDecoration.iconLargeSize,
+              size: 40.0,
               color: colorScheme.primary,
             ),
           ),
