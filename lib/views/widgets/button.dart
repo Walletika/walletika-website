@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     required this.onPressed,
     required this.text,
+    this.textAlignment,
     this.type = ButtonType.elevated,
     this.standardSize = true,
     this.icon,
@@ -18,6 +19,7 @@ class CustomButton extends StatelessWidget {
 
   final void Function()? onPressed;
   final String? text;
+  final AlignmentGeometry? textAlignment;
   final ButtonType type;
   final bool standardSize;
   final Icon? icon;
@@ -30,16 +32,16 @@ class CustomButton extends StatelessWidget {
 
     switch (type) {
       case ButtonType.elevated:
-        widget = _elevatedButton(onPressed, Text(text!), icon);
+        widget = _elevatedButton();
         break;
       case ButtonType.filled:
-        widget = _filledButton(onPressed, Text(text!), icon);
+        widget = _filledButton();
         break;
       case ButtonType.outlined:
-        widget = _outlinedButton(onPressed, Text(text!), icon);
+        widget = _outlinedButton();
         break;
       case ButtonType.text:
-        widget = _textButton(onPressed, Text(text!), icon);
+        widget = _textButton();
         break;
       case ButtonType.icon:
         widget = IconButton(onPressed: onPressed, icon: icon!, tooltip: text);
@@ -61,43 +63,37 @@ class CustomButton extends StatelessWidget {
     return widget;
   }
 
-  ElevatedButton _elevatedButton(
-    void Function()? onPressed,
-    Text text,
-    Icon? icon,
-  ) {
+  ElevatedButton _elevatedButton() {
     return icon != null
-        ? ElevatedButton.icon(onPressed: onPressed, label: text, icon: icon)
-        : ElevatedButton(onPressed: onPressed, child: text);
+        ? ElevatedButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
+        : ElevatedButton(onPressed: onPressed, child: _text());
   }
 
-  FilledButton _filledButton(
-    void Function()? onPressed,
-    Text text,
-    Icon? icon,
-  ) {
+  FilledButton _filledButton() {
     return icon != null
-        ? FilledButton.icon(onPressed: onPressed, label: text, icon: icon)
-        : FilledButton(onPressed: onPressed, child: text);
+        ? FilledButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
+        : FilledButton(onPressed: onPressed, child: _text());
   }
 
-  OutlinedButton _outlinedButton(
-    void Function()? onPressed,
-    Text text,
-    Icon? icon,
-  ) {
+  OutlinedButton _outlinedButton() {
     return icon != null
-        ? OutlinedButton.icon(onPressed: onPressed, label: text, icon: icon)
-        : OutlinedButton(onPressed: onPressed, child: text);
+        ? OutlinedButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
+        : OutlinedButton(onPressed: onPressed, child: _text());
   }
 
-  TextButton _textButton(
-    void Function()? onPressed,
-    Text text,
-    Icon? icon,
-  ) {
+  TextButton _textButton() {
     return icon != null
-        ? TextButton.icon(onPressed: onPressed, label: text, icon: icon)
-        : TextButton(onPressed: onPressed, child: text);
+        ? TextButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
+        : TextButton(onPressed: onPressed, child: _text());
+  }
+
+  Widget _text() {
+    Widget widget = Text(text!);
+
+    if (textAlignment != null) {
+      widget = Align(alignment: textAlignment!, child: widget);
+    }
+
+    return widget;
   }
 }
