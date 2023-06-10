@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class AppInfo {
   static const String name = 'Walletika';
-  static const String titlePage = 'Walletika Cryptocurrency Wallet';
+  static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
 }
 
 class AppDecoration {
@@ -80,7 +80,7 @@ class AppLanguages {
 }
 
 class AppPages {
-  static const String home = '/home';
+  static const String home = '/';
   static const String download = '/download';
   static const String token = '/token';
   static const String documents = '/documents';

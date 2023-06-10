@@ -1,11 +1,11 @@
 {
-    "name": "Walletika Cryptocurrency Wallet",
+    "name": "Walletika",
     "short_name": "Walletika",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0175C2",
-    "description": "The official Walletika website for cryptocurrency wallet.",
+    "description": "The official Walletika website.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
