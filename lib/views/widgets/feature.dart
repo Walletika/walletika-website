@@ -68,11 +68,7 @@ class CustomFeature extends StatelessWidget {
               color: colorScheme.tertiary,
               borderRadius: BorderRadius.circular(AppDecoration.radiusBig),
             ),
-            child: Icon(
-              icon,
-              size: 40.0,
-              color: colorScheme.primary,
-            ),
+            child: Icon(icon, size: 40.0),
           ),
         ],
       );
