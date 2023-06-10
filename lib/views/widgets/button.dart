@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/constants.dart';
+import 'image.dart';
 
-enum ButtonType { elevated, filled, outlined, text, icon }
+enum ButtonType { elevated, filled, outlined, text, icon, image }
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     required this.onPressed,
-    required this.text,
+    this.text,
     this.textAlignment,
     this.type = ButtonType.elevated,
     this.standardSize = true,
     this.icon,
     this.width,
     this.height,
+    this.imagePath,
     super.key,
   });
 
@@ -25,6 +27,7 @@ class CustomButton extends StatelessWidget {
   final Icon? icon;
   final double? width;
   final double? height;
+  final String? imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,9 @@ class CustomButton extends StatelessWidget {
         break;
       case ButtonType.text:
         widget = _textButton();
+        break;
+      case ButtonType.image:
+        widget = _imageButton();
         break;
       case ButtonType.icon:
         widget = IconButton(onPressed: onPressed, icon: icon!, tooltip: text);
@@ -85,6 +91,20 @@ class CustomButton extends StatelessWidget {
     return icon != null
         ? TextButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
         : TextButton(onPressed: onPressed, child: _text());
+  }
+
+  Widget _imageButton() {
+    return GestureDetector(
+      onTap: onPressed,
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: CustomImage(
+          path: imagePath,
+          width: width ?? AppDecoration.minButtonWidth,
+          height: height ?? AppDecoration.buttonHeightLarge,
+        ),
+      ),
+    );
   }
 
   Widget _text() {
