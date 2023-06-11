@@ -23,7 +23,7 @@ class CustomPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Column(children: sections),
-            const CustomFooterSection(),
+            CustomFooterSection(),
           ],
         ),
       ),
