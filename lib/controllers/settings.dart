@@ -13,7 +13,7 @@ class SettingsController extends GetxController {
   final List<PageModel> _pages = [
     PageModel(visible: true, path: AppPages.home, text: "1000@global"),
     PageModel(visible: true, path: AppPages.download, text: "1001@global"),
-    PageModel(visible: true, path: AppPages.token, text: "1002@global"),
+    PageModel(visible: false, path: AppPages.token, text: "1002@global"),
     PageModel(visible: true, path: AppPages.documents, text: "1003@global"),
   ];
 
