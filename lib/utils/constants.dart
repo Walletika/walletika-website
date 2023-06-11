@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 class AppInfo {
   static const String name = 'Walletika';
   static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
+  static const String telegramChannel = 'https://t.me/walletika';
+  static const String telegramGroup = 'https://t.me/walletikacommunity';
 }
 
 class AppDecoration {
@@ -72,6 +74,32 @@ class AppColors {
 
 class AppImages {
   static const String logo = 'assets/logos/app_logo.png';
+  static const String googleStore = 'assets/logos/google_store.png';
+  static const String androidAPK = 'assets/logos/android_apk.png';
+  static const String windowsStore = 'assets/logos/windows_store.png';
+  static const String windowsEXE = 'assets/logos/windows_exe.png';
+  static const String usbIllustrations = 'assets/illustrations/usb.png';
+  static const String telegramIllustrations =
+      'assets/illustrations/telegram.png';
+
+  static const Map<String, Map<String, String>> _images = {
+    "walletApp": {
+      "light": 'assets/illustrations/wallet.png',
+      "dark": 'assets/illustrations/wallet_dark.png',
+    },
+    "walletLogin": {
+      "light": 'assets/illustrations/wallet_login.png',
+      "dark": 'assets/illustrations/wallet_login_dark.png',
+    },
+    "walletAuth": {
+      "light": 'assets/illustrations/wallet_auth.png',
+      "dark": 'assets/illustrations/wallet_auth_dark.png',
+    },
+  };
+
+  static String theme(String name) {
+    return _images[name]![Get.isDarkMode ? "dark" : "light"]!;
+  }
 }
 
 class AppLanguages {
