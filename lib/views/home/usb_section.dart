@@ -63,14 +63,15 @@ Widget _sectionBuilder({
         children: [
           CustomText(
             text: "1009@home".tr,
-            maxWidth: 420.0,
-            style:
-                textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
+            maxWidth: 390.0,
+            style: textTheme.displaySmall!.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
           verticalSpace(),
           CustomText(
             text: "1010@home".tr,
-            maxWidth: 420.0,
+            maxWidth: 390.0,
             blueLightColor: true,
           ),
         ],
@@ -78,7 +79,6 @@ Widget _sectionBuilder({
       const CustomImage(
         path: AppImages.usbIllustrations,
         width: 300.0,
-        height: 200.0,
       ),
     ],
   );

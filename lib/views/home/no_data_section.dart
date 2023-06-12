@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
 
 import '../../utils/constants.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
-class WhatIsSection extends GetResponsiveView {
-  WhatIsSection({
+class NoDataSection extends GetResponsiveView {
+  NoDataSection({
     super.settings = AppDecoration.responsiveScreenSettings,
     super.key,
   });
@@ -53,26 +54,32 @@ CustomSection _sectionBuilder({
   final TextTheme textTheme = themeData.textTheme;
 
   return CustomSection(
-    height: 300.0,
-    backgroundColor: colorScheme.primary,
     borderRadius: borderRadius,
+    backgroundColor: colorScheme.primary,
+    wrapSpacing: AppDecoration.spaceMedium,
+    layout: SectionLayout.wrap,
     children: [
-      CustomText(
-        text: "1002@home".tr,
-        textAlign: TextAlign.center,
-        style: textTheme.displaySmall!.copyWith(
-          color: AppColors.white,
-          fontWeight: FontWeight.w500,
-        ),
+      const Icon(
+        LineIcons.alternateShield,
+        size: 120.0,
+        color: AppColors.white,
       ),
-      verticalSpace(),
-      CustomText(
-        text: "1003@home".tr,
-        textAlign: TextAlign.center,
-        style: textTheme.bodyLarge!.copyWith(
-          color: AppColors.white,
-          fontWeight: FontWeight.w300,
-        ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomText(
+            text: "1002@home".tr,
+            style: textTheme.displaySmall!.copyWith(color: AppColors.white),
+          ),
+          verticalSpace(AppDecoration.spaceSmall),
+          CustomText(
+            text: "1003@home".tr,
+            style: textTheme.bodyLarge!.copyWith(
+              color: AppColors.white,
+              fontWeight: FontWeight.w300,
+            ),
+          )
+        ],
       ),
     ],
   );

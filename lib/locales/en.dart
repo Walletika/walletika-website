@@ -29,20 +29,19 @@ const Map<String, String> translator = {
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
       "Choose between hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "What is Walletika?",
+  "1002@home": "WE DON'T STORE YOUR WALLET",
   "1003@home":
-      "Walletika is a decentralized wallet application that allows users to manage their digital assets with the highest quality of security and ease of use.",
-  "1004@home":
-      "We don't store your wallet access information on our servers or even on your local device",
+      "ACCESS INFORMATION ON OUR SERVERS OR EVEN ON YOUR LOCAL DEVICE.",
+  "1004@home": "",
   "1005@home": "No Private Key or Seed Phrase",
   "1006@home":
       "You don't need a private key to access your wallets anymore, we provides a unique solution to access using a username and two passwords memorizable instead.",
   "1007@home": "Two-Factor Authentication Support",
   "1008@home":
       "Your funds are protected with a Two-Factor Authentication confirmation code before any transaction.",
-  "1009@home": "Keep Your Wallets Offline",
+  "1009@home": "Keep Your Funds Safe",
   "1010@home":
-      "Turn your USB drive into a cold wallet to be offline and away from hackers.",
+      "Turn your USB drive into a cold wallet that is disconnected from the Internet and away from hackers.",
   "1011@home": "Powerful features to access a wide range of digital assets",
   "1012@home": "Multiple Blockchains",
   "1013@home":

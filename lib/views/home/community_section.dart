@@ -59,14 +59,15 @@ class _TabletView extends StatelessWidget {
         left: AppDecoration.paddingBig,
         right: AppDecoration.paddingBig,
         top: AppDecoration.padding,
-        bottom: AppDecoration.paddingBig,
+        bottom: 70,
       ),
       children: [
-        _textBuilder(context: context, textWidth: 500.0),
-        const CustomImage(
-          path: AppImages.telegramIllustrations,
-          width: 600.0,
-          height: 400.0,
+        const CustomImage(path: AppImages.telegramIllustrations, width: 600.0),
+        verticalSpace(AppDecoration.spaceBig),
+        _textBuilder(
+          context: context,
+          textWidth: AppDecoration.textSectionWidth,
+          isTablet: true,
         ),
       ],
     );
@@ -76,21 +77,25 @@ class _TabletView extends StatelessWidget {
 Widget _textBuilder({
   required BuildContext context,
   required double textWidth,
+  bool isTablet = false,
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
 
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    crossAxisAlignment:
+        isTablet ? CrossAxisAlignment.center : CrossAxisAlignment.start,
     children: [
       CustomText(
         text: "1024@home".tr,
+        textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: textWidth,
         style: textTheme.displayMedium!.copyWith(fontWeight: FontWeight.w900),
       ),
       verticalSpace(),
       CustomText(
         text: "1025@home".tr,
+        textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: textWidth,
         blueLightColor: true,
         style: textTheme.bodyLarge,
@@ -99,15 +104,19 @@ Widget _textBuilder({
       Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          CustomButton(
-            onPressed: () => openNewTab(AppInfo.telegramChannel),
-            text: "1007@global".tr,
+          Flexible(
+            child: CustomButton(
+              onPressed: () => openNewTab(AppInfo.telegramChannel),
+              text: "1007@global".tr,
+            ),
           ),
           horizontalSpace(),
-          CustomButton(
-            onPressed: () => openNewTab(AppInfo.telegramGroup),
-            text: "1008@global".tr,
-            type: ButtonType.outlined,
+          Flexible(
+            child: CustomButton(
+              onPressed: () => openNewTab(AppInfo.telegramGroup),
+              text: "1008@global".tr,
+              type: ButtonType.outlined,
+            ),
           ),
         ],
       ),

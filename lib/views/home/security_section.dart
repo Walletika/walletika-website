@@ -29,21 +29,16 @@ class _DesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-    final TextTheme textTheme = themeData.textTheme;
-
     return CustomSection(
       children: [
-        _mainTitleBuilder(textTheme),
-        verticalSpace(AppDecoration.spaceLarge),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Flexible(
               child: _textBuilder(
+                context: context,
                 title: "1005@home".tr,
                 description: "1006@home".tr,
-                textTheme: textTheme,
               ),
             ),
             Flexible(
@@ -59,9 +54,9 @@ class _DesktopView extends StatelessWidget {
             ),
             Flexible(
               child: _textBuilder(
+                context: context,
                 title: "1007@home".tr,
                 description: "1008@home".tr,
-                textTheme: textTheme,
               ),
             ),
           ],
@@ -76,25 +71,20 @@ class _PhoneView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-    final TextTheme textTheme = themeData.textTheme;
-
     return CustomSection(
       children: [
-        _mainTitleBuilder(textTheme),
-        verticalSpace(AppDecoration.spaceLarge),
         _textBuilder(
+          context: context,
           title: "1005@home".tr,
           description: "1006@home".tr,
-          textTheme: textTheme,
         ),
         verticalSpace(AppDecoration.spaceBig),
         _imageBuilder(AppImages.theme("walletLogin")),
         verticalSpace(AppDecoration.spaceBig),
         _textBuilder(
+          context: context,
           title: "1007@home".tr,
           description: "1008@home".tr,
-          textTheme: textTheme,
         ),
         verticalSpace(AppDecoration.spaceBig),
         _imageBuilder(AppImages.theme("walletAuth")),
@@ -103,26 +93,21 @@ class _PhoneView extends StatelessWidget {
   }
 }
 
-Widget _mainTitleBuilder(TextTheme textTheme) {
-  return CustomText(
-    text: "1004@home".tr,
-    textAlign: TextAlign.center,
-    style: textTheme.headlineLarge,
-  );
-}
-
 Widget _textBuilder({
+  required BuildContext context,
   required String title,
   required String description,
-  required TextTheme textTheme,
 }) {
+  final ThemeData themeData = Theme.of(context);
+  final TextTheme textTheme = themeData.textTheme;
+
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       CustomText(
         text: title,
         maxWidth: 400.0,
-        style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w500),
+        style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
       ),
       verticalSpace(),
       CustomText(
@@ -135,9 +120,5 @@ Widget _textBuilder({
 }
 
 Widget _imageBuilder(String path) {
-  return CustomImage(
-    path: path,
-    width: 400.0,
-    height: 400.0,
-  );
+  return CustomImage(path: path, width: 400.0);
 }
