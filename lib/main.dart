@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:get/get.dart';
 
 import 'controllers/dependencies.dart';
@@ -12,6 +13,8 @@ import 'views/token/page.dart';
 import 'views/widgets/theme.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
+
   WidgetsFlutterBinding.ensureInitialized();
 
   InitialBinding().dependencies();
