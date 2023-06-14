@@ -69,11 +69,13 @@ CustomSection _sectionBuilder({
         children: [
           CustomText(
             text: "1002@home".tr,
+            maxWidth: 600.0,
             style: textTheme.displaySmall!.copyWith(color: AppColors.white),
           ),
           verticalSpace(AppDecoration.spaceSmall),
           CustomText(
             text: "1003@home".tr,
+            maxWidth: 600.0,
             style: textTheme.bodyLarge!.copyWith(
               color: AppColors.white,
               fontWeight: FontWeight.w300,

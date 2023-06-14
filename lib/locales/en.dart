@@ -29,9 +29,9 @@ const Map<String, String> translator = {
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
       "Choose between hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "WE DON'T STORE YOUR WALLET",
+  "1002@home": "WE DON'T STORE YOUR WALLETS",
   "1003@home":
-      "ACCESS INFORMATION ON OUR SERVERS OR EVEN ON YOUR LOCAL DEVICE.",
+      "Your access information is not stored on our servers or even on your local device, thanks to our unique real-time wallet generation technology.",
   "1004@home": "",
   "1005@home": "No Private Key or Seed Phrase",
   "1006@home":
