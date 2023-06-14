@@ -6,10 +6,6 @@ import 'controllers/dependencies.dart';
 import 'controllers/settings.dart';
 import 'locales/locales.dart';
 import 'utils/constants.dart';
-import 'views/documents/page.dart';
-import 'views/download/page.dart';
-import 'views/home/page.dart';
-import 'views/token/page.dart';
 import 'views/widgets/theme.dart';
 
 void main() {
@@ -19,13 +15,11 @@ void main() {
 
   InitialBinding().dependencies();
 
-  runApp(AppLauncher());
+  runApp(const AppLauncher());
 }
 
-class AppLauncher extends StatelessWidget {
-  AppLauncher({super.key});
-
-  final SettingsController settingsController = Get.find<SettingsController>();
+class AppLauncher extends GetView<SettingsController> {
+  const AppLauncher({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,29 +28,12 @@ class AppLauncher extends StatelessWidget {
       title: AppInfo.titlePage,
       theme: applicationLightTheme,
       darkTheme: applicationDarkTheme,
-      themeMode: settingsController.theme,
-      locale: settingsController.locale,
+      themeMode: controller.theme,
+      locale: controller.locale,
       translations: AppTranslator(),
       defaultTransition: Transition.fadeIn,
-      initialRoute: AppPages.home,
-      getPages: [
-        GetPage(
-          name: AppPages.home,
-          page: () => const HomeView(),
-        ),
-        GetPage(
-          name: AppPages.download,
-          page: () => const DownloadView(),
-        ),
-        GetPage(
-          name: AppPages.token,
-          page: () => const TokenView(),
-        ),
-        GetPage(
-          name: AppPages.documents,
-          page: () => const DocumentsView(),
-        ),
-      ],
+      initialRoute: controller.initialPage,
+      getPages: controller.getPages,
     );
   }
 }

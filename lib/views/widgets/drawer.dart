@@ -8,10 +8,8 @@ import '../../utils/constants.dart';
 import 'button.dart';
 import 'spacer.dart';
 
-class CustomDrawer extends StatelessWidget {
-  CustomDrawer({super.key});
-
-  final SettingsController _settingsController = Get.find<SettingsController>();
+class CustomDrawer extends GetView<SettingsController> {
+  const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButton(
-                  onPressed: _settingsController.themeUpdate,
+                  onPressed: controller.themeUpdate,
                   text: "1004@global".tr,
                   type: ButtonType.icon,
                   standardSize: false,
@@ -53,9 +51,9 @@ class CustomDrawer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(AppDecoration.radius),
                     dropdownColor: themeData.popupMenuTheme.color,
                     underline: zeroSpace(),
-                    value: _settingsController.currentLanguage,
-                    onChanged: _settingsController.languageUpdate,
-                    items: _settingsController.languages
+                    value: controller.currentLanguage,
+                    onChanged: controller.languageUpdate,
+                    items: controller.languages
                         .map((key, value) {
                           return MapEntry(
                             key,
@@ -69,9 +67,9 @@ class CustomDrawer extends StatelessWidget {
               ],
             ),
           ),
-          for (final PageModel page in _settingsController.pages)
+          for (final PageModel page in controller.pages)
             ListTile(
-              onTap: () => Get.offNamed(page.path),
+              onTap: () => Get.offNamed(page.name),
               title: Text(page.text.tr),
             ),
         ],

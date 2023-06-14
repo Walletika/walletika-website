@@ -17,7 +17,7 @@ class CustomPage extends StatelessWidget {
         preferredSize: const Size.fromHeight(AppDecoration.headerHeight),
         child: CustomHeader(),
       ),
-      endDrawer: CustomDrawer(),
+      endDrawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

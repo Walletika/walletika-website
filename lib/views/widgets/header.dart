@@ -40,7 +40,7 @@ class _DesktopView extends GetView<SettingsController> {
       actions: [
         for (final PageModel page in controller.pages)
           CustomButton(
-            onPressed: () => Get.offNamed(page.path),
+            onPressed: () => Get.offNamed(page.name),
             text: page.text.tr,
             type: ButtonType.text,
             standardSize: false,
