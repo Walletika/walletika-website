@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/constants.dart';
+import 'clickable_widget.dart';
 import 'image.dart';
 
 enum ButtonType { elevated, filled, outlined, text, icon, image }
@@ -94,15 +95,12 @@ class CustomButton extends StatelessWidget {
   }
 
   Widget _imageButton() {
-    return GestureDetector(
+    return CustomClickableWidget(
       onTap: onPressed,
-      child: MouseRegion(
-        cursor: SystemMouseCursors.click,
-        child: CustomImage(
-          path: imagePath,
-          width: width ?? AppDecoration.minButtonWidth,
-          height: height ?? AppDecoration.buttonHeightLarge,
-        ),
+      child: CustomImage(
+        path: imagePath,
+        width: width ?? AppDecoration.minButtonWidth,
+        height: height ?? AppDecoration.buttonHeightLarge,
       ),
     );
   }
