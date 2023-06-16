@@ -48,7 +48,7 @@ class _DesktopView extends StatelessWidget {
           ),
         ),
         Flexible(
-          child: _subSectionsBuilder(textTheme: textTheme),
+          child: _subSectionsBuilder(textTheme),
         )
       ],
     );
@@ -70,10 +70,7 @@ class _TabletView extends StatelessWidget {
       children: [
         Column(children: _brandBuilder(textTheme)),
         verticalSpace(AppDecoration.spaceLarge),
-        _subSectionsBuilder(
-          textTheme: textTheme,
-          isTablet: true,
-        ),
+        _subSectionsBuilder(textTheme),
       ],
     );
   }
@@ -100,17 +97,13 @@ List<Widget> _brandBuilder(TextTheme textTheme) {
   ];
 }
 
-Widget _subSectionsBuilder({
-  required TextTheme textTheme,
-  bool isTablet = false,
-}) {
+Widget _subSectionsBuilder(TextTheme textTheme) {
   return Wrap(
     spacing: AppDecoration.spaceMedium,
     runSpacing: AppDecoration.spaceMedium,
     children: [
       _subSection(
         textTheme: textTheme,
-        isTablet: isTablet,
         name: "1009@global".tr,
         buttons: {
           "1012@global".tr: () {},
@@ -120,7 +113,6 @@ Widget _subSectionsBuilder({
       ),
       _subSection(
         textTheme: textTheme,
-        isTablet: isTablet,
         name: "1010@global".tr,
         buttons: {
           "1015@global".tr: () {},
@@ -130,7 +122,6 @@ Widget _subSectionsBuilder({
       ),
       _subSection(
         textTheme: textTheme,
-        isTablet: isTablet,
         name: "1011@global".tr,
         buttons: {
           "1018@global".tr: () {},
@@ -145,15 +136,13 @@ Widget _subSectionsBuilder({
 
 Widget _subSection({
   required TextTheme textTheme,
-  required bool isTablet,
   required String name,
   required Map<String, void Function()> buttons,
 }) {
   return SizedBox(
     width: 200.0,
     child: Column(
-      crossAxisAlignment:
-          isTablet ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CustomText(text: name, style: textTheme.titleMedium),
         verticalSpace(),
@@ -163,7 +152,6 @@ Widget _subSection({
           CustomButton(
             onPressed: button.value,
             text: button.key,
-            textAlignment: isTablet ? Alignment.center : Alignment.centerLeft,
             type: ButtonType.text,
             height: 40.0,
           ),
