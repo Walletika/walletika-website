@@ -15,6 +15,7 @@ class AppDecoration {
   static const double radiusBig = 30.0;
   static const double radiusLarge = 50.0;
   static const double margin = 10.0;
+  static const double marginMedium = 20.0;
   static const double paddingSmall = 5.0;
   static const double padding = 10.0;
   static const double paddingMedium = 20.0;
@@ -29,7 +30,8 @@ class AppDecoration {
   static const double elevation = 20.0;
   static const double iconSize = 24.0;
   static const double iconSmallSize = 20.0;
-  static const double iconBigSize = 30.0;
+  static const double iconMediumSize = 30.0;
+  static const double iconBigSize = 40.0;
   static const double iconLargeSize = 50.0;
   static const double dividerPadding = 20.0;
   static const double widgetWidth = 300.0;
@@ -43,6 +45,7 @@ class AppDecoration {
   static const double headerHeight = 90.0;
   static const ResponsiveScreenSettings responsiveScreenSettings =
       ResponsiveScreenSettings(desktopChangePoint: 1024.0);
+  static const TextOverflow textOverflow = TextOverflow.fade;
 }
 
 class AppColors {
@@ -110,5 +113,5 @@ class AppLanguages {
 class AppPages {
   static const String home = '/';
   static const String download = '/download';
-  static const String documents = '/documents';
+  static const String documents = '/docs';
 }

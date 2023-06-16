@@ -38,7 +38,7 @@ class CustomText extends StatelessWidget {
         textAlign: textAlign,
         softWrap: softWrap,
         style: customStyle,
-        overflow: TextOverflow.fade,
+        overflow: AppDecoration.textOverflow,
       ),
     );
   }
