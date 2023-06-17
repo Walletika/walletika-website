@@ -26,7 +26,7 @@ class MainDocsSection extends GetView<DocumentsController> {
       height: 350.0,
       backgroundColor: colorScheme.primary,
       mainAxisAlignment: MainAxisAlignment.end,
-      padding: const EdgeInsets.all(AppDecoration.paddingLarge),
+      padding: const EdgeInsets.all(AppDecoration.paddingBig),
       children: [
         CustomText(
           text: "1000@docs".tr,
@@ -40,7 +40,7 @@ class MainDocsSection extends GetView<DocumentsController> {
         CustomText(
           text: "1001@docs".tr,
           textAlign: TextAlign.center,
-          style: textTheme.headlineLarge!.copyWith(
+          style: textTheme.headlineMedium!.copyWith(
             color: AppColors.white,
             fontWeight: FontWeight.w300,
           ),

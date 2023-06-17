@@ -22,6 +22,10 @@ class ArticlesSection extends GetView<DocumentsController> {
   @override
   Widget build(BuildContext context) {
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.paddingMedium,
+        vertical: 70.0,
+      ),
       children: [
         Obx(() {
           final TopicModel? topic;

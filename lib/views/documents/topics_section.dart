@@ -19,6 +19,10 @@ class TopicsSection extends GetView<DocumentsController> {
   @override
   Widget build(BuildContext context) {
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.paddingMedium,
+        vertical: 70.0,
+      ),
       children: [
         Obx(() {
           final List<TopicModel>? topics = controller.topics;
@@ -51,10 +55,7 @@ class TopicsSection extends GetView<DocumentsController> {
       onTap: () => Get.offNamed(topic.pageID),
       child: Container(
         margin: const EdgeInsets.only(bottom: AppDecoration.marginMedium),
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppDecoration.paddingBig,
-          vertical: AppDecoration.paddingMedium,
-        ),
+        padding: const EdgeInsets.all(AppDecoration.paddingMedium),
         decoration: BoxDecoration(
           color: colorScheme.secondary,
           border: Border.all(color: colorScheme.tertiary),
