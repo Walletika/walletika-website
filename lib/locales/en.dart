@@ -22,8 +22,8 @@ const Map<String, String> translator = {
   "1019@global": "Security",
   "1020@global": "Terms of Service",
   "1021@global": "Privacy Policy",
-  "1022@global": "",
-  "1023@global": "",
+  "1022@global": "Search",
+  "1023@global": "Articles",
 
   // Home
   "1000@home": "Best Secure Crypto Wallet",
@@ -65,6 +65,8 @@ const Map<String, String> translator = {
   "1025@home":
       "Join our Telegram channel to keep up with the latest updates and interact with one of our developers.",
   "1026@home": "© 2023 Walletika Ltd. All rights reserved.",
-  "1027@home": "",
-  "1028@home": "",
+
+  // Documents
+  "1000@docs": "Walletika Documentation",
+  "1001@docs": "How can we help you?",
 };

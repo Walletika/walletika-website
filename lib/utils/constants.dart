@@ -6,6 +6,8 @@ class AppInfo {
   static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
   static const String telegramChannel = 'https://t.me/walletika';
   static const String telegramGroup = 'https://t.me/walletikacommunity';
+  static const String topicsAPI =
+      'https://raw.githubusercontent.com/Walletika/metadata/main/web_topics.json';
 }
 
 class AppDecoration {
@@ -84,6 +86,8 @@ class AppImages {
   static const String usbIllustrations = 'assets/illustrations/usb.png';
   static const String telegramIllustrations =
       'assets/illustrations/telegram.png';
+  static const String pageNotFoundIllustrations =
+      'assets/illustrations/page_not_found.png';
 
   static const Map<String, Map<String, String>> _images = {
     "walletApp": {
@@ -113,5 +117,5 @@ class AppLanguages {
 class AppPages {
   static const String home = '/';
   static const String download = '/download';
-  static const String documents = '/docs';
+  static const String documents = '/documents';
 }

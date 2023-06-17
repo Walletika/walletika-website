@@ -7,6 +7,7 @@ import '../utils/constants.dart';
 import '../views/documents/page.dart';
 import '../views/download/page.dart';
 import '../views/home/page.dart';
+import '../views/topic/page.dart';
 
 class SettingsController extends GetxController {
   // States
@@ -32,6 +33,12 @@ class SettingsController extends GetxController {
       name: AppPages.documents,
       text: "1003@global",
       widget: () => const DocumentsView(),
+    ),
+    PageModel(
+      visible: false,
+      name: '${AppPages.documents}/:id',
+      text: "",
+      widget: () => const TopicView(),
     ),
   ];
 
@@ -61,9 +68,5 @@ class SettingsController extends GetxController {
   Future<void> languageUpdate(String? language) async {
     _currentLanguage.value = language!;
     await Get.updateLocale(locale);
-  }
-
-  void addPage(PageModel page) {
-    _pages.add(page);
   }
 }
