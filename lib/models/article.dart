@@ -9,16 +9,16 @@ class ArticleModel {
     required this.contentURL,
     required this.updateDate,
     this.imageURL,
-    this.author,
+    this.publisher,
   });
 
   final String topicID;
   final String id;
   final ContentLanguageModel title;
   final ContentLanguageModel contentURL;
-  final int updateDate;
+  final DateTime updateDate;
   final String? imageURL;
-  final String? author;
+  final String? publisher;
 
   String get pageID => '${AppPages.documents}/$topicID/$id';
 
@@ -31,8 +31,8 @@ class ArticleModel {
         id: json['id'],
         title: ContentLanguageModel.fromJson(json['title']),
         contentURL: ContentLanguageModel.fromJson(json['content']),
-        updateDate: json['date'],
+        updateDate: DateTime.fromMillisecondsSinceEpoch(json['date']),
         imageURL: json['image'],
-        author: json['author'],
+        publisher: json['publisher'],
       );
 }
