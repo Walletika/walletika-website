@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:get/get.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 import 'controllers/dependencies.dart';
 import 'controllers/settings.dart';
@@ -14,6 +15,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   InitialBinding().dependencies();
+
+  timeago.setLocaleMessages('ar', timeago.ArMessages());
 
   runApp(const AppLauncher());
 }
