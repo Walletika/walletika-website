@@ -39,34 +39,40 @@ class _CustomReactionState extends State<CustomReaction> {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CustomButton(
-                onPressed: () => _reactionOnPressed(ReactionType.frown),
-                type: ButtonType.icon,
-                width: 100.0,
-                icon: Icon(
-                  LineIcons.frowningFace,
-                  color: _reactionColor(ReactionType.frown),
-                  size: AppDecoration.iconLargeSize,
+              Flexible(
+                child: CustomButton(
+                  onPressed: () => _reactionOnPressed(ReactionType.frown),
+                  type: ButtonType.icon,
+                  width: 100.0,
+                  icon: Icon(
+                    LineIcons.frowningFace,
+                    color: _reactionColor(ReactionType.frown),
+                    size: AppDecoration.iconLargeSize,
+                  ),
                 ),
               ),
-              CustomButton(
-                onPressed: () => _reactionOnPressed(ReactionType.smile),
-                type: ButtonType.icon,
-                width: 100.0,
-                icon: Icon(
-                  LineIcons.smilingFace,
-                  color: _reactionColor(ReactionType.smile),
-                  size: AppDecoration.iconLargeSize,
+              Flexible(
+                child: CustomButton(
+                  onPressed: () => _reactionOnPressed(ReactionType.smile),
+                  type: ButtonType.icon,
+                  width: 100.0,
+                  icon: Icon(
+                    LineIcons.smilingFace,
+                    color: _reactionColor(ReactionType.smile),
+                    size: AppDecoration.iconLargeSize,
+                  ),
                 ),
               ),
-              CustomButton(
-                onPressed: () => _reactionOnPressed(ReactionType.happy),
-                type: ButtonType.icon,
-                width: 100.0,
-                icon: Icon(
-                  LineIcons.laughFaceWithBeamingEyes,
-                  color: _reactionColor(ReactionType.happy),
-                  size: AppDecoration.iconLargeSize,
+              Flexible(
+                child: CustomButton(
+                  onPressed: () => _reactionOnPressed(ReactionType.happy),
+                  type: ButtonType.icon,
+                  width: 100.0,
+                  icon: Icon(
+                    LineIcons.laughFaceWithBeamingEyes,
+                    color: _reactionColor(ReactionType.happy),
+                    size: AppDecoration.iconLargeSize,
+                  ),
                 ),
               ),
             ],
