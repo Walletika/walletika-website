@@ -7,6 +7,7 @@ enum SectionLayout { column, row, wrap }
 class CustomSection extends StatelessWidget {
   const CustomSection({
     this.stretch = false,
+    this.width,
     this.height,
     this.padding,
     this.borderRadius,
@@ -21,6 +22,7 @@ class CustomSection extends StatelessWidget {
   });
 
   final bool stretch;
+  final double? width;
   final double? height;
   final EdgeInsets? padding;
   final BorderRadiusGeometry? borderRadius;
@@ -79,8 +81,8 @@ class CustomSection extends StatelessWidget {
           ),
       decoration: decoration,
       constraints: BoxConstraints(
-        minWidth: stretch ? double.infinity : AppDecoration.pageWidth,
-        maxWidth: stretch ? double.infinity : AppDecoration.pageWidth,
+        minWidth: stretch ? double.infinity : width ?? AppDecoration.pageWidth,
+        maxWidth: stretch ? double.infinity : width ?? AppDecoration.pageWidth,
         minHeight: height ?? 0,
       ),
       child: layoutWidget,

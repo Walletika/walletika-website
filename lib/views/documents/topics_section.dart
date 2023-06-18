@@ -19,6 +19,7 @@ class TopicsSection extends GetView<DocumentsController> {
   @override
   Widget build(BuildContext context) {
     return CustomSection(
+      width: AppDecoration.docsPageWidth,
       padding: const EdgeInsets.symmetric(
         horizontal: AppDecoration.paddingMedium,
         vertical: 70.0,

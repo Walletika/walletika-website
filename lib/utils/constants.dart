@@ -42,6 +42,7 @@ class AppDecoration {
   static const double buttonHeightMedium = 40.0;
   static const double buttonHeightLarge = 50.0;
   static const double pageWidth = 1024.0;
+  static const double docsPageWidth = 700.0;
   static const double sectionHeight = 400.0;
   static const double textSectionWidth = 800.0;
   static const double headerHeight = 90.0;
