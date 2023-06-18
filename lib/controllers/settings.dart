@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../locales/locales.dart';
 import '../models/page.dart';
 import '../utils/constants.dart';
+import '../views/article/page.dart';
 import '../views/documents/page.dart';
 import '../views/download/page.dart';
 import '../views/home/page.dart';
@@ -39,6 +40,12 @@ class SettingsController extends GetxController {
       name: '${AppPages.documents}/:id',
       text: "",
       widget: () => const TopicView(),
+    ),
+    PageModel(
+      visible: false,
+      name: '${AppPages.documents}/:id/:id',
+      text: "",
+      widget: () => const ArticleView(),
     ),
   ];
 

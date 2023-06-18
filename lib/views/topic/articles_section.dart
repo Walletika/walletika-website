@@ -141,7 +141,7 @@ class ArticlesSection extends GetView<DocumentsController> {
         children: [
           for (final ArticleModel article in topic.articles)
             CustomButton(
-              onPressed: () {},
+              onPressed: () => Get.offNamed(article.pageID),
               icon: const Icon(
                 LineIcons.readme,
                 size: AppDecoration.iconSmallSize,

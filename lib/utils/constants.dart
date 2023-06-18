@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 class AppInfo {
   static const String name = 'Walletika';
+  static const String officialPublisher = 'Walletika Team';
   static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
   static const String telegramChannel = 'https://t.me/walletika';
   static const String telegramGroup = 'https://t.me/walletikacommunity';

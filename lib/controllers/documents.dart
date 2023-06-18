@@ -40,4 +40,8 @@ class DocumentsController extends GetxController {
       _topics.value = topics.map((e) => TopicModel.fromJson(e)).toList();
     });
   }
+
+  Future<String> fetchArticle(String articleURL) {
+    return fetchString(articleURL);
+  }
 }
