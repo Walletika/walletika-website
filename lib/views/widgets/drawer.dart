@@ -26,12 +26,12 @@ class CustomDrawer extends GetView<SettingsController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButton(
-                  onPressed: controller.themeUpdate,
+                  onPressed: _themeUpdate,
                   text: "1004@global".tr,
                   type: ButtonType.icon,
                   standardSize: false,
-                  icon: const Icon(
-                    LineIcons.moon,
+                  icon: Icon(
+                    controller.isDarkMode ? LineIcons.sun : LineIcons.moon,
                     size: AppDecoration.iconLargeSize,
                   ),
                 ),
@@ -75,5 +75,10 @@ class CustomDrawer extends GetView<SettingsController> {
         ],
       ),
     );
+  }
+
+  void _themeUpdate() async {
+    await controller.themeUpdate();
+    Get.back();
   }
 }

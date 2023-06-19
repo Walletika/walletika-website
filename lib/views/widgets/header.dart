@@ -80,7 +80,7 @@ class _DesktopView extends GetView<SettingsController> {
           text: "1004@global".tr,
           type: ButtonType.icon,
           standardSize: false,
-          icon: const Icon(LineIcons.moon),
+          icon: Icon(controller.isDarkMode ? LineIcons.sun : LineIcons.moon),
         ),
         horizontalSpace(AppDecoration.spaceMedium),
       ],
