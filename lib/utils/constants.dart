@@ -105,6 +105,14 @@ class AppImages {
       "light": 'assets/illustrations/wallet_auth.png',
       "dark": 'assets/illustrations/wallet_auth_dark.png',
     },
+    "mobile": {
+      "light": 'assets/illustrations/mobile.png',
+      "dark": 'assets/illustrations/mobile_dark.png',
+    },
+    "desktop": {
+      "light": 'assets/illustrations/desktop.png',
+      "dark": 'assets/illustrations/desktop_dark.png',
+    },
   };
 
   static String theme(String name) {

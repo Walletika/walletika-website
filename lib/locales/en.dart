@@ -70,6 +70,18 @@ const Map<String, String> translator = {
       "Join our Telegram channel to keep up with the latest updates and interact with one of our developers.",
   "1026@home": "© 2023 Walletika Ltd. All rights reserved.",
 
+  // Download
+  "1000@download": "The Most Secure Crypto Wallet",
+  "1001@download":
+      "Choose between multiple devices to access and manage your digital assets anytime, anywhere.",
+  "1002@download": "Mobile App",
+  "1003@download":
+      "Install on your mobile to control your wealth anywhere easily.",
+  "1004@download": "Desktop App",
+  "1005@download":
+      "Install as a hot wallet on your desktop device or as a cold wallet on your USB drive.",
+  "1006@download": "How do you feel about Walletika app?",
+
   // Documents
   "1000@docs": "Walletika Documentation",
   "1001@docs": "How can we help you?",

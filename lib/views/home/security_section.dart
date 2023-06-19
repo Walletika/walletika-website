@@ -32,7 +32,7 @@ class _DesktopView extends StatelessWidget {
     return CustomSection(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
               child: _textBuilder(
@@ -47,7 +47,7 @@ class _DesktopView extends StatelessWidget {
           ],
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
               child: _imageBuilder(AppImages.theme("walletAuth")),
