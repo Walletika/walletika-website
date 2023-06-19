@@ -9,6 +9,7 @@ import '../views/documents/page.dart';
 import '../views/download/page.dart';
 import '../views/home/page.dart';
 import '../views/topic/page.dart';
+import 'dependencies.dart';
 
 class SettingsController extends GetxController {
   // States
@@ -34,18 +35,21 @@ class SettingsController extends GetxController {
       name: AppPages.documents,
       text: "1003@global",
       widget: () => const DocumentsView(),
+      binding: () => DocumentsBinding(),
     ),
     PageModel(
       visible: false,
       name: '${AppPages.documents}/:id',
       text: "",
       widget: () => const TopicView(),
+      binding: () => DocumentsBinding(),
     ),
     PageModel(
       visible: false,
       name: '${AppPages.documents}/:id/:id',
       text: "",
       widget: () => const ArticleView(),
+      binding: () => DocumentsBinding(),
     ),
   ];
 
@@ -63,7 +67,11 @@ class SettingsController extends GetxController {
   Iterable<PageModel> get pages => _pages.where((page) => page.visible);
 
   List<GetPage> get getPages => _pages
-      .map((page) => GetPage(name: page.name, page: page.widget))
+      .map((page) => GetPage(
+            name: page.name,
+            page: page.widget,
+            binding: page.binding?.call(),
+          ))
       .toList();
 
   // Setter methods

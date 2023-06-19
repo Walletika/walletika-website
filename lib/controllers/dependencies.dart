@@ -7,6 +7,12 @@ class InitialBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(SettingsController(), permanent: true);
-    Get.lazyPut(() => DocumentsController(), fenix: true);
+  }
+}
+
+class DocumentsBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.put(DocumentsController(), permanent: true);
   }
 }
