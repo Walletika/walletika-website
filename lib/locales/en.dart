@@ -25,6 +25,9 @@ const Map<String, String> translator = {
   "1022@global": "Search",
   "1023@global": "Articles",
   "1024@global": "Published by",
+  "1025@global": "Search results for",
+  "1026@global": "No results for",
+  "1027@global": "All Topics",
 
   // Home
   "1000@home": "Best Secure Crypto Wallet",
@@ -71,4 +74,6 @@ const Map<String, String> translator = {
   "1000@docs": "Walletika Documentation",
   "1001@docs": "How can we help you?",
   "1002@docs": "What do you think of this article?",
+  "1003@docs":
+      "If you can't find useful search results, please contact us to help you, we may consider writing an article on your topic.",
 };

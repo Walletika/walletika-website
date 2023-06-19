@@ -34,6 +34,26 @@ class DocumentsController extends GetxController {
     return topic_?.articles.firstWhere((e) => e.pageID == pageID);
   }
 
+  List<ArticleModel>? search(String value) {
+    List<ArticleModel>? result;
+
+    if (value.isNotEmpty) {
+      value = value.toLowerCase();
+      result ??= [];
+
+      _topics.value?.forEach((topic) {
+        for (final ArticleModel article in topic.articles) {
+          if (article.title.en.toLowerCase().contains(value) ||
+              article.title.ar.toLowerCase().contains(value)) {
+            result!.add(article);
+          }
+        }
+      });
+    }
+
+    return result;
+  }
+
   // Setter methods
   Future<void> fetchTopics() async {
     await fetchList(AppInfo.topicsAPI).then((topics) {

@@ -85,6 +85,7 @@ class AppImages {
   static const String androidAPK = 'assets/logos/android_apk.png';
   static const String windowsStore = 'assets/logos/windows_store.png';
   static const String windowsEXE = 'assets/logos/windows_exe.png';
+  static const String searchIllustrations = 'assets/illustrations/search.png';
   static const String usbIllustrations = 'assets/illustrations/usb.png';
   static const String telegramIllustrations =
       'assets/illustrations/telegram.png';

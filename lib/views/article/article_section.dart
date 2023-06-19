@@ -71,7 +71,7 @@ class ArticleSection extends GetView<DocumentsController> {
 
     return CustomPageLine(
       pages: {
-        "1003@global".tr: () => Get.offNamed(AppPages.documents),
+        "1027@global".tr: () => Get.offNamed(AppPages.documents),
         topic.title.translate(language): () => Get.offNamed(topic.pageID),
         article.title.translate(language): null,
       },
