@@ -31,7 +31,6 @@ class _DesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomSection(
-      height: 800.0,
       layout: SectionLayout.wrap,
       children: [
         SizedBox(
