@@ -32,6 +32,7 @@ class _DesktopView extends StatelessWidget {
     return CustomSection(
       children: [
         Row(
+          textDirection: TextDirection.ltr,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
@@ -47,6 +48,7 @@ class _DesktopView extends StatelessWidget {
           ],
         ),
         Row(
+          textDirection: TextDirection.ltr,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
