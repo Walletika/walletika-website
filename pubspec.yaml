@@ -39,11 +39,16 @@ dependencies:
   get: ^4.6.5
   http: ^0.13.5
   url_launcher: ^6.1.11
-  flutter_markdown: ^0.6.15
+  markdown: ^7.1.0
 
   # Fixed version
   line_icons: 2.0.1
   timeago: 3.4.0
+  flutter_highlighter: 0.1.1
+  flutter_markdown_selectionarea:
+    git:
+      url: https://github.com/MahmoudKhalid/flutter_markdown_selectionarea.git
+      ref: master
 
 dev_dependencies:
   flutter_test:

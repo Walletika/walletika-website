@@ -102,6 +102,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_highlighter:
+    dependency: "direct main"
+    description:
+      name: flutter_highlighter
+      sha256: "93173afd47a9ada53f3176371755e7ea4a1065362763976d06d6adfb4d946e10"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
@@ -118,14 +126,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  flutter_markdown:
+  flutter_markdown_selectionarea:
     dependency: "direct main"
     description:
-      name: flutter_markdown
-      sha256: dc6d5258653f6857135b32896ccda7f7af0c54dcec832495ad6835154c6c77c0
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.15"
+      path: "."
+      ref: master
+      resolved-ref: "5c5e7b3c71d56ce00b57f56fb37699bae608f825"
+      url: "https://github.com/MahmoudKhalid/flutter_markdown_selectionarea.git"
+    source: git
+    version: "0.6.14+3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -144,6 +153,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.6.5"
+  highlighter:
+    dependency: transitive
+    description:
+      name: highlighter
+      sha256: "92180c72b9da8758e1acf39a45aa305a97dcfe2fdc8f3d1d2947c23f2772bfbc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   http:
     dependency: "direct main"
     description:
@@ -209,7 +226,7 @@ packages:
     source: hosted
     version: "2.1.1"
   markdown:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: markdown
       sha256: "8e332924094383133cee218b676871f42db2514f1f6ac617b6cf6152a7faab8e"

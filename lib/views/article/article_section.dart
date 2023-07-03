@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:flutter_markdown_selectionarea/flutter_markdown_selectionarea.dart';
+import 'package:flutter_highlighter/flutter_highlighter.dart';
+import 'package:flutter_highlighter/themes/darcula.dart';
+import 'package:markdown/markdown.dart' as md;
 
 import '../../controllers/documents.dart';
 import '../../controllers/settings.dart';
@@ -9,6 +14,7 @@ import '../../models/topic.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
 import '../../utils/time_calculator.dart';
+import '../widgets/button.dart';
 import '../widgets/image.dart';
 import '../widgets/page_line.dart';
 import '../widgets/reaction.dart';
@@ -52,7 +58,7 @@ class ArticleSection extends GetView<DocumentsController> {
               verticalSpace(AppDecoration.spaceLarge),
               ..._articleBuilder(context: context, article: article),
               verticalSpace(AppDecoration.spaceLarge),
-              _contentBuilder(article),
+              _contentBuilder(context: context, article: article),
             ],
           );
         }),
@@ -126,7 +132,12 @@ class ArticleSection extends GetView<DocumentsController> {
     ];
   }
 
-  Widget _contentBuilder(ArticleModel article) {
+  Widget _contentBuilder({
+    required BuildContext context,
+    required ArticleModel article,
+  }) {
+    final ThemeData themeData = Theme.of(context);
+    final ColorScheme colorScheme = themeData.colorScheme;
     final String language = _settingsController.currentLanguage;
 
     return FutureBuilder(
@@ -136,12 +147,59 @@ class ArticleSection extends GetView<DocumentsController> {
 
         return MarkdownBody(
           data: snapshot.data!,
-          selectable: true,
+          styleSheet: MarkdownStyleSheet.fromTheme(themeData).copyWith(
+            blockquoteDecoration: BoxDecoration(
+              color: colorScheme.tertiary,
+              borderRadius: BorderRadius.circular(AppDecoration.radius),
+            ),
+          ),
           onTapLink: (text, href, title) {
             if (href != null) openNewTab(href);
           },
+          builders: {
+            'code': CodeElementBuilder(),
+          },
         );
       },
+    );
+  }
+}
+
+class CodeElementBuilder extends MarkdownElementBuilder {
+  @override
+  Widget? visitElementAfter(md.Element element, TextStyle? preferredStyle) {
+    String language = '';
+
+    if (element.attributes['class'] != null) {
+      language = element.attributes['class']!.substring(9);
+    }
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Flexible(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(AppDecoration.radius),
+            child: HighlightView(
+              element.textContent,
+              language: language,
+              theme: darculaTheme,
+              padding: const EdgeInsets.all(AppDecoration.paddingMedium),
+            ),
+          ),
+        ),
+        horizontalSpace(AppDecoration.spaceSmall),
+        CustomButton(
+          onPressed: () {
+            final data = ClipboardData(text: element.textContent);
+            Clipboard.setData(data);
+          },
+          icon: const Icon(LineIcons.copy),
+          type: ButtonType.icon,
+          width: 40.0,
+          height: 40.0,
+        ),
+      ],
     );
   }
 }
