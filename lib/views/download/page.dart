@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../home/features_section.dart';
 import '../widgets/page.dart';
 import 'platforms_section.dart';
 import 'main_section.dart';
@@ -11,11 +10,10 @@ class DownloadView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomPage([
-      const MainDownloadSection(),
-      const PlatformsSection(),
-      const RateSection(),
-      FeaturesSection(),
+    return CustomPage(const [
+      MainDownloadSection(),
+      PlatformsSection(),
+      RateSection(),
     ]);
   }
 }
