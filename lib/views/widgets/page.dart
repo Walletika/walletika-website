@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:walletika_website/controllers/settings.dart';
 
 import '../../utils/constants.dart';
 import 'drawer.dart';
 import 'header.dart';
 import 'footer.dart';
+import 'spacer.dart';
 
-class CustomPage extends StatelessWidget {
-  const CustomPage(this.sections, {super.key});
+class CustomPage extends GetView<SettingsController> {
+  CustomPage(this.sections, {super.key}) {
+    _scrollController.addListener(
+      () => controller.pageScrollableUpdate(_scrollController),
+    );
+  }
 
   final List<Widget> sections;
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +28,7 @@ class CustomPage extends StatelessWidget {
       ),
       endDrawer: const CustomDrawer(),
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -27,6 +37,18 @@ class CustomPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: Obx(() {
+        if (!controller.scrollable) return zeroSpace();
+
+        return FloatingActionButton(
+          onPressed: () => _scrollController.animateTo(
+            0.0,
+            duration: const Duration(seconds: 1),
+            curve: Curves.easeOut,
+          ),
+          child: const Icon(LineIcons.angleUp),
+        );
+      }),
     );
   }
 }

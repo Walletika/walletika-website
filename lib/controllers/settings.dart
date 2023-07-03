@@ -13,6 +13,7 @@ import 'dependencies.dart';
 
 class SettingsController extends GetxController {
   // States
+  final RxBool _scrollable = false.obs;
   final RxBool _isDarkMode = false.obs;
   final RxString _currentLanguage = AppLanguages.en.obs;
 
@@ -54,6 +55,8 @@ class SettingsController extends GetxController {
   ];
 
   // Getter methods
+  bool get scrollable => _scrollable.value;
+
   bool get isDarkMode => _isDarkMode.value;
 
   String get currentLanguage => _currentLanguage.value;
@@ -83,5 +86,16 @@ class SettingsController extends GetxController {
   Future<void> languageUpdate(String? language) async {
     _currentLanguage.value = language!;
     await Get.updateLocale(locale);
+  }
+
+  void pageScrollableUpdate(ScrollController controller) {
+    final double pixels = controller.position.pixels;
+    final bool status = _scrollable.value;
+
+    if (!status && pixels >= 200.0) {
+      _scrollable.value = true;
+    } else if (status && pixels < 200.0) {
+      _scrollable.value = false;
+    }
   }
 }
