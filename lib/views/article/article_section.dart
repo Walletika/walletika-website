@@ -136,6 +136,7 @@ class ArticleSection extends GetView<DocumentsController> {
 
         return MarkdownBody(
           data: snapshot.data!,
+          selectable: true,
           onTapLink: (text, href, title) {
             if (href != null) openNewTab(href);
           },

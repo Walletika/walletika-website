@@ -29,12 +29,14 @@ class CustomPage extends GetView<SettingsController> {
       endDrawer: const CustomDrawer(),
       body: SingleChildScrollView(
         controller: _scrollController,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Column(children: sections),
-            CustomFooterSection(),
-          ],
+        child: SelectionArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Column(children: sections),
+              CustomFooterSection(),
+            ],
+          ),
         ),
       ),
       floatingActionButton: Obx(() {

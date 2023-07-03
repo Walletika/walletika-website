@@ -16,7 +16,7 @@ class CustomClickableWidget extends StatelessWidget {
       onTap: onTap,
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
-        child: child,
+        child: SelectionContainer.disabled(child: child),
       ),
     );
   }

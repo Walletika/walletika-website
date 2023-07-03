@@ -67,7 +67,7 @@ class CustomButton extends StatelessWidget {
       );
     }
 
-    return widget;
+    return SelectionContainer.disabled(child: widget);
   }
 
   ElevatedButton _elevatedButton() {
