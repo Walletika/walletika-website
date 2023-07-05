@@ -106,15 +106,21 @@ class CustomButton extends StatelessWidget {
   }
 
   Widget _imageButton() {
-    return CustomClickableWidget(
-      onTap: onPressed,
-      child: CustomImage(
-        path: imagePath,
-        url: imageURL,
-        width: width ?? AppDecoration.minButtonWidth,
-        height: height ?? AppDecoration.buttonHeightLarge,
-      ),
+    final Widget widget = CustomImage(
+      path: imagePath,
+      url: imageURL,
+      width: width ?? AppDecoration.minButtonWidth,
+      height: height ?? AppDecoration.buttonHeightLarge,
     );
+
+    if (onPressed != null) {
+      return CustomClickableWidget(
+        onTap: onPressed,
+        child: widget,
+      );
+    }
+
+    return widget;
   }
 
   Widget _text() {
