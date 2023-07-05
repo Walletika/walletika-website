@@ -81,6 +81,7 @@ const Map<String, String> translator = {
   "1005@download":
       "قم بالتثبيت كمحفظة ساخنة على جهاز سطح المكتب الخاص بك أو كمحفظة باردة على محرك أقراص USB.",
   "1006@download": "ما هو شعورك تجاه تطبيق Walletika؟",
+  "1007@download": "هذه الحزمة سوف تكون متاحة قريبا",
 
   // Documents
   "1000@docs": "وثائق Walletika",
