@@ -41,6 +41,10 @@ final ThemeData applicationLightTheme = ThemeData(
     titleSpacing: 5.0,
     iconTheme: _iconTheme,
   ),
+  drawerTheme: DrawerThemeData(
+    backgroundColor: _colorScheme.background,
+    surfaceTintColor: _colorScheme.background,
+  ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: _colorScheme.secondary,
@@ -157,6 +161,10 @@ final ThemeData applicationDarkTheme = ThemeData(
   appBarTheme: applicationLightTheme.appBarTheme.copyWith(
     iconTheme: _iconThemeDark,
     shadowColor: _colorSchemeDark.shadow,
+  ),
+  drawerTheme: applicationLightTheme.drawerTheme.copyWith(
+    backgroundColor: _colorSchemeDark.background,
+    surfaceTintColor: _colorSchemeDark.background,
   ),
   inputDecorationTheme: applicationLightTheme.inputDecorationTheme.copyWith(
     fillColor: _colorSchemeDark.secondary,
