@@ -195,6 +195,7 @@ class CodeElementBuilder extends MarkdownElementBuilder {
             Clipboard.setData(data);
           },
           icon: const Icon(LineIcons.copy),
+          tooltip: "1028@global".tr,
           type: ButtonType.icon,
           width: 40.0,
           height: 40.0,
