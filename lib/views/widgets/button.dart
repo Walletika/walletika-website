@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.height,
     this.imagePath,
+    this.imageURL,
     this.tooltip,
     super.key,
   });
@@ -30,6 +31,7 @@ class CustomButton extends StatelessWidget {
   final double? width;
   final double? height;
   final String? imagePath;
+  final String? imageURL;
   final String? tooltip;
 
   @override
@@ -108,6 +110,7 @@ class CustomButton extends StatelessWidget {
       onTap: onPressed,
       child: CustomImage(
         path: imagePath,
+        url: imageURL,
         width: width ?? AppDecoration.minButtonWidth,
         height: height ?? AppDecoration.buttonHeightLarge,
       ),
