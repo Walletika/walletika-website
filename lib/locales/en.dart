@@ -5,7 +5,7 @@ const Map<String, String> translator = {
   "1002@global": "Token",
   "1003@global": "Documents",
   "1004@global": "Dark / Light Mode",
-  "1005@global": "More Packages",
+  "1005@global": "Free Download",
   "1006@global": "Buy WTK",
   "1007@global": "Join Channel",
   "1008@global": "Join Group",

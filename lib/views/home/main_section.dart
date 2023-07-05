@@ -89,29 +89,14 @@ Widget _textBuilder({
         maxWidth: 360.0,
         blueLightColor: true,
       ),
-      verticalSpace(AppDecoration.spaceLarge),
+      verticalSpace(AppDecoration.spaceBig),
       Wrap(
         spacing: AppDecoration.space,
         runSpacing: AppDecoration.space,
         children: [
-          const CustomButton(
-            onPressed: _googleStore,
-            imagePath: AppImages.googleStore,
-            type: ButtonType.image,
-            width: 170.0,
-            height: 51.0,
-          ),
-          const CustomButton(
-            onPressed: _windowsStore,
-            imagePath: AppImages.windowsStore,
-            type: ButtonType.image,
-            width: 170.0,
-            height: 51.0,
-          ),
           CustomButton(
-            onPressed: _morePackages,
+            onPressed: () => Get.offNamed(AppPages.download),
             text: "1005@global".tr,
-            type: ButtonType.outlined,
             width: 170.0,
             height: 51.0,
           ),
@@ -119,16 +104,4 @@ Widget _textBuilder({
       ),
     ],
   );
-}
-
-void _googleStore() {
-  Get.offNamed(AppPages.download);
-}
-
-void _windowsStore() {
-  Get.offNamed(AppPages.download);
-}
-
-void _morePackages() {
-  Get.offNamed(AppPages.download);
 }
