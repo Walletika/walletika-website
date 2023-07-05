@@ -77,7 +77,7 @@ class _DesktopView extends GetView<SettingsController> {
         horizontalSpace(),
         CustomButton(
           onPressed: controller.themeUpdate,
-          text: "1004@global".tr,
+          tooltip: "1004@global".tr,
           type: ButtonType.icon,
           standardSize: false,
           icon: Icon(controller.isDarkMode ? LineIcons.sun : LineIcons.moon),

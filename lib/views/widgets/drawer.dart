@@ -27,7 +27,7 @@ class CustomDrawer extends GetView<SettingsController> {
               children: [
                 CustomButton(
                   onPressed: _themeUpdate,
-                  text: "1004@global".tr,
+                  tooltip: "1004@global".tr,
                   type: ButtonType.icon,
                   standardSize: false,
                   icon: Icon(

@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.height,
     this.imagePath,
+    this.tooltip,
     super.key,
   });
 
@@ -29,6 +30,7 @@ class CustomButton extends StatelessWidget {
   final double? width;
   final double? height;
   final String? imagePath;
+  final String? tooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,7 @@ class CustomButton extends StatelessWidget {
         widget = _imageButton();
         break;
       case ButtonType.icon:
-        widget = IconButton(onPressed: onPressed, icon: icon!, tooltip: text);
+        widget = IconButton(onPressed: onPressed, icon: icon!);
         break;
     }
 
@@ -63,6 +65,13 @@ class CustomButton extends StatelessWidget {
           minHeight: height ?? AppDecoration.buttonHeightLarge,
           maxHeight: height ?? double.infinity,
         ),
+        child: widget,
+      );
+    }
+
+    if (tooltip != null) {
+      widget = Tooltip(
+        message: tooltip,
         child: widget,
       );
     }
