@@ -37,9 +37,9 @@ const Map<String, String> translator = {
   "1003@home":
       "Your access information is not stored on our servers or even on your local device, thanks to our unique real-time wallet generation technology.",
   "1004@home": "",
-  "1005@home": "No Private Key or Seed Phrase",
+  "1005@home": "Keyless",
   "1006@home":
-      "You don't need a private key to access your wallets anymore, we provides a unique solution to access using a username and two passwords memorizable instead.",
+      "You don't need a private key to access your wallets anymore, we provides a unique solution to access using a username and two passwords memorizable.",
   "1007@home": "Two-Factor Authentication Support",
   "1008@home":
       "Your funds are protected with a Two-Factor Authentication confirmation code before any transaction.",
@@ -83,7 +83,7 @@ const Map<String, String> translator = {
   "1006@download": "How do you feel about Walletika app?",
 
   // Documents
-  "1000@docs": "Walletika Documentation",
+  "1000@docs": "Walletika Documents",
   "1001@docs": "How can we help you?",
   "1002@docs": "What do you think of this article?",
   "1003@docs":
