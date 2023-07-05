@@ -30,6 +30,7 @@ class SettingsController extends GetxController {
       name: AppPages.download,
       text: "1001@global",
       widget: () => const DownloadView(),
+      binding: () => DownloadBinding(),
     ),
     PageModel(
       visible: true,

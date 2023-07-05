@@ -11,6 +11,8 @@ class AppInfo {
   static const String github = 'https://github.com/Walletika';
   static const String topicsAPI =
       'https://raw.githubusercontent.com/Walletika/metadata/main/web_topics.json';
+  static const String packagesAPI =
+      'https://raw.githubusercontent.com/Walletika/walletika-web-packages/main/packages.json';
 }
 
 class AppDecoration {
@@ -83,10 +85,6 @@ class AppColors {
 
 class AppImages {
   static const String logo = 'assets/logos/app_logo.png';
-  static const String googleStore = 'assets/logos/google_store.png';
-  static const String androidAPK = 'assets/logos/android_apk.png';
-  static const String windowsStore = 'assets/logos/windows_store.png';
-  static const String windowsEXE = 'assets/logos/windows_exe.png';
   static const String searchIllustrations = 'assets/illustrations/search.png';
   static const String usbIllustrations = 'assets/illustrations/usb.png';
   static const String telegramIllustrations =
