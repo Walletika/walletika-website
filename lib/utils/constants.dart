@@ -5,8 +5,10 @@ class AppInfo {
   static const String name = 'Walletika';
   static const String officialPublisher = 'Walletika Team';
   static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
+  static const String twitter = 'https://twitter.com/WalletikaApp';
   static const String telegramChannel = 'https://t.me/walletika';
   static const String telegramGroup = 'https://t.me/walletikacommunity';
+  static const String github = 'https://github.com/Walletika';
   static const String topicsAPI =
       'https://raw.githubusercontent.com/Walletika/metadata/main/web_topics.json';
 }

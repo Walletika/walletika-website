@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
+import '../../utils/launch_url.dart';
 import 'button.dart';
 import 'image.dart';
 import 'section.dart';
@@ -104,30 +105,39 @@ Widget _subSectionsBuilder(TextTheme textTheme) {
     children: [
       _subSection(
         textTheme: textTheme,
+        name: "1011@global".tr,
+        buttons: {
+          "1005@home".tr: () =>
+              Get.offNamed('/documents/about/what-is-keyless'),
+          "1018@global".tr: () =>
+              Get.offNamed('/documents/guide/how-to-install'),
+          "1019@global".tr: () =>
+              Get.offNamed('/documents/guide/how-to-setup-2fa'),
+          "1020@global".tr: () =>
+              Get.offNamed('/documents/guide/how-to-receive'),
+          "1021@global".tr: () => Get.offNamed('/documents/guide/how-to-send'),
+          "1018@home".tr: () => Get.offNamed('/documents/guide/how-to-stake'),
+          "1020@home".tr: () => Get.offNamed('/documents/guide/how-to-backup'),
+        },
+      ),
+      _subSection(
+        textTheme: textTheme,
         name: "1009@global".tr,
         buttons: {
-          "1012@global".tr: () {},
-          "1013@global".tr: () {},
-          "1014@global".tr: () {},
+          "1012@global".tr: () => Get.offNamed('/documents/about'),
+          "1013@global".tr: () =>
+              Get.offNamed('/documents/user-agreement/terms-of-use'),
+          "1014@global".tr: () =>
+              Get.offNamed('/documents/user-agreement/privacy-policy'),
         },
       ),
       _subSection(
         textTheme: textTheme,
         name: "1010@global".tr,
         buttons: {
-          "1015@global".tr: () {},
-          "1016@global".tr: () {},
-          "1017@global".tr: () {},
-        },
-      ),
-      _subSection(
-        textTheme: textTheme,
-        name: "1011@global".tr,
-        buttons: {
-          "1018@global".tr: () {},
-          "1019@global".tr: () {},
-          "1020@global".tr: () {},
-          "1021@global".tr: () {},
+          "1015@global".tr: () => openNewTab(AppInfo.twitter),
+          "1016@global".tr: () => openNewTab(AppInfo.telegramChannel),
+          "1017@global".tr: () => openNewTab(AppInfo.github),
         },
       ),
     ],
