@@ -41,13 +41,19 @@ class _TabletView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _sectionBuilder(context: context);
+    return _sectionBuilder(
+      context: context,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      textAlign: TextAlign.center,
+    );
   }
 }
 
 Widget _sectionBuilder({
   required BuildContext context,
   BorderRadiusGeometry? borderRadius,
+  CrossAxisAlignment? crossAxisAlignment,
+  TextAlign? textAlign,
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
@@ -59,10 +65,11 @@ Widget _sectionBuilder({
     layout: SectionLayout.wrap,
     children: [
       Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
         children: [
           CustomText(
             text: "1009@home".tr,
+            textAlign: textAlign ?? TextAlign.start,
             maxWidth: 390.0,
             style: textTheme.displaySmall!.copyWith(
               fontWeight: FontWeight.bold,
@@ -71,6 +78,7 @@ Widget _sectionBuilder({
           verticalSpace(),
           CustomText(
             text: "1010@home".tr,
+            textAlign: textAlign ?? TextAlign.start,
             maxWidth: 390.0,
             blueLightColor: true,
           ),

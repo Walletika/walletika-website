@@ -79,6 +79,8 @@ class _PhoneView extends StatelessWidget {
           context: context,
           title: "1005@home".tr,
           description: "1006@home".tr,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
         _imageBuilder(AppImages.theme("walletLogin")),
@@ -87,6 +89,8 @@ class _PhoneView extends StatelessWidget {
           context: context,
           title: "1007@home".tr,
           description: "1008@home".tr,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
         _imageBuilder(AppImages.theme("walletAuth")),
@@ -99,21 +103,25 @@ Widget _textBuilder({
   required BuildContext context,
   required String title,
   required String description,
+  CrossAxisAlignment? crossAxisAlignment,
+  TextAlign? textAlign,
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
 
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
     children: [
       CustomText(
         text: title,
+        textAlign: textAlign ?? TextAlign.start,
         maxWidth: 400.0,
         style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
       ),
       verticalSpace(),
       CustomText(
         text: description,
+        textAlign: textAlign ?? TextAlign.start,
         maxWidth: 400.0,
         blueLightColor: true,
       ),
