@@ -107,7 +107,7 @@ Widget _subSectionsBuilder(TextTheme textTheme) {
         textTheme: textTheme,
         name: "1011@global".tr,
         buttons: {
-          "1005@home".tr: () =>
+          "1029@global".tr: () =>
               Get.offNamed('/documents/about/what-is-keyless'),
           "1018@global".tr: () =>
               Get.offNamed('/documents/guide/how-to-install'),

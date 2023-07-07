@@ -29,24 +29,25 @@ const Map<String, String> translator = {
   "1026@global": "No results for",
   "1027@global": "All Topics",
   "1028@global": "Copy",
+  "1029@global": "Keyless",
 
   // Home
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
-      "Choose between hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "WE DON'T STORE YOUR WALLETS",
+      "Choose between a hot and cold wallet to access your funds easily without a private key.",
+  "1002@home": "WE DON'T STORE YOUR DATA",
   "1003@home":
-      "Your access information is not stored on our servers or even on your local device, thanks to our unique real-time wallet generation technology.",
+      "Your wallets access information is not stored on our servers or even on your device, thanks to our unique technology of regenerating the wallet every time when transactions are made instead of storing it.",
   "1004@home": "",
-  "1005@home": "Keyless",
+  "1005@home": "Keyless Wallet",
   "1006@home":
-      "You don't need a private key to access your wallets anymore, we provides a unique solution to access using a username and two passwords memorizable.",
+      "You don't need a private key “able to lose” to access your wallet anymore, we provides a unique solution instead with a username and two passwords that can be memorized mentally.",
   "1007@home": "Two-Factor Authentication Support",
   "1008@home":
-      "Your funds are protected with a Two-Factor Authentication confirmation code before any transaction.",
+      "Your funds are protected by the power of two-factor authentication, no transactions can be made unless you confirm the 6-digit code that changes every 30 seconds.",
   "1009@home": "Keep Your Funds Safe",
   "1010@home":
-      "Turn your USB drive into a cold wallet that is disconnected from the Internet and away from hackers.",
+      "Turn your USB drive into a cold wallet, offline and away from hackers.",
   "1011@home": "Powerful features to access a wide range of digital assets",
   "1012@home": "Multiple Blockchains",
   "1013@home":
@@ -59,7 +60,7 @@ const Map<String, String> translator = {
       "Watch the price changes of digital assets against various fiat currencies such as USD, EUR, GBP, and more.",
   "1018@home": "Staking",
   "1019@home":
-      "Get the most out of your digital assets with staking services to earn rewards.",
+      "Get the most out of your digital assets with staking services for annual interest.",
   "1020@home": "Backup",
   "1021@home":
       "Backup all your wallets to an external file to avoid losing them if you lose or change your device.",
@@ -82,7 +83,7 @@ const Map<String, String> translator = {
   "1005@download":
       "Install as a hot wallet on your desktop device or as a cold wallet on your USB drive.",
   "1006@download": "How do you feel about Walletika app?",
-  "1007@download": "This package will available soon",
+  "1007@download": "The package will be available soon",
 
   // Documents
   "1000@docs": "Walletika Documents",
