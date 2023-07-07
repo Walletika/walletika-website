@@ -68,7 +68,7 @@ Widget _platformBuilder({
       ),
       verticalSpace(AppDecoration.spaceLarge),
       SizedBox(
-        width: 350.0,
+        width: 400.0,
         child: Obx(() {
           final List<PackageModel>? packages = controller.packages;
 
@@ -78,6 +78,8 @@ Widget _platformBuilder({
 
           return Wrap(
             crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runAlignment: WrapAlignment.center,
             spacing: AppDecoration.space,
             runSpacing: AppDecoration.space,
             children: [
