@@ -84,6 +84,8 @@ const Map<String, String> translator = {
       "Install as a hot wallet on your desktop device or as a cold wallet on your USB drive.",
   "1006@download": "How do you feel about Walletika app?",
   "1007@download": "The package will be available soon",
+  "1008@download":
+      "We are in the beta phase, to try the app join our telegram group and claim funds on the testnet, do not deposit real money.",
 
   // Documents
   "1000@docs": "Walletika Documents",
