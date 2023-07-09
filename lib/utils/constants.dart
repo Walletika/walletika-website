@@ -10,7 +10,7 @@ class AppInfo {
   static const String telegramGroup = 'https://t.me/walletikacommunity';
   static const String github = 'https://github.com/Walletika';
   static const String topicsAPI =
-      'https://raw.githubusercontent.com/Walletika/metadata/main/web_topics.json';
+      'https://raw.githubusercontent.com/Walletika/walletika-web-docs/main/topics.json';
   static const String packagesAPI =
       'https://raw.githubusercontent.com/Walletika/walletika-web-packages/main/packages.json';
 }
