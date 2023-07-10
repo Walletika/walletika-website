@@ -85,7 +85,9 @@ class SettingsController extends GetxController {
   }
 
   Future<void> languageUpdate(String? language) async {
-    _currentLanguage.value = language!;
+    if (language == null) return;
+
+    _currentLanguage.value = language;
     await Get.updateLocale(locale);
   }
 

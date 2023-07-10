@@ -52,7 +52,7 @@ class CustomDrawer extends GetView<SettingsController> {
                     dropdownColor: themeData.popupMenuTheme.color,
                     underline: zeroSpace(),
                     value: controller.currentLanguage,
-                    onChanged: controller.languageUpdate,
+                    onChanged: _languageUpdate,
                     items: controller.languages
                         .map((key, value) {
                           return MapEntry(
@@ -79,6 +79,11 @@ class CustomDrawer extends GetView<SettingsController> {
 
   void _themeUpdate() async {
     await controller.themeUpdate();
+    Get.back();
+  }
+
+  void _languageUpdate(String? language) async {
+    await controller.languageUpdate(language);
     Get.back();
   }
 }
