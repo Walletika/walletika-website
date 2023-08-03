@@ -5,14 +5,14 @@ class AppInfo {
   static const String name = 'Walletika';
   static const String officialPublisher = 'Walletika Team';
   static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
-  static const String twitter = 'https://twitter.com/WalletikaApp';
+  static const String twitter = 'https://twitter.com/Walletikaapp';
   static const String telegramChannel = 'https://t.me/walletika';
   static const String telegramGroup = 'https://t.me/walletikacommunity';
   static const String github = 'https://github.com/Walletika';
   static const String topicsAPI =
-      'https://raw.githubusercontent.com/Walletika/walletika-web-docs/main/topics.json';
+      'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/topics.json';
   static const String packagesAPI =
-      'https://raw.githubusercontent.com/Walletika/walletika-web-packages/main/packages.json';
+      'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/packages.json';
 }
 
 class AppDecoration {

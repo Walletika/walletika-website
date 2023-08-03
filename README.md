@@ -1,16 +1,14 @@
-# walletika_website_repo
+# Walletika official website
 
-A new Flutter project.
+This project built using flutter framework by Walletika Team.
 
-## Getting Started
+## Commands
 
-This project is a starting point for a Flutter application.
+Release command
+```
+flutter build web --web-renderer canvaskit --release
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Resources
+- https://docs.flutter.dev/deployment/web
+- https://docs.flutter.dev/platform-integration/web/renderers
