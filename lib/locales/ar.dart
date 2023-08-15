@@ -30,6 +30,7 @@ const Map<String, String> translator = {
   "1027@global": "كل المواضيع",
   "1028@global": "نسخ",
   "1029@global": "بدون مفتاح",
+  "1030@global": "الورقة البيضاء",
 
   // Home
   "1000@home": "أفضل محفظة تشفير آمنة",

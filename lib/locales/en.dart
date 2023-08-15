@@ -30,6 +30,7 @@ const Map<String, String> translator = {
   "1027@global": "All Topics",
   "1028@global": "Copy",
   "1029@global": "Keyless",
+  "1030@global": "Whitepaper",
 
   // Home
   "1000@home": "Best Secure Crypto Wallet",

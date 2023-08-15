@@ -129,6 +129,7 @@ Widget _subSectionsBuilder(TextTheme textTheme) {
               Get.offNamed('/documents/user-agreement/terms-of-use'),
           "1014@global".tr: () =>
               Get.offNamed('/documents/user-agreement/privacy-policy'),
+          "1030@global".tr: () => Get.offNamed('/documents/about/whitepaper'),
         },
       ),
       _subSection(
