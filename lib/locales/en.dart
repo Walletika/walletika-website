@@ -36,13 +36,13 @@ const Map<String, String> translator = {
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
       "Choose between a hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "WE DON'T STORE YOUR DATA",
+  "1002@home": "WE DO NOT STORE USERS DATA",
   "1003@home":
-      "Your wallets access information is not stored on our servers or even on your device, thanks to our unique technology of regenerating the wallet every time when transactions are made instead of storing it.",
+      "Wallet access information is not stored on our servers or even user devices, thanks to our unique technology that regenerates the wallet every time a transaction is made.",
   "1004@home": "",
   "1005@home": "Keyless Wallet",
   "1006@home":
-      "You don't need a private key “able to lose” to access your wallet anymore, we provides a unique solution instead with a username and two passwords that can be memorized mentally.",
+      "You do not need a private key to access your wallet anymore, we provide a decentralized login system with a username and two passwords that can be memorized mentally.",
   "1007@home": "Two-Factor Authentication Support",
   "1008@home":
       "Your funds are protected by the power of two-factor authentication, no transactions can be made unless you confirm the 6-digit code that changes every 30 seconds.",
@@ -86,12 +86,12 @@ const Map<String, String> translator = {
   "1006@download": "How do you feel about Walletika app?",
   "1007@download": "The package will be available soon",
   "1008@download":
-      "We are in the beta phase, to try the app join our telegram group and claim funds on the testnet, do not deposit real money.",
+      "We are in beta, please do not deposit real money. Join our group now and ask for a deposit to test the app together.",
 
   // Documents
   "1000@docs": "Walletika Documents",
   "1001@docs": "How can we help you?",
   "1002@docs": "What do you think of this article?",
   "1003@docs":
-      "If you can't find useful search results, please contact us to help you, we may consider writing an article on your topic.",
+      "If you cannot find useful search results, please contact us to help you, we may consider writing an article on your topic.",
 };
