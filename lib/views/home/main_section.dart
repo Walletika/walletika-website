@@ -82,14 +82,14 @@ Widget _textBuilder({
         maxWidth: 360.0,
         style: titleStyle,
       ),
-      verticalSpace(),
+      verticalSpace(AppDecoration.spaceMedium),
       CustomText(
         text: "1001@home".tr,
         textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: 360.0,
         blueLightColor: true,
       ),
-      verticalSpace(AppDecoration.spaceBig),
+      verticalSpace(AppDecoration.spaceLarge),
       Wrap(
         spacing: AppDecoration.space,
         runSpacing: AppDecoration.space,
@@ -97,6 +97,15 @@ Widget _textBuilder({
           CustomButton(
             onPressed: () => Get.offNamed(AppPages.download),
             text: "1005@global".tr,
+            width: 170.0,
+            height: 51.0,
+          ),
+          CustomButton(
+            onPressed: () => Get.offNamed(
+              '${AppPages.documents}/about/whitepaper',
+            ),
+            text: "1030@global".tr,
+            type: ButtonType.outlined,
             width: 170.0,
             height: 51.0,
           ),
