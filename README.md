@@ -7,6 +7,7 @@ This project built using flutter framework by Walletika Team.
 Release command
 ```
 flutter build web --web-renderer canvaskit --release
+flutter build web --web-renderer canvaskit --release --base-href="/"
 ```
 
 ## Resources
