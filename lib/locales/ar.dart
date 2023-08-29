@@ -11,8 +11,8 @@ const Map<String, String> translator = {
   "1008@global": "الانضمام للمجموعة",
   "1009@global": "الشركة",
   "1010@global": "تابعنا",
-  "1011@global": "ميزات",
-  "1012@global": "عنا",
+  "1011@global": "تعرف على الميزات",
+  "1012@global": "اقرأ عنا",
   "1013@global": "شروط الخدمة",
   "1014@global": "سياسة الخصوصية",
   "1015@global": "تويتر",
@@ -30,7 +30,9 @@ const Map<String, String> translator = {
   "1027@global": "كل المواضيع",
   "1028@global": "نسخ",
   "1029@global": "بدون مفتاح",
-  "1030@global": "الورقة البيضاء",
+  "1030@global": "المستند التقني",
+  "1031@global": "ماهي Walletika؟",
+  "1032@global": "القائمة",
 
   // Home
   "1000@home": "أفضل محفظة تشفير آمنة",

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:line_icons/line_icons.dart';
 
 import '../../controllers/settings.dart';
 import '../../models/page.dart';
 import '../../utils/constants.dart';
 import 'button.dart';
 import 'image.dart';
+import 'page.dart';
 import 'spacer.dart';
 import 'text.dart';
 
@@ -32,9 +32,6 @@ class _DesktopView extends GetView<SettingsController> {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-    final TextTheme textTheme = themeData.textTheme;
-
     return _appBarBuilder(
       context: context,
       actions: [
@@ -51,38 +48,6 @@ class _DesktopView extends GetView<SettingsController> {
           child: VerticalDivider(),
         ),
         horizontalSpace(),
-        Obx(() {
-          return DropdownButton(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppDecoration.padding,
-            ),
-            style: textTheme.labelLarge,
-            icon: const Icon(Icons.arrow_drop_down_rounded),
-            borderRadius: BorderRadius.circular(AppDecoration.radius),
-            dropdownColor: themeData.popupMenuTheme.color,
-            underline: zeroSpace(),
-            value: controller.currentLanguage,
-            onChanged: controller.languageUpdate,
-            items: controller.languages
-                .map((key, value) {
-                  return MapEntry(
-                    key,
-                    DropdownMenuItem(value: key, child: Text(value)),
-                  );
-                })
-                .values
-                .toList(),
-          );
-        }),
-        horizontalSpace(),
-        CustomButton(
-          onPressed: controller.themeUpdate,
-          tooltip: "1004@global".tr,
-          type: ButtonType.icon,
-          standardSize: false,
-          icon: Icon(controller.isDarkMode ? LineIcons.sun : LineIcons.moon),
-        ),
-        horizontalSpace(AppDecoration.spaceMedium),
       ],
     );
   }
@@ -121,7 +86,15 @@ Widget _appBarBuilder({required BuildContext context, List<Widget>? actions}) {
           ),
         ),
       ]),
-      actions: actions,
+      actions: [
+        ...?actions,
+        IconButton(
+          icon: const Icon(Icons.menu),
+          tooltip: "1032@global".tr,
+          onPressed: CustomPage.scaffoldKey.currentState?.openEndDrawer,
+        ),
+        horizontalSpace(AppDecoration.spaceMedium),
+      ],
     ),
   );
 }

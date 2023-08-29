@@ -11,6 +11,7 @@ import 'spacer.dart';
 
 class CustomPage extends GetView<SettingsController> {
   CustomPage(this.sections, {super.key}) {
+    _scaffoldKey = GlobalKey<ScaffoldState>();
     _scrollController.addListener(
       () => controller.pageScrollableUpdate(_scrollController),
     );
@@ -18,10 +19,14 @@ class CustomPage extends GetView<SettingsController> {
 
   final List<Widget> sections;
   final ScrollController _scrollController = ScrollController();
+  static GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  static GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(AppDecoration.headerHeight),
         child: CustomHeader(),
