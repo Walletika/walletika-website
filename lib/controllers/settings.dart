@@ -8,6 +8,7 @@ import '../views/article/page.dart';
 import '../views/documents/page.dart';
 import '../views/download/page.dart';
 import '../views/home/page.dart';
+import '../views/token/page.dart';
 import '../views/topic/page.dart';
 import 'dependencies.dart';
 
@@ -31,6 +32,12 @@ class SettingsController extends GetxController {
       text: "1001@global",
       widget: () => const DownloadView(),
       binding: () => DownloadBinding(),
+    ),
+    PageModel(
+      visible: true,
+      name: AppPages.token,
+      text: "1002@global",
+      widget: () => const TokenView(),
     ),
     PageModel(
       visible: true,

@@ -93,6 +93,34 @@ const Map<String, String> translator = {
   "1008@download":
       "We are in beta, please do not deposit real money. Join our group now and ask for a deposit to test the app together.",
 
+  // Token
+  "1000@token": "The Major Token of Walletika",
+  "1001@token":
+      "We provide a secure token to our investors for great investment opportunities to grow further together.",
+  "1002@token": "No Mint Function",
+  "1003@token":
+      "No mint function means no inflation, making the Walletika token a low-risk, trustable, strong and safe for everyone.",
+  "1004@token": "Limited Supply",
+  "1005@token":
+      "The maximum supply is 100,000,000 WTK, of which 70% is allocated to the initial circulating supply.",
+  "1006@token": "Recyclable",
+  "1007@token":
+      "Walletika token is recyclable, by collecting it against Walletika's paid services and refinancing it into staking services again.",
+  "1008@token": "Fully Decentralized",
+  "1009@token":
+      "100% decentralized and transactions cannot be controlled such as freezing wallets or balances.",
+  "1010@token":
+      "The percentages were distributed based on our own vision that would provide the maximum benefit for investors primarily.",
+  "1011@token": "35% Pre-sale to fund trading liquidity.",
+  "1012@token": "5% Private sale to fund the project launch.",
+  "1013@token": "13% Liquidity for CEX and DEX listing.",
+  "1014@token": "30% Staking services liquidity, 20% locked for a year.",
+  "1015@token": "17% Team and marketing strategies, 10% locked for a year.",
+  "1016@token": "Max Supply 100,000,000 WTK",
+  "1017@token":
+      "Join our community to be up to date about the sale stages and the latest news.",
+  "1018@token": "How do you feel about Walletika token?",
+
   // Documents
   "1000@docs": "Walletika Documents",
   "1001@docs": "How can we help you?",

@@ -128,5 +128,6 @@ class AppLanguages {
 class AppPages {
   static const String home = '/';
   static const String download = '/download';
+  static const String token = '/token';
   static const String documents = '/documents';
 }
