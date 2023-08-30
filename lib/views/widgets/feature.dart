@@ -10,6 +10,7 @@ class CustomFeature extends StatelessWidget {
     this.title,
     required this.description,
     this.width,
+    this.height,
     super.key,
   });
 
@@ -17,6 +18,7 @@ class CustomFeature extends StatelessWidget {
   final String? title;
   final String description;
   final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class CustomFeature extends StatelessWidget {
         vertical: AppDecoration.paddingLarge,
       ),
       width: width,
+      height: height,
       decoration: BoxDecoration(
         color: colorScheme.secondary,
         borderRadius: BorderRadius.circular(AppDecoration.radiusBig),
