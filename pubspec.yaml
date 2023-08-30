@@ -42,6 +42,7 @@ dependencies:
   markdown: ^7.1.0
 
   # Fixed version
+  fl_chart: 0.63.0
   line_icons: 2.0.1
   timeago: 3.4.0
   flutter_highlighter: 0.1.1
