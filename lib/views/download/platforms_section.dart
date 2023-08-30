@@ -16,26 +16,29 @@ class PlatformsSection extends GetView<DownloadController> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomSection(
-      layout: SectionLayout.wrap,
-      children: [
-        _platformBuilder(
-          context: context,
-          title: "1002@download".tr,
-          description: "1003@download".tr,
-          path: AppImages.theme("mobile"),
-          packageType: PackageType.mobile,
-          controller: controller,
-        ),
-        _platformBuilder(
-          context: context,
-          title: "1004@download".tr,
-          description: "1005@download".tr,
-          path: AppImages.theme("desktop"),
-          packageType: PackageType.desktop,
-          controller: controller,
-        ),
-      ],
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: CustomSection(
+        layout: SectionLayout.wrap,
+        children: [
+          _platformBuilder(
+            context: context,
+            title: "1002@download".tr,
+            description: "1003@download".tr,
+            path: AppImages.theme("mobile"),
+            packageType: PackageType.mobile,
+            controller: controller,
+          ),
+          _platformBuilder(
+            context: context,
+            title: "1004@download".tr,
+            description: "1005@download".tr,
+            path: AppImages.theme("desktop"),
+            packageType: PackageType.desktop,
+            controller: controller,
+          ),
+        ],
+      ),
     );
   }
 }
