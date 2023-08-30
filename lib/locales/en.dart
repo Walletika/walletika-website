@@ -99,7 +99,7 @@ const Map<String, String> translator = {
       "We provide a secure token to our investors for great investment opportunities to grow further together.",
   "1002@token": "No Mint Function",
   "1003@token":
-      "No mint function means no inflation, making the Walletika token a low-risk, trustable, strong and safe for everyone.",
+      "There is no mint function which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
   "1004@token": "Limited Supply",
   "1005@token":
       "The maximum supply is 100,000,000 WTK, of which 70% is allocated to the initial circulating supply.",
