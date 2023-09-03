@@ -13,6 +13,8 @@ class AppInfo {
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/topics.json';
   static const String packagesAPI =
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/packages.json';
+  static const String saleAPI =
+      'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/sale.json';
 }
 
 class AppDecoration {

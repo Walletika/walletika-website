@@ -38,6 +38,7 @@ class SettingsController extends GetxController {
       name: AppPages.token,
       text: "1002@global",
       widget: () => const TokenView(),
+      binding: () => TokenBinding(),
     ),
     PageModel(
       visible: true,
