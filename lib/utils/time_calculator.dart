@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 String timeDifference({required DateTime start, required DateTime end}) {
-  return "${end.difference(start).inDays} ${"1074#global".tr}";
+  return "${end.difference(start).inDays} ${"1045@global".tr}";
 }
 
 String timeAgo({required DateTime time, required String locale}) {

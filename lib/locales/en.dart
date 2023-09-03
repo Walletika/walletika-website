@@ -33,6 +33,34 @@ const Map<String, String> translator = {
   "1030@global": "Whitepaper",
   "1031@global": "What is Walletika?",
   "1032@global": "Menu",
+  "1033@global": "Start time",
+  "1034@global": "End time",
+  "1035@global": "Sale",
+  "1036@global": "Price",
+  "1037@global": "Buy Now",
+  "1038@global": "Round",
+  "1039@global": "Upcoming",
+  "1040@global": "Live",
+  "1041@global": "Ended",
+  "1042@global": "Completed",
+  "1043@global": "Sold",
+  "1044@global": "Done",
+  "1045@global": "Days",
+  "1046@global": "Amount",
+  "1047@global": "Checkout",
+  "1048@global": "Available Tokens",
+  "1049@global": "We're almost done!",
+  "1050@global": "Confirm",
+  "1051@global": "Copied",
+  "1052@global": "Order Amount",
+  "1053@global": "Order Cost",
+  "1054@global": "Accepted Networks",
+  "1055@global": "Request Submitted",
+
+  // Warns
+  "1000@warns": "Field is required",
+  "1001@warns": "Amount is zero",
+  "1002@warns": "Amount exceeds",
 
   // Home
   "1000@home": "Best Secure Crypto Wallet",
@@ -115,11 +143,28 @@ const Map<String, String> translator = {
   "1012@token": "5% Private sale to fund the project launch.",
   "1013@token": "13% Liquidity for CEX and DEX listing.",
   "1014@token": "30% Staking services liquidity, 20% locked for a year.",
-  "1015@token": "17% Team and marketing strategies, 10% locked for a year.",
+  "1015@token":
+      "17% Team share and marketing strategies, 10% locked for a year.",
   "1016@token": "Max Supply 100,000,000 WTK",
   "1017@token":
       "Join our community to be up to date about the sale stages and the latest news.",
   "1018@token": "How do you feel about Walletika token?",
+  "1019@token":
+      "Participate in one of the best opportunities at the cheapest prices!",
+  "1020@token": "Private Sale x50 per \$1 Hit",
+  "1021@token": "Presale x10 per \$1 Hit",
+  "1022@token":
+      "The best opportunities before starting trading on the exchanges!",
+  "1023@token": "How much you can buy?",
+  "1024@token": "You'll buy",
+  "1025@token": "instead of",
+  "1026@token": "from the exchange!",
+  "1027@token":
+      "*You'll receive your tokens on the same deposit address ( Do not deposit from the exchange ).",
+  "1028@token": "Make a deposit",
+  "1029@token": "to following address",
+  "1030@token":
+      "We thank you for your participation and support, we invite you to join our community and follow our social media accounts to stay informed of the latest news.",
 
   // Documents
   "1000@docs": "Walletika Documents",
