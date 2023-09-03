@@ -21,12 +21,7 @@ class PresaleSection extends GetView<TokenController> {
     final TextTheme textTheme = themeData.textTheme;
 
     return CustomSection(
-      padding: const EdgeInsets.only(
-        top: AppDecoration.paddingBig,
-        bottom: AppDecoration.paddingBig,
-        right: AppDecoration.paddingBig,
-        left: AppDecoration.paddingLarge,
-      ),
+      padding: const EdgeInsets.all(AppDecoration.paddingBig),
       children: [
         CustomText(
           text: "1021@token".tr,
