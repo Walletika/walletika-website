@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:get/get.dart';
 import 'package:timeago/timeago.dart' as timeago;
+// import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+// import 'package:flutter/foundation.dart';
+// import 'package:device_preview/device_preview.dart';
 
 import 'controllers/dependencies.dart';
 import 'controllers/settings.dart';
@@ -19,6 +21,12 @@ void main() {
   timeago.setLocaleMessages('ar', timeago.ArMessages());
 
   runApp(const AppLauncher());
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (context) => const AppLauncher(), // Wrap your app
+  //   ),
+  // );
 }
 
 class AppLauncher extends GetView<SettingsController> {
@@ -27,6 +35,8 @@ class AppLauncher extends GetView<SettingsController> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      // useInheritedMediaQuery: true,
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: AppInfo.titlePage,
       theme: applicationLightTheme,
