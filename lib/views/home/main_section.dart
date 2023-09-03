@@ -101,6 +101,13 @@ Widget _textBuilder({
             height: 51.0,
           ),
           CustomButton(
+            onPressed: () => Get.offNamed(AppPages.token),
+            text: "1056@global".tr,
+            type: ButtonType.outlined,
+            width: 170.0,
+            height: 51.0,
+          ),
+          CustomButton(
             onPressed: () => Get.offNamed(
               '${AppPages.documents}/about/whitepaper',
             ),

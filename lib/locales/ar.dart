@@ -56,6 +56,7 @@ const Map<String, String> translator = {
   "1053@global": "تكلفة الطلب",
   "1054@global": "الشبكات المقبولة",
   "1055@global": "تم تسجيل الطلب",
+  "1056@global": "البيع الخاص متاح الآن",
 
   // Warns
   "1000@warns": "الحقل مطلوب",
