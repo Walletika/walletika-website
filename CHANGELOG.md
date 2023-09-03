@@ -1,3 +1,7 @@
+# 1.2.1
+- Fix: Sale section was shows 2 rows in line
+- Added private sale button in the main section
+
 # 1.2.0
 - Added TokenController and RoundModel
 - Added AmountFormatter util
