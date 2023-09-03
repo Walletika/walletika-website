@@ -1,3 +1,22 @@
+# 1.2.0
+- Added TokenController and RoundModel
+- Added AmountFormatter util
+- Added digit format util
+- Added fetchMap function
+- Added CustomTagText widget
+- Added CustomTextField  widget
+- Added CustomAmountField widget
+- Added CustomCopyableText widget
+- Added CustomAddressText widget
+- Added customAwesomeDialog widget
+- Added CustomRound widget
+- Added private sale and presale sections
+
+# 1.1.1
+- Translation edited
+- PlatformsSection directionality always left to right
+- Space adjusting for TokenFeaturesSection
+
 # 1.1.0
 - Added CustomPieChart widget
 - Added token page
