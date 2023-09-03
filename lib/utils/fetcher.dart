@@ -10,3 +10,7 @@ Future<String> fetchString(String apiURL) async {
 Future<List<Map<String, dynamic>>> fetchList(String apiURL) async {
   return jsonDecode(await fetchString(apiURL)).cast<Map<String, dynamic>>();
 }
+
+Future<Map<String, dynamic>> fetchMap(String apiURL) async {
+  return jsonDecode(await fetchString(apiURL)).cast<String, dynamic>();
+}
