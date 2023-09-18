@@ -6,8 +6,8 @@ import '../../utils/constants.dart';
 import '../widgets/feature.dart';
 import '../widgets/section.dart';
 
-class TokenFeaturesSection extends StatelessWidget {
-  const TokenFeaturesSection({super.key});
+class TokenomicsFeaturesSection extends StatelessWidget {
+  const TokenomicsFeaturesSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,26 +24,26 @@ class TokenFeaturesSection extends StatelessWidget {
       children: [
         CustomFeature(
           icon: LineIcons.alternateShield,
-          title: "1002@token".tr,
-          description: "1003@token".tr,
+          title: "1002@tokenomics".tr,
+          description: "1003@tokenomics".tr,
           width: width,
         ),
         CustomFeature(
           icon: LineIcons.coins,
-          title: "1004@token".tr,
-          description: "1005@token".tr,
+          title: "1004@tokenomics".tr,
+          description: "1005@tokenomics".tr,
           width: width,
         ),
         CustomFeature(
           icon: LineIcons.recycle,
-          title: "1006@token".tr,
-          description: "1007@token".tr,
+          title: "1006@tokenomics".tr,
+          description: "1007@tokenomics".tr,
           width: width,
         ),
         CustomFeature(
           icon: LineIcons.wiredNetwork,
-          title: "1008@token".tr,
-          description: "1009@token".tr,
+          title: "1008@tokenomics".tr,
+          description: "1009@tokenomics".tr,
           width: width,
         ),
       ],

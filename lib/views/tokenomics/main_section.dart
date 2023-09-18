@@ -6,8 +6,8 @@ import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
-class MainTokenSection extends StatelessWidget {
-  const MainTokenSection({super.key});
+class MainTokenomicsSection extends StatelessWidget {
+  const MainTokenomicsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,13 @@ class MainTokenSection extends StatelessWidget {
       backgroundColor: colorScheme.secondary,
       children: [
         CustomText(
-          text: "1000@token".tr,
+          text: "1000@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.displayMedium!.copyWith(fontWeight: FontWeight.bold),
         ),
         verticalSpace(),
         CustomText(
-          text: "1001@token".tr,
+          text: "1001@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.headlineSmall,
         ),

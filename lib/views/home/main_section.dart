@@ -101,7 +101,7 @@ Widget _textBuilder({
             height: 51.0,
           ),
           CustomButton(
-            onPressed: () => Get.offNamed(AppPages.token),
+            onPressed: () => Get.offNamed(AppPages.tokenomics),
             text: "1056@global".tr,
             type: ButtonType.outlined,
             width: 170.0,

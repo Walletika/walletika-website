@@ -30,7 +30,7 @@ class FollowSaleSection extends StatelessWidget {
           child: Column(
             children: [
               CustomText(
-                text: "1017@token".tr,
+                text: "1017@tokenomics".tr,
                 textAlign: TextAlign.center,
                 style: textTheme.bodyLarge!.copyWith(
                   color: colorScheme.primary,

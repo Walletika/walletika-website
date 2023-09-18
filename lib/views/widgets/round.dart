@@ -217,13 +217,13 @@ class CustomRound extends StatelessWidget {
           ),
           verticalSpace(AppDecoration.spaceMedium),
           CustomText(
-            text: "1027@token".tr,
+            text: "1027@tokenomics".tr,
             textAlign: TextAlign.center,
             style: textTheme.bodyMedium!.copyWith(color: AppColors.red),
           ),
           verticalSpace(AppDecoration.spaceMedium),
           CustomText(
-            text: '${"1028@token".tr} $amount ${"1029@token".tr}',
+            text: '${"1028@tokenomics".tr} $amount ${"1029@tokenomics".tr}',
             textAlign: TextAlign.center,
           ),
           CustomAddressText(model.address!),
@@ -241,7 +241,7 @@ class CustomRound extends StatelessWidget {
     customAwesomeDialog(
       dialogType: DialogType.success,
       title: "1055@global".tr,
-      desc: "1030@token".tr,
+      desc: "1030@tokenomics".tr,
       btnOkText: "1044@global".tr,
     ).show();
   }
@@ -295,7 +295,7 @@ class _PaymentFormState extends State<_PaymentForm> {
           children: [
             Flexible(
               child: CustomText(
-                text: "1023@token".tr,
+                text: "1023@tokenomics".tr,
                 style: textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -334,7 +334,7 @@ class _PaymentFormState extends State<_PaymentForm> {
         verticalSpace(AppDecoration.spaceMedium),
         CustomText(
           text:
-              '${"1024@token".tr} $saleAmount ${"1025@token".tr} $exchangeAmount ${"1026@token".tr}',
+              '${"1024@tokenomics".tr} $saleAmount ${"1025@tokenomics".tr} $exchangeAmount ${"1026@tokenomics".tr}',
           textAlign: TextAlign.center,
           blueLightColor: true,
           style: textTheme.bodyMedium,

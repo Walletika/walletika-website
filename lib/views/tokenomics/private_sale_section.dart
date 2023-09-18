@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/settings.dart';
-import '../../controllers/token.dart';
+import '../../controllers/tokenomics.dart';
 import '../../models/round.dart';
 import '../../utils/constants.dart';
 import '../widgets/round.dart';
@@ -10,7 +10,7 @@ import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
-class PrivateSaleSection extends GetView<TokenController> {
+class PrivateSaleSection extends GetView<TokenomicsController> {
   PrivateSaleSection({super.key});
 
   final SettingsController _settingsController = Get.find<SettingsController>();
@@ -24,13 +24,13 @@ class PrivateSaleSection extends GetView<TokenController> {
       padding: const EdgeInsets.all(AppDecoration.paddingBig),
       children: [
         CustomText(
-          text: "1020@token".tr,
+          text: "1020@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
         ),
         verticalSpace(),
         CustomText(
-          text: "1019@token".tr,
+          text: "1019@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.headlineSmall,
         ),

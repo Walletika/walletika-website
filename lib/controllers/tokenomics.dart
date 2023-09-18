@@ -4,7 +4,7 @@ import '../models/round.dart';
 import '../utils/constants.dart';
 import '../utils/fetcher.dart';
 
-class TokenController extends GetxController {
+class TokenomicsController extends GetxController {
   // States
   final Rxn<List<RoundModel>> _privateSale = Rxn<List<RoundModel>>();
   final Rxn<List<RoundModel>> _presale = Rxn<List<RoundModel>>();

@@ -5,15 +5,15 @@ import '../../utils/constants.dart';
 import '../widgets/reaction.dart';
 import '../widgets/section.dart';
 
-class TokenRateSection extends StatelessWidget {
-  const TokenRateSection({super.key});
+class TokenomicsRateSection extends StatelessWidget {
+  const TokenomicsRateSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomSection(
       padding: const EdgeInsets.all(AppDecoration.paddingBig),
       children: [
-        CustomReaction(title: "1018@token".tr),
+        CustomReaction(title: "1018@tokenomics".tr),
       ],
     );
   }

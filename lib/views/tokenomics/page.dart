@@ -9,19 +9,19 @@ import 'presale_section.dart';
 import 'private_sale_section.dart';
 import 'rate_section.dart';
 
-class TokenView extends StatelessWidget {
-  const TokenView({super.key});
+class TokenomicsView extends StatelessWidget {
+  const TokenomicsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomPage([
-      const MainTokenSection(),
-      const TokenFeaturesSection(),
-      const DistributionTokenSection(),
+      const MainTokenomicsSection(),
+      const TokenomicsFeaturesSection(),
+      const TokenDistributionSection(),
       PrivateSaleSection(),
       const FollowSaleSection(),
       PresaleSection(),
-      const TokenRateSection(),
+      const TokenomicsRateSection(),
     ]);
   }
 }

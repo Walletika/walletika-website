@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'documents.dart';
 import 'download.dart';
 import 'settings.dart';
-import 'token.dart';
+import 'tokenomics.dart';
 
 class InitialBinding extends Bindings {
   @override
@@ -19,10 +19,10 @@ class DocumentsBinding extends Bindings {
   }
 }
 
-class TokenBinding extends Bindings {
+class TokenomicsBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put(TokenController(), permanent: true);
+    Get.put(TokenomicsController(), permanent: true);
   }
 }
 

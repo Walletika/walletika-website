@@ -2,7 +2,7 @@ const Map<String, String> translator = {
   // Global
   "1000@global": "Home",
   "1001@global": "Download",
-  "1002@global": "Token",
+  "1002@global": "Tokenomics",
   "1003@global": "Documents",
   "1004@global": "Dark / Light Mode",
   "1005@global": "Free Download",
@@ -123,48 +123,48 @@ const Map<String, String> translator = {
       "We are in beta, please do not deposit real money. Join our group now and ask for a deposit to test the app together.",
 
   // Token
-  "1000@token": "The Major Token of Walletika",
-  "1001@token":
+  "1000@tokenomics": "The Major Token of Walletika",
+  "1001@tokenomics":
       "We provide a secure token to our investors for great investment opportunities to grow further together.",
-  "1002@token": "No Mint Function",
-  "1003@token":
+  "1002@tokenomics": "No Mint Function",
+  "1003@tokenomics":
       "There is no mint function which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
-  "1004@token": "Limited Supply",
-  "1005@token":
+  "1004@tokenomics": "Limited Supply",
+  "1005@tokenomics":
       "The maximum supply is 100,000,000 WTK, of which 70% is allocated to the initial circulating supply.",
-  "1006@token": "Recyclable",
-  "1007@token":
+  "1006@tokenomics": "Recyclable",
+  "1007@tokenomics":
       "Walletika token is recyclable, by collecting it against Walletika's paid services and refinancing it into staking services again.",
-  "1008@token": "Fully Decentralized",
-  "1009@token":
+  "1008@tokenomics": "Fully Decentralized",
+  "1009@tokenomics":
       "100% decentralized and transactions cannot be controlled such as freezing wallets or balances.",
-  "1010@token":
+  "1010@tokenomics":
       "The percentages were distributed based on our own vision that would provide the maximum benefit for investors primarily.",
-  "1011@token": "35% Pre-sale to fund trading liquidity.",
-  "1012@token": "5% Private sale to fund the project launch.",
-  "1013@token": "13% Liquidity for CEX and DEX listing.",
-  "1014@token": "30% Staking services liquidity, 20% locked for a year.",
-  "1015@token":
+  "1011@tokenomics": "35% Pre-sale to fund trading liquidity.",
+  "1012@tokenomics": "5% Private sale to fund the project launch.",
+  "1013@tokenomics": "13% Liquidity for CEX and DEX listing.",
+  "1014@tokenomics": "30% Staking services liquidity, 20% locked for a year.",
+  "1015@tokenomics":
       "17% Team share and marketing strategies, 10% locked for a year.",
-  "1016@token": "Max Supply 100,000,000 WTK",
-  "1017@token":
+  "1016@tokenomics": "Max Supply 100,000,000 WTK",
+  "1017@tokenomics":
       "Join our community to be up to date about the sale stages and the latest news.",
-  "1018@token": "How do you feel about Walletika token?",
-  "1019@token":
+  "1018@tokenomics": "How do you feel about Walletika token?",
+  "1019@tokenomics":
       "Participate in one of the best opportunities at the cheapest prices!",
-  "1020@token": "Private Sale x50 per \$1 Hit",
-  "1021@token": "Presale x10 per \$1 Hit",
-  "1022@token":
+  "1020@tokenomics": "Private Sale x50 per \$1 Hit",
+  "1021@tokenomics": "Presale x10 per \$1 Hit",
+  "1022@tokenomics":
       "The best opportunities before starting trading on the exchanges!",
-  "1023@token": "How much you can buy?",
-  "1024@token": "You'll buy",
-  "1025@token": "instead of",
-  "1026@token": "from the exchange!",
-  "1027@token":
+  "1023@tokenomics": "How much you can buy?",
+  "1024@tokenomics": "You'll buy",
+  "1025@tokenomics": "instead of",
+  "1026@tokenomics": "from the exchange!",
+  "1027@tokenomics":
       "*You'll receive your tokens on the same deposit address ( Do not deposit from the exchange ).",
-  "1028@token": "Make a deposit",
-  "1029@token": "to following address",
-  "1030@token":
+  "1028@tokenomics": "Make a deposit",
+  "1029@tokenomics": "to following address",
+  "1030@tokenomics":
       "We thank you for your participation and support, we invite you to join our community and follow our social media accounts to stay informed of the latest news.",
 
   // Documents
