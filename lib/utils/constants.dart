@@ -9,6 +9,8 @@ class AppInfo {
   static const String telegramChannel = 'https://t.me/walletika';
   static const String telegramGroup = 'https://t.me/walletikacommunity';
   static const String github = 'https://github.com/Walletika';
+  static const String tokenSmartContract =
+      'https://bscscan.com/address/0x8B26361df494D174e81D0E52110056362ECdD056';
   static const String topicsAPI =
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/topics.json';
   static const String packagesAPI =

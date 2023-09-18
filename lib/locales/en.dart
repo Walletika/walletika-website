@@ -56,7 +56,9 @@ const Map<String, String> translator = {
   "1053@global": "Order Cost",
   "1054@global": "Accepted Networks",
   "1055@global": "Request Submitted",
-  "1056@global": "Private Sale Live",
+  "1056@global": "Sale is Live",
+  "1057@global": "Smart Contract Explorer",
+  "1058@global": "\$WTK Explorer",
 
   // Warns
   "1000@warns": "Field is required",
