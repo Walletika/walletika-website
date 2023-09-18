@@ -45,6 +45,7 @@ dependencies:
   # Fixed version
   # device_preview: 1.1.0
   awesome_dialog: 3.0.2
+  carousel_slider: 4.2.1
   fl_chart: 0.63.0
   line_icons: 2.0.1
   timeago: 3.4.0

@@ -9,6 +9,7 @@ class CustomImage extends StatelessWidget {
     this.path,
     this.width,
     this.height,
+    this.fit,
     this.circled = false,
     super.key,
   });
@@ -18,6 +19,7 @@ class CustomImage extends StatelessWidget {
   final String? path;
   final double? width;
   final double? height;
+  final BoxFit? fit;
   final bool circled;
 
   @override
@@ -33,6 +35,7 @@ class CustomImage extends StatelessWidget {
         height: height,
         filterQuality: FilterQuality.medium,
         isAntiAlias: true,
+        fit: fit,
       );
     } else {
       widget = Image.asset(

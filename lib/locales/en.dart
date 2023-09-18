@@ -112,6 +112,7 @@ const Map<String, String> translator = {
   "1030@home":
       "The CEO and a software engineer with +8 years of software development experience.",
   "1031@home": "The CFO with extensive experience working with enterprises.",
+  "1032@home": "Our Friends",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",

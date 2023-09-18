@@ -96,6 +96,19 @@ class AppImages {
   static const String pageNotFoundIllustrations =
       'assets/illustrations/page_not_found.png';
 
+  static const List<String> partners = [
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/binance.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/coinbase.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/Cryptocom.jpg',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/gateio.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/okx.jpg',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/huobi.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/pancakeswap.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/uniswap.jpg',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/coinmarketcap.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/coingecko.png',
+  ];
+
   static const Map<String, Map<String, String>> _images = {
     "walletApp": {
       "light": 'assets/illustrations/wallet.png',
