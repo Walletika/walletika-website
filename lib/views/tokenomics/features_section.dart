@@ -11,23 +11,17 @@ class TokenomicsFeaturesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double width = 350.0;
+    const double width = 300.0;
 
     return CustomSection(
       padding: const EdgeInsets.only(
         top: 100.0,
         bottom: AppDecoration.paddingBig,
-        right: AppDecoration.paddingBig,
-        left: AppDecoration.paddingBig,
+        right: AppDecoration.padding,
+        left: AppDecoration.padding,
       ),
       layout: SectionLayout.wrap,
       children: [
-        CustomFeature(
-          icon: LineIcons.alternateShield,
-          title: "1002@tokenomics".tr,
-          description: "1003@tokenomics".tr,
-          width: width,
-        ),
         CustomFeature(
           icon: LineIcons.coins,
           title: "1004@tokenomics".tr,

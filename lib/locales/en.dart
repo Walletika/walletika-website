@@ -126,12 +126,11 @@ const Map<String, String> translator = {
   "1000@tokenomics": "The Major Token of Walletika",
   "1001@tokenomics":
       "We provide a secure token to our investors for great investment opportunities to grow further together.",
-  "1002@tokenomics": "No Mint Function",
-  "1003@tokenomics":
-      "There is no mint function which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
+  "1002@tokenomics": "",
+  "1003@tokenomics": "",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
-      "The maximum supply is 100,000,000 WTK, of which 70% is allocated to the initial circulating supply.",
+      "The maximum supply is 100,000,000 WTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
   "1006@tokenomics": "Recyclable",
   "1007@tokenomics":
       "Walletika token is recyclable, by collecting it against Walletika's paid services and refinancing it into staking services again.",
