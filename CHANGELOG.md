@@ -1,3 +1,10 @@
+# 1.3.0
+- Rename token page to tokenomics
+- Remove mint token feature
+- Added Token explorer button
+- Added team section
+- Added partners section
+
 # 1.2.1
 - Fix: Sale section was shows 2 rows in line
 - Added private sale button in the main section
