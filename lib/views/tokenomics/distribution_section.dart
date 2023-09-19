@@ -43,7 +43,8 @@ class TokenDistributionSection extends StatelessWidget {
           indicatorWidth: 400.0,
           items: {
             "1011@tokenomics".tr: 35.0,
-            "1012@tokenomics".tr: 5.0,
+            "1012@tokenomics".tr: 2.5,
+            "1003@tokenomics".tr: 2.5,
             "1013@tokenomics".tr: 13.0,
             "1014@tokenomics".tr: 30.0,
             "1015@tokenomics".tr: 17.0,
