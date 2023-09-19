@@ -30,7 +30,7 @@ class _DesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _sectionBuilder(context: context, viewportFraction: 0.25);
+    return _sectionBuilder(context: context, viewportFraction: 0.2);
   }
 }
 
@@ -51,6 +51,11 @@ Widget _sectionBuilder({
   final TextTheme textTheme = themeData.textTheme;
 
   return CustomSection(
+    stretch: true,
+    padding: const EdgeInsets.symmetric(
+      horizontal: 0,
+      vertical: AppDecoration.spaceLarge,
+    ),
     children: [
       CustomText(
         text: "1032@home".tr,
@@ -58,7 +63,7 @@ Widget _sectionBuilder({
         maxWidth: 900.0,
         style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
       ),
-      verticalSpace(AppDecoration.spaceBig),
+      verticalSpace(AppDecoration.spaceLarge),
       CarouselSlider(
         options: CarouselOptions(
           height: 100.0,

@@ -103,6 +103,7 @@ class AppImages {
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/gateio.png',
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/okx.jpg',
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/huobi.png',
+    'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/nuls.jpg',
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/pancakeswap.png',
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/uniswap.jpg',
     'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/coinmarketcap.png',
