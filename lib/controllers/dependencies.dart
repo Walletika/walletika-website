@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import 'documents.dart';
 import 'download.dart';
+import 'home.dart';
 import 'settings.dart';
 import 'tokenomics.dart';
 
@@ -9,6 +10,7 @@ class InitialBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(SettingsController(), permanent: true);
+    Get.put(HomeController(), permanent: true);
   }
 }
 

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import '../../controllers/home.dart';
+import '../../models/partner.dart';
 import '../../utils/constants.dart';
 import '../widgets/image.dart';
 import '../widgets/section.dart';
@@ -25,27 +27,36 @@ class PartnersSection extends GetResponsiveView {
   }
 }
 
-class _DesktopView extends StatelessWidget {
+class _DesktopView extends GetView<HomeController> {
   const _DesktopView();
 
   @override
   Widget build(BuildContext context) {
-    return _sectionBuilder(context: context, viewportFraction: 0.2);
+    return _sectionBuilder(
+      context: context,
+      viewportFraction: 0.2,
+      controller: controller,
+    );
   }
 }
 
-class _PhoneView extends StatelessWidget {
+class _PhoneView extends GetView<HomeController> {
   const _PhoneView();
 
   @override
   Widget build(BuildContext context) {
-    return _sectionBuilder(context: context, viewportFraction: 0.5);
+    return _sectionBuilder(
+      context: context,
+      viewportFraction: 0.5,
+      controller: controller,
+    );
   }
 }
 
 Widget _sectionBuilder({
   required BuildContext context,
   required double viewportFraction,
+  required HomeController controller,
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
@@ -58,31 +69,49 @@ Widget _sectionBuilder({
     ),
     children: [
       CustomText(
-        text: "1032@home".tr,
+        text: "1030@home".tr,
         textAlign: TextAlign.center,
         maxWidth: 900.0,
         style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
       ),
       verticalSpace(AppDecoration.spaceLarge),
-      CarouselSlider(
-        options: CarouselOptions(
-          height: 100.0,
-          autoPlay: true,
-          autoPlayInterval: const Duration(seconds: 2),
-          pauseAutoPlayOnTouch: false,
-          pauseAutoPlayOnManualNavigate: false,
-          viewportFraction: viewportFraction,
-        ),
-        items: AppImages.partners.map((imageURL) {
-          return CustomImage(
-            url: imageURL,
-            width: 100.0,
-            height: 100.0,
-            fit: BoxFit.cover,
-            circled: true,
-          );
-        }).toList(),
-      ),
+      Obx(() {
+        final List<PartnerModel>? partners = controller.partners;
+
+        if (partners == null) {
+          return const CircularProgressIndicator();
+        }
+
+        return CarouselSlider(
+          options: CarouselOptions(
+            height: 160.0,
+            autoPlay: true,
+            autoPlayInterval: const Duration(seconds: 2),
+            pauseAutoPlayOnTouch: false,
+            pauseAutoPlayOnManualNavigate: false,
+            viewportFraction: viewportFraction,
+          ),
+          items: partners.map((partner) {
+            return Column(
+              children: [
+                CustomImage(
+                  url: partner.imageURL,
+                  width: 100.0,
+                  height: 100.0,
+                  fit: BoxFit.cover,
+                  circled: true,
+                ),
+                verticalSpace(),
+                CustomText(
+                  text: partner.name,
+                  textAlign: TextAlign.center,
+                  style: textTheme.titleMedium,
+                )
+              ],
+            );
+          }).toList(),
+        );
+      }),
     ],
   );
 }

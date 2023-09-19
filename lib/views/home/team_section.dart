@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
 
+import '../../controllers/home.dart';
+import '../../controllers/settings.dart';
+import '../../models/team_member.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
 import '../widgets/button.dart';
@@ -18,12 +21,14 @@ class TeamSection extends GetResponsiveView {
 
   @override
   Widget? desktop() {
-    return const _DesktopView();
+    return _DesktopView();
   }
 }
 
-class _DesktopView extends StatelessWidget {
-  const _DesktopView();
+class _DesktopView extends GetView<HomeController> {
+  _DesktopView();
+
+  final SettingsController _settingsController = Get.find<SettingsController>();
 
   @override
   Widget build(BuildContext context) {
@@ -37,41 +42,42 @@ class _DesktopView extends StatelessWidget {
         left: AppDecoration.paddingBig,
         right: AppDecoration.paddingBig,
       ),
-      layout: SectionLayout.wrap,
       children: [
-        SizedBox(
-          width: AppDecoration.docsPageWidth,
-          child: Column(
-            children: [
-              CustomText(
-                text: "1029@home".tr,
-                style: textTheme.displaySmall!.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              verticalSpace(AppDecoration.spaceBig),
-            ],
+        CustomText(
+          text: "1029@home".tr,
+          style: textTheme.displaySmall!.copyWith(
+            fontWeight: FontWeight.bold,
           ),
         ),
-        _memberBuilder(
-          context: context,
-          imageURL:
-              "https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/mahmoud_picture.jpg",
-          name: "Mahmoud Khalid",
-          description: "1030@home".tr,
-          telegram: "https://t.me/WalletikaCEO",
-          twitter: "https://twitter.com/MahmoudKEA",
-          linkedin: "https://www.linkedin.com/in/MahmoudKEA",
-          github: "https://github.com/MahmoudKhalid",
-        ),
-        _memberBuilder(
-          context: context,
-          imageURL:
-              "https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/william_picture.jpg",
-          name: "William Noah",
-          description: "1031@home".tr,
-          telegram: "https://t.me/WilliamDeveloper",
-        ),
+        verticalSpace(AppDecoration.spaceLarge),
+        Obx(() {
+          final List<TeamMemberModel>? members = controller.teamMembers;
+
+          if (members == null) {
+            return const CircularProgressIndicator();
+          }
+
+          return Wrap(
+            alignment: WrapAlignment.center,
+            runAlignment: WrapAlignment.center,
+            spacing: AppDecoration.spaceLarge,
+            runSpacing: AppDecoration.spaceLarge,
+            children: members
+                .map((member) => _memberBuilder(
+                      context: context,
+                      imageURL: member.imageURL,
+                      name: member.name,
+                      description: member.description.translate(
+                        _settingsController.currentLanguage,
+                      ),
+                      telegram: member.telegram,
+                      twitter: member.twitter,
+                      linkedin: member.linkedin,
+                      github: member.github,
+                    ))
+                .toList(),
+          );
+        }),
       ],
     );
   }
@@ -82,7 +88,7 @@ Widget _memberBuilder({
   required String imageURL,
   required String name,
   required String description,
-  required String telegram,
+  String? telegram,
   String? twitter,
   String? linkedin,
   String? github,
@@ -99,9 +105,12 @@ Widget _memberBuilder({
           verticalSpace(60.0),
           Container(
             width: 350.0,
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppDecoration.paddingMedium,
-              vertical: AppDecoration.paddingLarge,
+            height: 250.0,
+            padding: const EdgeInsets.only(
+              top: AppDecoration.paddingLarge,
+              bottom: AppDecoration.paddingMedium,
+              left: AppDecoration.paddingMedium,
+              right: AppDecoration.paddingMedium,
             ),
             decoration: BoxDecoration(
               border: Border.all(color: colorScheme.tertiary),
@@ -126,13 +135,14 @@ Widget _memberBuilder({
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    CustomButton(
-                      onPressed: () => openNewTab(telegram),
-                      icon: const Icon(LineIcons.telegram),
-                      type: ButtonType.icon,
-                      standardSize: false,
-                      // width: 80.0,
-                    ),
+                    if (telegram != null)
+                      CustomButton(
+                        onPressed: () => openNewTab(telegram),
+                        icon: const Icon(LineIcons.telegram),
+                        type: ButtonType.icon,
+                        standardSize: false,
+                        // width: 80.0,
+                      ),
                     if (twitter != null)
                       CustomButton(
                         onPressed: () => openNewTab(twitter),
