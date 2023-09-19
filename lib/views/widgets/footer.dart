@@ -4,6 +4,7 @@ import 'package:line_icons/line_icons.dart';
 
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
+import 'address.dart';
 import 'button.dart';
 import 'image.dart';
 import 'section.dart';
@@ -67,6 +68,11 @@ class _DesktopView extends StatelessWidget {
           blueLightColor: true,
           style: textTheme.bodyMedium,
         ),
+        verticalSpace(),
+        SizedBox(
+          width: AppDecoration.textSectionWidth,
+          child: _donateBuilder(),
+        ),
         verticalSpace(AppDecoration.spaceBig),
         _socialMediaBuilder(),
       ],
@@ -103,6 +109,8 @@ class _PhoneView extends StatelessWidget {
           blueLightColor: true,
           style: textTheme.bodyMedium,
         ),
+        verticalSpace(),
+        _donateBuilder(),
         verticalSpace(AppDecoration.spaceBig),
         _socialMediaBuilder(),
       ],
@@ -151,6 +159,19 @@ Widget _socialMediaBuilder() {
         icon: const Icon(LineIcons.github, size: AppDecoration.iconBigSize),
         type: ButtonType.icon,
         width: 80.0,
+      ),
+    ],
+  );
+}
+
+Widget _donateBuilder() {
+  return Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      CustomText(text: "1059@global".tr),
+      horizontalSpace(AppDecoration.spaceSmall),
+      const Flexible(
+        child: CustomAddressText(AppInfo.donateAddress, width: 340.0),
       ),
     ],
   );

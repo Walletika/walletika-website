@@ -19,6 +19,8 @@ class AppInfo {
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/packages.json';
   static const String saleAPI =
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/sale.json';
+  static const String donateAddress =
+      '0x91C90934Ffab309667D3Ef846E854Ac138060A13';
 }
 
 class AppDecoration {
