@@ -64,6 +64,14 @@ class _DesktopView extends StatelessWidget {
           linkedin: "https://www.linkedin.com/in/MahmoudKEA",
           github: "https://github.com/MahmoudKhalid",
         ),
+        _memberBuilder(
+          context: context,
+          imageURL:
+              "https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/william_picture.jpg",
+          name: "William Noah",
+          description: "1031@home".tr,
+          telegram: "https://t.me/WilliamDeveloper",
+        ),
       ],
     );
   }
