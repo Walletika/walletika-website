@@ -1,3 +1,8 @@
+# 1.3.1
+- Extend partners section
+- Added home controller
+- Added donate into footer
+
 # 1.3.0
 - Rename token page to tokenomics
 - Remove mint token feature
