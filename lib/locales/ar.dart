@@ -60,6 +60,8 @@ const Map<String, String> translator = {
   "1057@global": "تصفح العقد الذكي",
   "1058@global": "\$WTK تصفح",
   "1059@global": "تبرع",
+  "1060@global": "بعد",
+  "1061@global": "متبقي",
 
   // Warns
   "1000@warns": "الحقل مطلوب",

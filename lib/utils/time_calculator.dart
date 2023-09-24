@@ -5,8 +5,22 @@ String timeDifference({required DateTime start, required DateTime end}) {
   return "${end.difference(start).inDays} ${"1045@global".tr}";
 }
 
-String timeAgo({required DateTime time, required String locale}) {
-  return timeago.format(time.toUtc(), locale: locale, allowFromNow: true);
+String timeAgo({
+  required DateTime time,
+  required String locale,
+  bool isLive = false,
+}) {
+  String estimated = timeago.format(
+    time.toUtc(),
+    locale: locale,
+    allowFromNow: true,
+  );
+
+  if (isLive) {
+    estimated = estimated.replaceAll("1060@global".tr, "1061@global".tr);
+  }
+
+  return estimated;
 }
 
 String timeDisplay({

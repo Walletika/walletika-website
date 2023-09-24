@@ -39,6 +39,7 @@ class CustomRound extends StatelessWidget {
     final ColorScheme colorScheme = themeData.colorScheme;
 
     final DateTime now = DateTime.now().toUtc();
+    bool isUpcoming = false;
     bool isLive = false;
 
     final String tagText;
@@ -49,6 +50,7 @@ class CustomRound extends StatelessWidget {
       tagText = "1039@global".tr;
       tagFontColor = AppColors.purple;
       tagBackgroundColor = AppColors.purpleAccent;
+      isUpcoming = true;
     } else if (!model.isCompleted && now.isBefore(model.endTime)) {
       tagText = "1040@global".tr;
       tagFontColor = AppColors.green;
@@ -86,7 +88,11 @@ class CustomRound extends StatelessWidget {
                   ),
                   verticalSpace(AppDecoration.spaceSmall),
                   Text(
-                    timeAgo(time: model.startTime, locale: locale),
+                    timeAgo(
+                      time: isUpcoming ? model.startTime : model.endTime,
+                      locale: locale,
+                      isLive: isLive,
+                    ),
                     style: textTheme.bodySmall!.copyWith(color: tagFontColor),
                   ),
                 ],
