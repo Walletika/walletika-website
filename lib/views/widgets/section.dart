@@ -12,6 +12,7 @@ class CustomSection extends StatelessWidget {
     this.padding,
     this.borderRadius,
     this.backgroundColor,
+    this.image,
     this.wrapSpacing = AppDecoration.spaceLarge,
     this.wrapCrossAlignment,
     this.crossAxisAlignment,
@@ -27,6 +28,7 @@ class CustomSection extends StatelessWidget {
   final EdgeInsets? padding;
   final BorderRadiusGeometry? borderRadius;
   final Color? backgroundColor;
+  final DecorationImage? image;
   final double wrapSpacing;
   final WrapCrossAlignment? wrapCrossAlignment;
   final CrossAxisAlignment? crossAxisAlignment;
@@ -39,9 +41,10 @@ class CustomSection extends StatelessWidget {
     BoxDecoration? decoration;
     final Widget layoutWidget;
 
-    if (backgroundColor != null) {
+    if (backgroundColor != null || image != null) {
       decoration = BoxDecoration(
         color: backgroundColor,
+        image: image,
         borderRadius: borderRadius,
       );
     }
