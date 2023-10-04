@@ -23,18 +23,18 @@ class PlatformsSection extends GetView<DownloadController> {
         children: [
           _platformBuilder(
             context: context,
-            title: "1002@download".tr,
-            description: "1003@download".tr,
-            path: AppImages.theme("mobile"),
-            packageType: PackageType.mobile,
-            controller: controller,
-          ),
-          _platformBuilder(
-            context: context,
             title: "1004@download".tr,
             description: "1005@download".tr,
             path: AppImages.theme("desktop"),
             packageType: PackageType.desktop,
+            controller: controller,
+          ),
+          _platformBuilder(
+            context: context,
+            title: "1002@download".tr,
+            description: "1003@download".tr,
+            path: AppImages.theme("mobile"),
+            packageType: PackageType.mobile,
             controller: controller,
           ),
         ],
