@@ -37,10 +37,7 @@ class _DesktopView extends StatelessWidget {
           width: 360.0,
           child: _textBuilder(context: context),
         ),
-        CustomImage(
-          path: AppImages.theme("walletApp"),
-          width: 450.0,
-        ),
+        const CustomImage(path: AppImages.wallet, width: 550.0),
       ],
     );
   }
@@ -55,7 +52,7 @@ class _TabletView extends StatelessWidget {
       layout: SectionLayout.wrap,
       children: [
         _textBuilder(context: context, isTablet: true),
-        CustomImage(path: AppImages.theme("walletApp")),
+        const CustomImage(path: AppImages.wallet, width: 550.0),
       ],
     );
   }
@@ -103,15 +100,6 @@ Widget _textBuilder({
           CustomButton(
             onPressed: () => Get.offNamed(AppPages.tokenomics),
             text: "1056@global".tr,
-            type: ButtonType.outlined,
-            width: 170.0,
-            height: 51.0,
-          ),
-          CustomButton(
-            onPressed: () => Get.offNamed(
-              '${AppPages.documents}/about/whitepaper',
-            ),
-            text: "1030@global".tr,
             type: ButtonType.outlined,
             width: 170.0,
             height: 51.0,

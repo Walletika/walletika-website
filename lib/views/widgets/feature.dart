@@ -85,7 +85,7 @@ class CustomFeature extends StatelessWidget {
       widget = Stack(
         alignment: Alignment.topCenter,
         children: [
-          Column(children: [verticalSpace(60.0), widget]),
+          Column(children: [verticalSpace(70.0), widget]),
           Container(
             width: 100.0,
             height: 100.0,
@@ -95,6 +95,7 @@ class CustomFeature extends StatelessWidget {
                   ? Border.all(
                       color: colorScheme.background,
                       width: AppDecoration.space,
+                      strokeAlign: BorderSide.strokeAlignCenter,
                     )
                   : null,
               borderRadius: BorderRadius.circular(AppDecoration.radiusLarge),

@@ -5,10 +5,10 @@ const Map<String, String> translator = {
   "1002@global": "Tokenomics",
   "1003@global": "Documents",
   "1004@global": "Dark / Light Mode",
-  "1005@global": "Free Download",
+  "1005@global": "Download App",
   "1006@global": "Buy WTK",
   "1007@global": "Join Channel",
-  "1008@global": "Join Group",
+  "1008@global": "Join Community",
   "1009@global": "Company",
   "1010@global": "Follow us",
   "1011@global": "Learn about features",
@@ -56,12 +56,14 @@ const Map<String, String> translator = {
   "1053@global": "Order Cost",
   "1054@global": "Accepted Networks",
   "1055@global": "Request Submitted",
-  "1056@global": "Sale is Live",
+  "1056@global": "Private Sale",
   "1057@global": "Smart Contract Explorer",
   "1058@global": "\$WTK Explorer",
   "1059@global": "Donate",
   "1060@global": "from now",
   "1061@global": "left",
+  "1062@global": "Our Friends",
+  "1063@global": "Founders",
 
   // Warns
   "1000@warns": "Field is required",
@@ -72,32 +74,32 @@ const Map<String, String> translator = {
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
       "Choose between a hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "WE DO NOT STORE OUR USERS DATA",
+  "1002@home": "WE DO NOT STORE USERS DATA",
   "1003@home":
-      "Wallet access information is not stored on our servers or even user devices, thanks to our unique technology that regenerates the wallet every time a transaction is made.",
+      "We ensure the utmost privacy and security for our users by our unique solution that does not require the storage of user data on our servers or user devices.",
   "1004@home": "",
   "1005@home": "Keyless Wallet",
   "1006@home":
-      "You do not need a private key to access your wallet anymore, we provide a decentralized login system with a username and two passwords that can be memorized mentally.",
-  "1007@home": "Two-Factor Authentication Support",
+      "You do not need a private key to access your wallet anymore, we provide a decentralized login system instead.",
+  "1007@home": "Two-Factor Authentication",
   "1008@home":
-      "Your funds are protected by the power of two-factor authentication, no transactions can be made unless you confirm the 6-digit code that changes every 30 seconds.",
+      "We are the first crypto wallet supports decentralized two-factor authentication to confirm transactions, this unique feature ensures unparalleled security anywhere.",
   "1009@home": "Keep Your Funds Safe",
   "1010@home":
       "Turn your USB drive into a cold wallet, offline and away from hackers.",
   "1011@home": "Powerful features to access a wide range of digital assets",
   "1012@home": "Multiple Blockchains",
   "1013@home":
-      "Enjoy with +20 different blockchain networks by default and is able to add more manually.",
+      "Enjoy +20 different blockchain networks that give you free access to a wide range of digital assets.",
   "1014@home": "Multiple Wallets",
   "1015@home":
-      "Create and manage unlimited wallets on all blockchain networks from one place.",
+      "Enjoy creating and managing unlimited wallets for different blockchain networks in one place.",
   "1016@home": "Multiple Fiat Currencies",
   "1017@home":
       "Watch the price changes of digital assets against various fiat currencies such as USD, EUR, GBP, and more.",
-  "1018@home": "Staking",
+  "1018@home": "Staking Services",
   "1019@home":
-      "Get the most out of your digital assets with staking services for annual interest.",
+      "Get the most out of your crypto assets by staking for a high annual interest.",
   "1020@home": "Backup",
   "1021@home":
       "Backup all your wallets to an external file to avoid losing them if you lose or change your device.",
@@ -111,8 +113,6 @@ const Map<String, String> translator = {
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
       "Walletika is a software platform, we do not provide any financial advice and do not store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
-  "1029@home": "Team Founders",
-  "1030@home": "Our Friends",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",

@@ -43,7 +43,7 @@ class _DesktopView extends StatelessWidget {
               ),
             ),
             Flexible(
-              child: _imageBuilder(AppImages.theme("walletLogin")),
+              child: _imageBuilder(AppImages.walletLogin),
             ),
           ],
         ),
@@ -52,7 +52,7 @@ class _DesktopView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
-              child: _imageBuilder(AppImages.theme("walletAuth")),
+              child: _imageBuilder(AppImages.walletAuth),
             ),
             Flexible(
               child: _textBuilder(
@@ -83,8 +83,8 @@ class _PhoneView extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
-        _imageBuilder(AppImages.theme("walletLogin")),
-        verticalSpace(AppDecoration.spaceBig),
+        _imageBuilder(AppImages.walletLogin),
+        verticalSpace(AppDecoration.spaceLarge),
         _textBuilder(
           context: context,
           title: "1007@home".tr,
@@ -93,7 +93,7 @@ class _PhoneView extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
-        _imageBuilder(AppImages.theme("walletAuth")),
+        _imageBuilder(AppImages.walletAuth),
       ],
     );
   }
@@ -116,7 +116,7 @@ Widget _textBuilder({
         text: title,
         textAlign: textAlign ?? TextAlign.start,
         maxWidth: 400.0,
-        style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+        style: textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),
       ),
       verticalSpace(),
       CustomText(
@@ -130,5 +130,5 @@ Widget _textBuilder({
 }
 
 Widget _imageBuilder(String path) {
-  return CustomImage(path: path, width: 400.0);
+  return CustomImage(path: path, width: 550.0);
 }

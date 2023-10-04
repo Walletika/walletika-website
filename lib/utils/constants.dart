@@ -69,11 +69,11 @@ class AppColors {
   static const Color fontDark = Color(0xffffffff);
   static const Color font2 = Color(0xff747f8c);
   static const Color font2Dark = Color(0xff747f8c);
-  static const Color background = Color(0xffffffff);
+  static const Color background = Color(0xfff0f2f5);
   static const Color backgroundDark = Color(0xff141416);
-  static const Color background2 = Color(0xfff0f2f5);
+  static const Color background2 = Color(0xffe4e6eb);
   static const Color background2Dark = Color(0xff1a1a1d);
-  static const Color background3 = Color(0xffe4e6eb);
+  static const Color background3 = Color(0xfffcfcfd);
   static const Color background3Dark = Color(0xff23262f);
   static const Color icon = Color(0xff606770);
   static const Color iconDark = Color(0xff606770);
@@ -93,26 +93,21 @@ class AppColors {
 
 class AppImages {
   static const String logo = 'assets/logos/app_logo.png';
+  static const String wallet = 'assets/illustrations/wallet.png';
+  static const String wallets = 'assets/illustrations/wallets.png';
+  static const String walletLogin = 'assets/illustrations/wallet_login.png';
+  static const String walletAuth = 'assets/illustrations/wallet_auth.png';
+  static const String walletStaking = 'assets/illustrations/wallet_staking.png';
+  static const String walletBlockchains =
+      'assets/illustrations/wallet_blockchains.png';
   static const String searchIllustrations = 'assets/illustrations/search.png';
-  static const String usbIllustrations = 'assets/illustrations/usb.png';
+  static const String usbBackground = 'assets/illustrations/usb.jpeg';
   static const String telegramIllustrations =
       'assets/illustrations/telegram.png';
   static const String pageNotFoundIllustrations =
       'assets/illustrations/page_not_found.png';
 
   static const Map<String, Map<String, String>> _images = {
-    "walletApp": {
-      "light": 'assets/illustrations/wallet.png',
-      "dark": 'assets/illustrations/wallet_dark.png',
-    },
-    "walletLogin": {
-      "light": 'assets/illustrations/wallet_login.png',
-      "dark": 'assets/illustrations/wallet_login_dark.png',
-    },
-    "walletAuth": {
-      "light": 'assets/illustrations/wallet_auth.png',
-      "dark": 'assets/illustrations/wallet_auth_dark.png',
-    },
     "mobile": {
       "light": 'assets/illustrations/mobile.png',
       "dark": 'assets/illustrations/mobile_dark.png',

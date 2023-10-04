@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
-import '../widgets/image.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
@@ -41,52 +40,43 @@ class _TabletView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _sectionBuilder(
-      context: context,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      textAlign: TextAlign.center,
-    );
+    return _sectionBuilder(context: context);
   }
 }
 
 Widget _sectionBuilder({
   required BuildContext context,
   BorderRadiusGeometry? borderRadius,
-  CrossAxisAlignment? crossAxisAlignment,
-  TextAlign? textAlign,
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
-  final ColorScheme colorScheme = themeData.colorScheme;
 
   return CustomSection(
+    height: AppDecoration.sectionHeight,
     borderRadius: borderRadius,
-    backgroundColor: colorScheme.secondary,
-    layout: SectionLayout.wrap,
+    mainAxisAlignment: MainAxisAlignment.end,
+    crossAxisAlignment: CrossAxisAlignment.start,
+    padding: const EdgeInsets.symmetric(
+      horizontal: AppDecoration.paddingBig,
+      vertical: AppDecoration.paddingLarge,
+    ),
+    image: const DecorationImage(
+      image: ExactAssetImage(AppImages.usbBackground),
+      fit: BoxFit.cover,
+      filterQuality: FilterQuality.medium,
+    ),
     children: [
-      Column(
-        crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
-        children: [
-          CustomText(
-            text: "1009@home".tr,
-            textAlign: textAlign ?? TextAlign.start,
-            maxWidth: 390.0,
-            style: textTheme.displaySmall!.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          verticalSpace(),
-          CustomText(
-            text: "1010@home".tr,
-            textAlign: textAlign ?? TextAlign.start,
-            maxWidth: 390.0,
-            blueLightColor: true,
-          ),
-        ],
+      CustomText(
+        text: "1009@home".tr,
+        style: textTheme.displaySmall!.copyWith(
+          color: AppColors.white,
+          fontWeight: FontWeight.w900,
+        ),
       ),
-      const CustomImage(
-        path: AppImages.usbIllustrations,
-        width: 300.0,
+      verticalSpace(),
+      CustomText(
+        text: "1010@home".tr,
+        style: textTheme.bodyLarge!.copyWith(color: AppColors.white),
       ),
     ],
   );

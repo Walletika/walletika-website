@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:line_icons/line_icons.dart';
 
 import '../../utils/constants.dart';
-import '../widgets/feature.dart';
+import '../widgets/image.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
@@ -18,6 +17,11 @@ class FeaturesSection extends GetResponsiveView {
   Widget? desktop() {
     return const _DesktopView();
   }
+
+  @override
+  Widget? phone() {
+    return const _PhoneView();
+  }
 }
 
 class _DesktopView extends StatelessWidget {
@@ -25,61 +29,132 @@ class _DesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-    final TextTheme textTheme = themeData.textTheme;
-    const double width = 285.0;
-
     return CustomSection(
-      layout: SectionLayout.wrap,
       children: [
-        Column(
+        Row(
+          textDirection: TextDirection.ltr,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            CustomText(
-              text: "1011@home".tr,
-              textAlign: TextAlign.center,
-              maxWidth: 900.0,
-              style: textTheme.headlineLarge,
+            Flexible(
+              child: _textBuilder(
+                context: context,
+                title: "1018@home".tr,
+                description: "1019@home".tr,
+              ),
             ),
-            verticalSpace(AppDecoration.spaceBig),
+            Flexible(
+              child: _imageBuilder(AppImages.walletStaking),
+            ),
           ],
         ),
-        CustomFeature(
-          icon: LineIcons.sitemap,
-          title: "1012@home".tr,
-          description: "1013@home".tr,
-          width: width,
+        Row(
+          textDirection: TextDirection.ltr,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: _imageBuilder(AppImages.walletBlockchains),
+            ),
+            Flexible(
+              child: _textBuilder(
+                context: context,
+                title: "1012@home".tr,
+                description: "1013@home".tr,
+              ),
+            ),
+          ],
         ),
-        CustomFeature(
-          icon: LineIcons.wallet,
-          title: "1014@home".tr,
-          description: "1015@home".tr,
-          width: width,
-        ),
-        CustomFeature(
-          icon: LineIcons.wavyMoneyBill,
-          title: "1016@home".tr,
-          description: "1017@home".tr,
-          width: width,
-        ),
-        CustomFeature(
-          icon: LineIcons.pieChart,
-          title: "1018@home".tr,
-          description: "1019@home".tr,
-          width: width,
-        ),
-        CustomFeature(
-          icon: LineIcons.fileExport,
-          title: "1020@home".tr,
-          description: "1021@home".tr,
-          width: width,
-        ),
-        CustomFeature(
-          icon: LineIcons.alternateExchange,
-          title: "1022@home".tr,
-          description: "1023@home".tr,
-          width: width,
+        Row(
+          textDirection: TextDirection.ltr,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: _textBuilder(
+                context: context,
+                title: "1014@home".tr,
+                description: "1015@home".tr,
+              ),
+            ),
+            Flexible(
+              child: _imageBuilder(AppImages.wallets),
+            ),
+          ],
         ),
       ],
     );
   }
+}
+
+class _PhoneView extends StatelessWidget {
+  const _PhoneView();
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomSection(
+      children: [
+        _textBuilder(
+          context: context,
+          title: "1018@home".tr,
+          description: "1019@home".tr,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textAlign: TextAlign.center,
+        ),
+        verticalSpace(AppDecoration.spaceBig),
+        _imageBuilder(AppImages.walletStaking),
+        verticalSpace(AppDecoration.spaceLarge),
+        _textBuilder(
+          context: context,
+          title: "1012@home".tr,
+          description: "1013@home".tr,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textAlign: TextAlign.center,
+        ),
+        verticalSpace(AppDecoration.spaceBig),
+        _imageBuilder(AppImages.walletBlockchains),
+        verticalSpace(AppDecoration.spaceLarge),
+        _textBuilder(
+          context: context,
+          title: "1014@home".tr,
+          description: "1015@home".tr,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textAlign: TextAlign.center,
+        ),
+        verticalSpace(AppDecoration.spaceBig),
+        _imageBuilder(AppImages.wallets),
+      ],
+    );
+  }
+}
+
+Widget _textBuilder({
+  required BuildContext context,
+  required String title,
+  required String description,
+  CrossAxisAlignment? crossAxisAlignment,
+  TextAlign? textAlign,
+}) {
+  final ThemeData themeData = Theme.of(context);
+  final TextTheme textTheme = themeData.textTheme;
+
+  return Column(
+    crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
+    children: [
+      CustomText(
+        text: title,
+        textAlign: textAlign ?? TextAlign.start,
+        maxWidth: 400.0,
+        style: textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),
+      ),
+      verticalSpace(),
+      CustomText(
+        text: description,
+        textAlign: textAlign ?? TextAlign.start,
+        maxWidth: 400.0,
+        blueLightColor: true,
+      ),
+    ],
+  );
+}
+
+Widget _imageBuilder(String path) {
+  return CustomImage(path: path, width: 550.0);
 }

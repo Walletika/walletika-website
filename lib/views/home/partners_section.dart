@@ -65,14 +65,14 @@ Widget _sectionBuilder({
     stretch: true,
     padding: const EdgeInsets.symmetric(
       horizontal: 0,
-      vertical: AppDecoration.spaceLarge,
+      vertical: AppDecoration.spaceBig,
     ),
     children: [
       CustomText(
-        text: "1030@home".tr,
+        text: "1062@global".tr,
         textAlign: TextAlign.center,
         maxWidth: 900.0,
-        style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
+        style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.w900),
       ),
       verticalSpace(AppDecoration.spaceLarge),
       Obx(() {
@@ -106,7 +106,7 @@ Widget _sectionBuilder({
                   text: partner.name,
                   textAlign: TextAlign.center,
                   style: textTheme.titleMedium,
-                )
+                ),
               ],
             );
           }).toList(),

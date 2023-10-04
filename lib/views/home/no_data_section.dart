@@ -85,7 +85,7 @@ CustomSection _sectionBuilder({
             textAlign: textAlign ?? TextAlign.start,
             maxWidth: 600.0,
             style: textTheme.bodyLarge!.copyWith(
-              color: AppColors.white,
+              color: colorScheme.onPrimary,
               fontWeight: FontWeight.w300,
             ),
           )
