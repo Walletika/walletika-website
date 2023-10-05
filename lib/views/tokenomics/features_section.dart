@@ -23,19 +23,28 @@ class TokenomicsFeaturesSection extends StatelessWidget {
       layout: SectionLayout.wrap,
       children: [
         CustomFeature(
-          icon: LineIcons.coins,
+          icon: const Icon(
+            LineIcons.coins,
+            size: AppDecoration.iconBigSize,
+          ),
           title: "1004@tokenomics".tr,
           description: "1005@tokenomics".tr,
           width: width,
         ),
         CustomFeature(
-          icon: LineIcons.recycle,
+          icon: const Icon(
+            LineIcons.recycle,
+            size: AppDecoration.iconBigSize,
+          ),
           title: "1006@tokenomics".tr,
           description: "1007@tokenomics".tr,
           width: width,
         ),
         CustomFeature(
-          icon: LineIcons.wiredNetwork,
+          icon: const Icon(
+            LineIcons.wiredNetwork,
+            size: AppDecoration.iconBigSize,
+          ),
           title: "1008@tokenomics".tr,
           description: "1009@tokenomics".tr,
           width: width,

@@ -18,7 +18,6 @@ class FollowSaleSection extends StatelessWidget {
     final ColorScheme colorScheme = themeData.colorScheme;
 
     return CustomSection(
-      padding: const EdgeInsets.all(AppDecoration.paddingBig),
       children: [
         Container(
           padding: const EdgeInsets.all(AppDecoration.paddingMedium),

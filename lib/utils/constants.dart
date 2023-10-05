@@ -36,6 +36,7 @@ class AppDecoration {
   static const double paddingMedium = 20.0;
   static const double paddingBig = 30.0;
   static const double paddingLarge = 50.0;
+  static const double paddingLargest = 70.0;
   static const double spaceSmall = 5.0;
   static const double space = 10.0;
   static const double spaceMedium = 20.0;

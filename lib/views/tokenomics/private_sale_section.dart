@@ -21,7 +21,12 @@ class PrivateSaleSection extends GetView<TokenomicsController> {
     final TextTheme textTheme = themeData.textTheme;
 
     return CustomSection(
-      padding: const EdgeInsets.all(AppDecoration.paddingBig),
+      padding: const EdgeInsets.only(
+        top: AppDecoration.paddingBig,
+        bottom: AppDecoration.paddingBig,
+        left: AppDecoration.padding,
+        right: AppDecoration.padding,
+      ),
       children: [
         CustomText(
           text: "1020@tokenomics".tr,
@@ -43,8 +48,8 @@ class PrivateSaleSection extends GetView<TokenomicsController> {
           }
 
           return Wrap(
-            spacing: AppDecoration.spaceBig,
-            runSpacing: AppDecoration.spaceBig,
+            spacing: AppDecoration.spaceLarge,
+            runSpacing: AppDecoration.spaceLarge,
             children: [
               for (int index = 0; index < rounds.length; index++)
                 CustomRound(

@@ -64,6 +64,7 @@ const Map<String, String> translator = {
   "1061@global": "left",
   "1062@global": "Our Friends",
   "1063@global": "Founders",
+  "1064@global": "Sold Out",
 
   // Warns
   "1000@warns": "Field is required",
@@ -133,7 +134,7 @@ const Map<String, String> translator = {
   "1000@tokenomics": "The Major Token of Walletika",
   "1001@tokenomics":
       "We provide a secure token to our investors for great investment opportunities to grow further together.",
-  "1002@tokenomics": "",
+  "1002@tokenomics": "3% Marketing Strategies",
   "1003@tokenomics": "2.5% SCO Partnership",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
@@ -147,10 +148,10 @@ const Map<String, String> translator = {
   "1010@tokenomics":
       "The percentages were distributed based on our own vision that would provide the maximum benefit for investors primarily.",
   "1011@tokenomics": "35% Presale",
-  "1012@tokenomics": "2.5% Private sale",
-  "1013@tokenomics": "13% CEX and DEX listing",
+  "1012@tokenomics": "2.5% Private Sale",
+  "1013@tokenomics": "20% CEX and DEX listing",
   "1014@tokenomics": "30% Staking LP",
-  "1015@tokenomics": "17% Team and marketing strategies",
+  "1015@tokenomics": "7% Team",
   "1016@tokenomics": "Max Supply 100,000,000 WTK",
   "1017@tokenomics":
       "Join our community to be up to date about the sale stages and the latest news.",
