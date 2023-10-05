@@ -34,7 +34,6 @@ final ThemeData applicationLightTheme = ThemeData(
   iconTheme: _iconTheme,
   tooltipTheme: const TooltipThemeData(preferBelow: false),
   appBarTheme: const AppBarTheme(
-    elevation: AppDecoration.elevationSmall,
     scrolledUnderElevation: AppDecoration.elevation,
     shadowColor: AppColors.shadowLight,
     surfaceTintColor: AppColors.transparent,

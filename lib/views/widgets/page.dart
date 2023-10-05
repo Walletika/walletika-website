@@ -38,6 +38,7 @@ class CustomPage extends GetView<SettingsController> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              const Divider(),
               Column(children: sections),
               CustomFooterSection(),
             ],
