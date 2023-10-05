@@ -42,7 +42,7 @@ const Map<String, String> translator = {
   "1039@global": "Upcoming",
   "1040@global": "Live",
   "1041@global": "Ended",
-  "1042@global": "Completed",
+  "1042@global": "Sold Out",
   "1043@global": "Sold",
   "1044@global": "Done",
   "1045@global": "Days",
@@ -64,7 +64,6 @@ const Map<String, String> translator = {
   "1061@global": "left",
   "1062@global": "Our Friends",
   "1063@global": "Founders",
-  "1064@global": "Sold Out",
 
   // Warns
   "1000@warns": "Field is required",

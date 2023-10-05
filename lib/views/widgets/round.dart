@@ -146,11 +146,7 @@ class CustomRound extends StatelessWidget {
                             ? _onBuyDeposit
                             : null
                     : null,
-                text: model.isCompleted
-                    ? "1064@global".tr
-                    : isLive
-                        ? "1037@global".tr
-                        : tagText,
+                text: isLive ? "1037@global".tr : tagText,
                 type: ButtonType.filled,
               ),
             ),

@@ -42,7 +42,7 @@ const Map<String, String> translator = {
   "1039@global": "قادم",
   "1040@global": "متاح الآن",
   "1041@global": "انتهى",
-  "1042@global": "مكتمل",
+  "1042@global": "نفذ البيع",
   "1043@global": "مُباع",
   "1044@global": "تم",
   "1045@global": "ايام",
@@ -64,7 +64,6 @@ const Map<String, String> translator = {
   "1061@global": "متبقي",
   "1062@global": "اصدقائنا",
   "1063@global": "المؤسسين",
-  "1064@global": "نفذ البيع",
 
   // Warns
   "1000@warns": "الحقل مطلوب",
