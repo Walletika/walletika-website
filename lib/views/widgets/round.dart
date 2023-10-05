@@ -2,6 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:decimal/decimal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
 
 import '../../models/round.dart';
 import '../../utils/constants.dart';
@@ -12,6 +13,7 @@ import 'address.dart';
 import 'amount_field.dart';
 import 'awesome_dialog.dart';
 import 'button.dart';
+import 'feature.dart';
 import 'spacer.dart';
 import 'tag_text.dart';
 import 'text.dart';
@@ -62,14 +64,10 @@ class CustomRound extends StatelessWidget {
       tagBackgroundColor = AppColors.grey;
     }
 
-    return Container(
-      padding: const EdgeInsets.all(AppDecoration.paddingMedium),
+    return CustomFeature(
       width: 300.0,
-      decoration: BoxDecoration(
-        border: Border.all(color: colorScheme.tertiary),
-        borderRadius: BorderRadius.circular(AppDecoration.radiusBig),
-      ),
-      child: Column(
+      icon: const Icon(LineIcons.coins, size: AppDecoration.iconBigSize),
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
@@ -148,7 +146,11 @@ class CustomRound extends StatelessWidget {
                             ? _onBuyDeposit
                             : null
                     : null,
-                text: "1037@global".tr,
+                text: model.isCompleted
+                    ? "1064@global".tr
+                    : isLive
+                        ? "1037@global".tr
+                        : tagText,
                 type: ButtonType.filled,
               ),
             ),
