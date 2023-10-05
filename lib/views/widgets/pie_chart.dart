@@ -105,7 +105,7 @@ class _CustomPieChartState extends State<CustomPieChart> {
     final List<Widget> widgets = [];
     int index = 0;
 
-    for (final String text in widget.items.keys) {
+    for (final MapEntry<String, double> item in widget.items.entries) {
       final bool isTouched = index == _touchedIndex;
       index++;
 
@@ -123,7 +123,7 @@ class _CustomPieChartState extends State<CustomPieChart> {
           horizontalSpace(),
           Flexible(
             child: CustomText(
-              text: text,
+              text: '${item.key} (${item.value}%)',
               blueLightColor: !isTouched,
             ),
           ),
