@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:line_icons/line_icons.dart';
 
 import '../../controllers/settings.dart';
 import '../../models/page.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
-import 'button.dart';
+import 'image.dart';
 import 'spacer.dart';
 
 class CustomDrawer extends GetView<SettingsController> {
@@ -24,24 +23,18 @@ class CustomDrawer extends GetView<SettingsController> {
           DrawerHeader(
             decoration: BoxDecoration(color: colorScheme.secondary),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CustomButton(
-                  onPressed: _themeUpdate,
-                  tooltip: "1004@global".tr,
-                  type: ButtonType.icon,
-                  standardSize: false,
-                  icon: Icon(
-                    controller.isDarkMode ? LineIcons.sun : LineIcons.moon,
-                    size: AppDecoration.iconLargeSize,
-                  ),
+                const CustomImage(
+                  padding: EdgeInsets.only(left: AppDecoration.spaceBig),
+                  path: AppImages.logo,
+                  width: 40.0,
+                  height: 40.0,
                 ),
-                horizontalSpace(AppDecoration.spaceMedium),
                 const SizedBox(
                   height: AppDecoration.buttonHeightLarge,
                   child: VerticalDivider(),
                 ),
-                horizontalSpace(AppDecoration.spaceMedium),
                 Obx(() {
                   return DropdownButton(
                     padding: const EdgeInsets.symmetric(
@@ -173,11 +166,6 @@ class CustomDrawer extends GetView<SettingsController> {
         ],
       ),
     );
-  }
-
-  void _themeUpdate() async {
-    await controller.themeUpdate();
-    Get.back();
   }
 
   void _languageUpdate(String? language) async {

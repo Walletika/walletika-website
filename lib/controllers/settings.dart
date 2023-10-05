@@ -15,7 +15,6 @@ import 'dependencies.dart';
 class SettingsController extends GetxController {
   // States
   final RxBool _scrollable = false.obs;
-  final RxBool _isDarkMode = false.obs;
   final RxString _currentLanguage = AppLanguages.en.obs;
 
   final String initialPage = AppPages.home;
@@ -74,11 +73,7 @@ class SettingsController extends GetxController {
   // Getter methods
   bool get scrollable => _scrollable.value;
 
-  bool get isDarkMode => _isDarkMode.value;
-
   String get currentLanguage => _currentLanguage.value;
-
-  ThemeMode get theme => isDarkMode ? ThemeMode.dark : ThemeMode.light;
 
   Locale get locale => Locale(currentLanguage);
 
@@ -95,11 +90,6 @@ class SettingsController extends GetxController {
       .toList();
 
   // Setter methods
-  Future<void> themeUpdate() async {
-    _isDarkMode.value = !isDarkMode;
-    Get.changeThemeMode(theme);
-  }
-
   Future<void> languageUpdate(String? language) async {
     if (language == null) return;
 

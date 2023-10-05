@@ -40,8 +40,6 @@ class AppLauncher extends GetView<SettingsController> {
       debugShowCheckedModeBanner: false,
       title: AppInfo.titlePage,
       theme: applicationLightTheme,
-      darkTheme: applicationDarkTheme,
-      themeMode: controller.theme,
       locale: controller.locale,
       translations: AppTranslator(),
       defaultTransition: Transition.fadeIn,

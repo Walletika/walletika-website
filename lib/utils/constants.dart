@@ -67,17 +67,11 @@ class AppDecoration {
 
 class AppColors {
   static const Color font = Color(0xff000000);
-  static const Color fontDark = Color(0xffffffff);
   static const Color font2 = Color(0xff747f8c);
-  static const Color font2Dark = Color(0xff747f8c);
   static const Color background = Color(0xfff0f2f5);
-  static const Color backgroundDark = Color(0xff141416);
   static const Color background2 = Color(0xffe4e6eb);
-  static const Color background2Dark = Color(0xff1a1a1d);
   static const Color background3 = Color(0xfffcfcfd);
-  static const Color background3Dark = Color(0xff23262f);
   static const Color icon = Color(0xff606770);
-  static const Color iconDark = Color(0xff606770);
   static const Color highlight = Color(0xff1652f0);
   static const Color shadow = Color(0xff000000);
   static const Color shadowLight = Color(0x73000000);
@@ -101,27 +95,14 @@ class AppImages {
   static const String walletStaking = 'assets/illustrations/wallet_staking.png';
   static const String walletBlockchains =
       'assets/illustrations/wallet_blockchains.png';
+  static const String mobileApp = 'assets/illustrations/mobile.png';
+  static const String desktopApp = 'assets/illustrations/desktop.png';
   static const String searchIllustrations = 'assets/illustrations/search.png';
   static const String usbBackground = 'assets/illustrations/usb.jpeg';
   static const String telegramIllustrations =
       'assets/illustrations/telegram.png';
   static const String pageNotFoundIllustrations =
       'assets/illustrations/page_not_found.png';
-
-  static const Map<String, Map<String, String>> _images = {
-    "mobile": {
-      "light": 'assets/illustrations/mobile.png',
-      "dark": 'assets/illustrations/mobile_dark.png',
-    },
-    "desktop": {
-      "light": 'assets/illustrations/desktop.png',
-      "dark": 'assets/illustrations/desktop_dark.png',
-    },
-  };
-
-  static String theme(String name) {
-    return _images[name]![Get.isDarkMode ? "dark" : "light"]!;
-  }
 }
 
 class AppLanguages {
