@@ -27,6 +27,7 @@ class CustomPage extends GetView<SettingsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+      extendBody: true,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(AppDecoration.headerHeight),
         child: CustomHeader(),
