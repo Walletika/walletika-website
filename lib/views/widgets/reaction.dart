@@ -34,7 +34,7 @@ class _CustomReactionState extends State<CustomReaction> {
       ),
       child: Column(
         children: [
-          CustomText(text: widget.title),
+          CustomText(text: widget.title, textAlign: TextAlign.center),
           verticalSpace(),
           Row(
             mainAxisSize: MainAxisSize.min,
