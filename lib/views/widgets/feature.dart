@@ -50,7 +50,7 @@ class CustomFeature extends StatelessWidget {
         boxShadow: type == FeatureType.filled
             ? [
                 BoxShadow(
-                  color: AppColors.black.withAlpha(20),
+                  color: colorScheme.shadow.withAlpha(20),
                   offset: const Offset(10.0, 20.0),
                   blurRadius: 10.0,
                 ),

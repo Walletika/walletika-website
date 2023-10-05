@@ -149,7 +149,7 @@ class ArticleSection extends GetView<DocumentsController> {
           data: snapshot.data!,
           styleSheet: MarkdownStyleSheet.fromTheme(themeData).copyWith(
             blockquoteDecoration: BoxDecoration(
-              color: colorScheme.tertiary,
+              color: colorScheme.secondary,
               borderRadius: BorderRadius.circular(AppDecoration.radius),
             ),
           ),

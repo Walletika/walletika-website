@@ -51,7 +51,7 @@ class CustomImage extends StatelessWidget {
       widget = Container(
         padding: padding,
         decoration: BoxDecoration(
-          color: colorScheme.tertiary,
+          color: colorScheme.secondary,
           borderRadius: BorderRadius.circular(AppDecoration.radiusLarge),
         ),
         child: ClipRRect(

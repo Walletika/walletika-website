@@ -65,10 +65,10 @@ CustomSection _sectionBuilder({
     wrapSpacing: AppDecoration.spaceMedium,
     layout: SectionLayout.wrap,
     children: [
-      const Icon(
+      Icon(
         LineIcons.alternateShield,
         size: 120.0,
-        color: AppColors.white,
+        color: colorScheme.onPrimary,
       ),
       Column(
         crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
@@ -77,7 +77,9 @@ CustomSection _sectionBuilder({
             text: "1002@home".tr,
             textAlign: textAlign ?? TextAlign.start,
             maxWidth: 650.0,
-            style: textTheme.displaySmall!.copyWith(color: AppColors.white),
+            style: textTheme.displaySmall!.copyWith(
+              color: colorScheme.onPrimary,
+            ),
           ),
           verticalSpace(AppDecoration.spaceSmall),
           CustomText(

@@ -67,11 +67,11 @@ class AppDecoration {
 }
 
 class AppColors {
-  static const Color font = Color(0xff000000);
-  static const Color font2 = Color(0xff747f8c);
-  static const Color background = Color(0xfff0f2f5);
-  static const Color background2 = Color(0xffe4e6eb);
-  static const Color background3 = Color(0xfffcfcfd);
+  static const Color font = Color(0xff212529);
+  static const Color font2 = Color(0xff888888);
+  static const Color background = Color(0xffeeeeee);
+  static const Color background2 = Color(0xffe1e1e1);
+  static const Color background3 = Color(0xffd0d0d0);
   static const Color icon = Color(0xff606770);
   static const Color highlight = Color(0xff1652f0);
   static const Color shadow = Color(0xff000000);

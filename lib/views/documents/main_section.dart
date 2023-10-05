@@ -33,7 +33,7 @@ class MainDocsSection extends StatelessWidget {
           text: "1000@docs".tr,
           textAlign: TextAlign.center,
           style: textTheme.displaySmall!.copyWith(
-            color: AppColors.white,
+            color: colorScheme.onPrimary,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -42,7 +42,7 @@ class MainDocsSection extends StatelessWidget {
           text: "1001@docs".tr,
           textAlign: TextAlign.center,
           style: textTheme.headlineMedium!.copyWith(
-            color: AppColors.white,
+            color: colorScheme.onPrimary,
             fontWeight: FontWeight.w300,
           ),
         ),
@@ -52,18 +52,20 @@ class MainDocsSection extends StatelessWidget {
           focusNode: _focusNode,
           keyboardType: TextInputType.text,
           maxLength: 64,
-          cursorColor: AppColors.white,
-          style: textTheme.bodyMedium!.copyWith(color: AppColors.white),
+          cursorColor: colorScheme.onPrimary,
+          style: textTheme.bodyMedium!.copyWith(color: colorScheme.onPrimary),
           onEditingComplete: _onEditingComplete,
           decoration: InputDecoration(
-            fillColor: AppColors.white.withAlpha(40),
+            fillColor: colorScheme.onPrimary.withAlpha(40),
             constraints: const BoxConstraints(maxWidth: 600.0),
             contentPadding: const EdgeInsets.all(AppDecoration.paddingMedium),
             counter: zeroSpace(),
-            prefixIcon: const Icon(LineIcons.search, color: AppColors.white),
+            prefixIcon: Icon(LineIcons.search, color: colorScheme.onPrimary),
             label: CustomText(
               text: "1022@global".tr,
-              style: textTheme.bodyMedium!.copyWith(color: AppColors.white),
+              style: textTheme.bodyMedium!.copyWith(
+                color: colorScheme.onPrimary,
+              ),
             ),
             suffix: CustomClickableWidget(
               onTap: () {
@@ -71,9 +73,9 @@ class MainDocsSection extends StatelessWidget {
                 _focusNode.unfocus();
                 _onEditingComplete();
               },
-              child: const Icon(
+              child: Icon(
                 LineIcons.times,
-                color: AppColors.white,
+                color: colorScheme.onPrimary,
                 size: AppDecoration.iconSmallSize,
               ),
             ),
