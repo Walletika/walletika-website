@@ -85,7 +85,7 @@ class CustomFeature extends StatelessWidget {
       widget = Stack(
         alignment: Alignment.topCenter,
         children: [
-          Column(children: [verticalSpace(70.0), widget]),
+          Column(children: [verticalSpace(AppDecoration.spaceLargest), widget]),
           Container(
             width: 100.0,
             height: 100.0,

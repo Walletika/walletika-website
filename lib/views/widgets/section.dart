@@ -80,7 +80,7 @@ class CustomSection extends StatelessWidget {
       padding: padding ??
           const EdgeInsets.symmetric(
             horizontal: AppDecoration.paddingBig,
-            vertical: 70.0,
+            vertical: AppDecoration.paddingLargest,
           ),
       decoration: decoration,
       constraints: BoxConstraints(

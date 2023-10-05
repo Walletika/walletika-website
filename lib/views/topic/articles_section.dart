@@ -25,7 +25,7 @@ class ArticlesSection extends GetView<DocumentsController> {
       width: AppDecoration.docsPageWidth,
       padding: const EdgeInsets.symmetric(
         horizontal: AppDecoration.paddingMedium,
-        vertical: 70.0,
+        vertical: AppDecoration.paddingLargest,
       ),
       children: [
         Obx(() {

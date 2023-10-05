@@ -42,6 +42,7 @@ class AppDecoration {
   static const double spaceMedium = 20.0;
   static const double spaceBig = 30.0;
   static const double spaceLarge = 50.0;
+  static const double spaceLargest = 70.0;
   static const double elevationSmall = 10.0;
   static const double elevation = 20.0;
   static const double iconSize = 24.0;

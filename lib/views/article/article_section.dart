@@ -33,7 +33,7 @@ class ArticleSection extends GetView<DocumentsController> {
       width: AppDecoration.docsPageWidth,
       padding: const EdgeInsets.symmetric(
         horizontal: AppDecoration.paddingMedium,
-        vertical: 70.0,
+        vertical: AppDecoration.paddingLargest,
       ),
       children: [
         Obx(() {
@@ -62,7 +62,7 @@ class ArticleSection extends GetView<DocumentsController> {
             ],
           );
         }),
-        verticalSpace(80.0),
+        verticalSpace(AppDecoration.spaceLargest),
         CustomReaction(title: "1002@docs".tr),
       ],
     );

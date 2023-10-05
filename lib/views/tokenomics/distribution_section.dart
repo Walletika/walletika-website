@@ -40,7 +40,7 @@ class TokenDistributionSection extends StatelessWidget {
         ),
         verticalSpace(AppDecoration.spaceLarge),
         CustomPieChart(
-          spacing: 70.0,
+          spacing: AppDecoration.spaceLargest,
           items: {
             "1014@tokenomics".tr: 30.0,
             "1003@tokenomics".tr: 2.5,

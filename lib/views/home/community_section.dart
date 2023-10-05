@@ -33,10 +33,10 @@ class _DesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomSection(
       padding: const EdgeInsets.only(
+        top: AppDecoration.padding,
+        bottom: AppDecoration.paddingLargest,
         left: AppDecoration.paddingBig,
         right: AppDecoration.paddingBig,
-        top: AppDecoration.padding,
-        bottom: 70.0,
       ),
       layout: SectionLayout.row,
       children: [
