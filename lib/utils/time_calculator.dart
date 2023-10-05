@@ -29,12 +29,17 @@ String timeDisplay({
   bool dateOnly = false,
   bool timeOnly = false,
   bool timeZoneName = false,
+  bool showSecs = false,
 }) {
   time ??= DateTime.now();
 
   if (inUTC) time = time.toUtc();
 
   String timeString = time.toString().split('.').first;
+
+  if (!showSecs) {
+    timeString = timeString.substring(0, 16);
+  }
 
   if (dateOnly) {
     timeString = timeString.split(' ').first;
