@@ -10,6 +10,7 @@ class CustomImage extends StatelessWidget {
     this.width,
     this.height,
     this.fit,
+    this.backgroundColor,
     this.circled = false,
     super.key,
   });
@@ -20,6 +21,7 @@ class CustomImage extends StatelessWidget {
   final double? width;
   final double? height;
   final BoxFit? fit;
+  final Color? backgroundColor;
   final bool circled;
 
   @override
@@ -51,7 +53,7 @@ class CustomImage extends StatelessWidget {
       widget = Container(
         padding: padding,
         decoration: BoxDecoration(
-          color: colorScheme.secondary,
+          color: backgroundColor ?? colorScheme.secondary,
           borderRadius: BorderRadius.circular(AppDecoration.radiusLarge),
         ),
         child: ClipRRect(

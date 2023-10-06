@@ -101,6 +101,7 @@ Widget _sectionBuilder({
                   width: 100.0,
                   height: 100.0,
                   fit: BoxFit.cover,
+                  backgroundColor: colorScheme.tertiary,
                   circled: true,
                 ),
                 verticalSpace(),
