@@ -134,6 +134,18 @@ class CustomRound extends StatelessWidget {
               minHeight: 10.0,
             ),
           ),
+          verticalSpace(AppDecoration.spaceSmall),
+          _infoBuilder(
+            themeData: themeData,
+            name: convertToFiatFormat(
+              value: Decimal.fromInt(model.soldTokensCost),
+              symbol: model.priceSymbol.toLowerCase(),
+            ),
+            value: convertToFiatFormat(
+              value: Decimal.fromInt(model.totalTokensCost),
+              symbol: model.priceSymbol.toLowerCase(),
+            ),
+          ),
           verticalSpace(AppDecoration.spaceBig),
           Center(
             child: SizedBox(

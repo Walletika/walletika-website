@@ -29,6 +29,10 @@ class RoundModel {
 
   int get availableTokens => isCompleted ? 0 : tokens - sold;
 
+  int get totalTokensCost => (tokens * price).toInt();
+
+  int get soldTokensCost => (sold * price).toInt();
+
   int get availableTokensCost => (availableTokens * price).toInt();
 
   factory RoundModel.fromJson(Map<String, dynamic> json) => RoundModel(
