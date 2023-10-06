@@ -60,12 +60,14 @@ Widget _sectionBuilder({
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
+  final ColorScheme colorScheme = themeData.colorScheme;
 
   return CustomSection(
     stretch: true,
+    backgroundColor: colorScheme.secondary,
     padding: const EdgeInsets.symmetric(
       horizontal: 0,
-      vertical: AppDecoration.spaceBig,
+      vertical: AppDecoration.spaceLargest,
     ),
     children: [
       CustomText(
