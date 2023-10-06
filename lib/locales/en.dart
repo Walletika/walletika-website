@@ -56,7 +56,7 @@ const Map<String, String> translator = {
   "1053@global": "Order Cost",
   "1054@global": "Accepted Networks",
   "1055@global": "Request Submitted",
-  "1056@global": "Private Sale",
+  "1056@global": "Special Sale",
   "1057@global": "Smart Contract Explorer",
   "1058@global": "\$WTK Explorer",
   "1059@global": "Donate",
@@ -133,7 +133,7 @@ const Map<String, String> translator = {
   "1000@tokenomics": "The Major Token of Walletika",
   "1001@tokenomics":
       "We provide a secure token to our investors for great investment opportunities to grow further together.",
-  "1002@tokenomics": "Marketing Strategies",
+  "1002@tokenomics": "Marketing",
   "1003@tokenomics": "SCO Partnership",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":

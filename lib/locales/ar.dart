@@ -133,7 +133,7 @@ const Map<String, String> translator = {
   "1000@tokenomics": "العملة الرئيسية لـ Walletika",
   "1001@tokenomics":
       "نحن نقدم رمزًا آمنًا لمستثمرينا للحصول على فرص استثمارية رائعة للنمو معًا.",
-  "1002@tokenomics": "استراتيجيات التسويق",
+  "1002@tokenomics": "التسويق",
   "1003@tokenomics": "شراكة SCO",
   "1004@tokenomics": "العرض محدود",
   "1005@tokenomics":

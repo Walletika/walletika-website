@@ -123,7 +123,7 @@ class _CustomPieChartState extends State<CustomPieChart> {
           horizontalSpace(),
           Flexible(
             child: CustomText(
-              text: '${item.key} (${item.value}%)',
+              text: '${item.value}% ${item.key}',
               blueLightColor: !isTouched,
             ),
           ),
