@@ -38,12 +38,12 @@ class _DesktopView extends StatelessWidget {
             Flexible(
               child: _textBuilder(
                 context: context,
-                title: "1018@home".tr,
-                description: "1019@home".tr,
+                title: "1014@home".tr,
+                description: "1015@home".tr,
               ),
             ),
             Flexible(
-              child: _imageBuilder(AppImages.walletStaking),
+              child: _imageBuilder(AppImages.wallets),
             ),
           ],
         ),
@@ -70,12 +70,12 @@ class _DesktopView extends StatelessWidget {
             Flexible(
               child: _textBuilder(
                 context: context,
-                title: "1014@home".tr,
-                description: "1015@home".tr,
+                title: "1018@home".tr,
+                description: "1019@home".tr,
               ),
             ),
             Flexible(
-              child: _imageBuilder(AppImages.wallets),
+              child: _imageBuilder(AppImages.walletStaking),
             ),
           ],
         ),
@@ -93,13 +93,13 @@ class _PhoneView extends StatelessWidget {
       children: [
         _textBuilder(
           context: context,
-          title: "1018@home".tr,
-          description: "1019@home".tr,
+          title: "1014@home".tr,
+          description: "1015@home".tr,
           crossAxisAlignment: CrossAxisAlignment.center,
           textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
-        _imageBuilder(AppImages.walletStaking),
+        _imageBuilder(AppImages.wallets),
         verticalSpace(AppDecoration.spaceLarge),
         _textBuilder(
           context: context,
@@ -113,13 +113,13 @@ class _PhoneView extends StatelessWidget {
         verticalSpace(AppDecoration.spaceLarge),
         _textBuilder(
           context: context,
-          title: "1014@home".tr,
-          description: "1015@home".tr,
+          title: "1018@home".tr,
+          description: "1019@home".tr,
           crossAxisAlignment: CrossAxisAlignment.center,
           textAlign: TextAlign.center,
         ),
         verticalSpace(AppDecoration.spaceBig),
-        _imageBuilder(AppImages.wallets),
+        _imageBuilder(AppImages.walletStaking),
       ],
     );
   }

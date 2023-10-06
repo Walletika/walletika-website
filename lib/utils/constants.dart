@@ -67,7 +67,7 @@ class AppDecoration {
 }
 
 class AppColors {
-  static const Color font = Color(0xff212529);
+  static const Color font = Color(0xff000000);
   static const Color font2 = Color(0xff888888);
   static const Color background = Color(0xffeeeeee);
   static const Color background2 = Color(0xffe1e1e1);

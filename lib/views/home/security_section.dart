@@ -36,14 +36,14 @@ class _DesktopView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
+              child: _imageBuilder(AppImages.walletLogin),
+            ),
+            Flexible(
               child: _textBuilder(
                 context: context,
                 title: "1005@home".tr,
                 description: "1006@home".tr,
               ),
-            ),
-            Flexible(
-              child: _imageBuilder(AppImages.walletLogin),
             ),
           ],
         ),
@@ -52,14 +52,14 @@ class _DesktopView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
-              child: _imageBuilder(AppImages.walletAuth),
-            ),
-            Flexible(
               child: _textBuilder(
                 context: context,
                 title: "1007@home".tr,
                 description: "1008@home".tr,
               ),
+            ),
+            Flexible(
+              child: _imageBuilder(AppImages.walletAuth),
             ),
           ],
         ),
