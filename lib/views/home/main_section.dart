@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
+import '../../utils/launch_url.dart';
 import '../widgets/button.dart';
 import '../widgets/image.dart';
 import '../widgets/section.dart';
@@ -100,6 +101,13 @@ Widget _textBuilder({
           CustomButton(
             onPressed: () => Get.offNamed(AppPages.tokenomics),
             text: "1056@global".tr,
+            type: ButtonType.outlined,
+            width: 170.0,
+            height: 51.0,
+          ),
+          CustomButton(
+            onPressed: () => openNewTab(AppInfo.whitepaperPDF),
+            text: "1030@global".tr,
             type: ButtonType.outlined,
             width: 170.0,
             height: 51.0,

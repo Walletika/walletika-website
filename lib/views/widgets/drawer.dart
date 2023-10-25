@@ -125,7 +125,7 @@ class CustomDrawer extends GetView<SettingsController> {
             title: Text("1031@global".tr),
           ),
           ListTile(
-            onTap: () => Get.offNamed('${AppPages.documents}/about/whitepaper'),
+            onTap: () => openNewTab(AppInfo.whitepaperPDF),
             title: Text("1030@global".tr),
           ),
           ListTile(
