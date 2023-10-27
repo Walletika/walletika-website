@@ -63,7 +63,7 @@ const Map<String, String> translator = {
   "1060@global": "بعد",
   "1061@global": "متبقي",
   "1062@global": "اصدقائنا",
-  "1063@global": "المؤسسين",
+  "1063@global": "الفريق",
 
   // Warns
   "1000@warns": "الحقل مطلوب",

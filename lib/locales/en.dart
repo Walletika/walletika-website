@@ -63,7 +63,7 @@ const Map<String, String> translator = {
   "1060@global": "from now",
   "1061@global": "left",
   "1062@global": "Our Friends",
-  "1063@global": "Founders",
+  "1063@global": "Team",
 
   // Warns
   "1000@warns": "Field is required",
