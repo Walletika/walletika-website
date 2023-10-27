@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/page.dart';
 import 'community_section.dart';
+import 'main_banner.dart';
 import 'sub_features_section.dart';
 import 'main_section.dart';
 import 'partners_section.dart';
@@ -17,6 +18,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPage([
+      MainBannerSection(),
       MainSection(),
       NoDataSection(),
       SecuritySection(),

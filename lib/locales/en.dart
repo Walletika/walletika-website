@@ -113,6 +113,7 @@ const Map<String, String> translator = {
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
       "Walletika is a software platform, we do not provide any financial advice and do not store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
+  "1029@home": "Private Sale is Coming on 15 November",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",

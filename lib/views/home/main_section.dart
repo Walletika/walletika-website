@@ -99,13 +99,6 @@ Widget _textBuilder({
             height: 51.0,
           ),
           CustomButton(
-            onPressed: () => Get.offNamed(AppPages.tokenomics),
-            text: "1056@global".tr,
-            type: ButtonType.outlined,
-            width: 170.0,
-            height: 51.0,
-          ),
-          CustomButton(
             onPressed: () => openNewTab(AppInfo.whitepaperPDF),
             text: "1030@global".tr,
             type: ButtonType.outlined,
