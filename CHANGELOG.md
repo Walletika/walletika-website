@@ -1,3 +1,13 @@
+# 1.5.0
+- Translation update
+- Set a background for partners section
+- Added backgroundColor parameter to CustomImage widget
+- Added totalTokensCost and soldTokensCost attributes to RoundModel
+- Added whitepaper button in home page
+- Added main banner in home page
+- Design improvement
+- Images upgrade
+
 # 1.4.0
 - Added image parameter to CustomSection widget
 - Added showSecs parameter to timeDisplay function
