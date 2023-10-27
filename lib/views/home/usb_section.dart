@@ -70,7 +70,7 @@ Widget _sectionBuilder({
         text: "1009@home".tr,
         style: textTheme.displaySmall!.copyWith(
           color: AppColors.white,
-          fontWeight: FontWeight.w900,
+          fontWeight: FontWeight.bold,
         ),
       ),
       verticalSpace(),
