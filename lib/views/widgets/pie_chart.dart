@@ -58,7 +58,6 @@ class _CustomPieChartState extends State<CustomPieChart> {
                   });
                 },
               ),
-              sectionsSpace: 3.0,
               sections: _pieSectionsBuilder(),
             ),
           ),
