@@ -62,7 +62,7 @@ const Map<String, String> translator = {
   "1059@global": "تبرع",
   "1060@global": "بعد",
   "1061@global": "متبقي",
-  "1062@global": "اصدقائنا",
+  "1062@global": "اصدقائنا & شركائنا",
   "1063@global": "الفريق",
 
   // Warns
