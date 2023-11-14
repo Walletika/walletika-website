@@ -64,6 +64,9 @@ const Map<String, String> translator = {
   "1061@global": "متبقي",
   "1062@global": "اصدقائنا & شركائنا",
   "1063@global": "الفريق",
+  "1064@global": "اتصل بنا",
+  "1065@global": "يوتيوب",
+  "1066@global": "المجتمع",
 
   // Warns
   "1000@warns": "الحقل مطلوب",

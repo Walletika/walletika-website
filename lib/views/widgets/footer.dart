@@ -71,10 +71,19 @@ class _DesktopView extends StatelessWidget {
         verticalSpace(),
         SizedBox(
           width: AppDecoration.textSectionWidth,
-          child: _donateBuilder(),
+          child: _donateBuilder(textTheme),
+        ),
+        SizedBox(
+          width: AppDecoration.textSectionWidth,
+          child: _contactUsBuilder(textTheme),
         ),
         verticalSpace(AppDecoration.spaceBig),
         _socialMediaBuilder(),
+        verticalSpace(),
+        SizedBox(
+          width: AppDecoration.textSectionWidth,
+          child: _agreementBuilder(MainAxisAlignment.end),
+        ),
       ],
     );
   }
@@ -110,9 +119,12 @@ class _PhoneView extends StatelessWidget {
           style: textTheme.bodyMedium,
         ),
         verticalSpace(),
-        _donateBuilder(),
+        _donateBuilder(textTheme),
+        _contactUsBuilder(textTheme),
         verticalSpace(AppDecoration.spaceBig),
         _socialMediaBuilder(),
+        verticalSpace(),
+        _agreementBuilder(MainAxisAlignment.center),
       ],
     );
   }
@@ -142,36 +154,91 @@ Widget _socialMediaBuilder() {
   return Row(
     mainAxisSize: MainAxisSize.min,
     children: [
-      CustomButton(
-        onPressed: () => openNewTab(AppInfo.twitter),
-        icon: const Icon(LineIcons.twitter, size: AppDecoration.iconBigSize),
-        type: ButtonType.icon,
-        width: 80.0,
+      Flexible(
+        child: CustomButton(
+          onPressed: () => openNewTab(AppInfo.twitter),
+          icon: const Icon(LineIcons.twitter, size: AppDecoration.iconBigSize),
+          type: ButtonType.icon,
+          width: 80.0,
+        ),
       ),
-      CustomButton(
-        onPressed: () => openNewTab(AppInfo.telegramChannel),
-        icon: const Icon(LineIcons.telegram, size: AppDecoration.iconBigSize),
-        type: ButtonType.icon,
-        width: 80.0,
+      Flexible(
+        child: CustomButton(
+          onPressed: () => openNewTab(AppInfo.telegramChannel),
+          icon: const Icon(LineIcons.telegram, size: AppDecoration.iconBigSize),
+          type: ButtonType.icon,
+          width: 80.0,
+        ),
       ),
-      CustomButton(
-        onPressed: () => openNewTab(AppInfo.github),
-        icon: const Icon(LineIcons.github, size: AppDecoration.iconBigSize),
-        type: ButtonType.icon,
-        width: 80.0,
+      Flexible(
+        child: CustomButton(
+          onPressed: () => openNewTab(AppInfo.youtube),
+          icon: const Icon(LineIcons.youtube, size: AppDecoration.iconBigSize),
+          type: ButtonType.icon,
+          width: 80.0,
+        ),
+      ),
+      Flexible(
+        child: CustomButton(
+          onPressed: () => openNewTab(AppInfo.github),
+          icon: const Icon(LineIcons.github, size: AppDecoration.iconBigSize),
+          type: ButtonType.icon,
+          width: 80.0,
+        ),
       ),
     ],
   );
 }
 
-Widget _donateBuilder() {
+Widget _donateBuilder(TextTheme textTheme) {
   return Row(
     mainAxisSize: MainAxisSize.min,
     children: [
-      CustomText(text: "1059@global".tr),
+      CustomText(text: "1059@global".tr, style: textTheme.bodyMedium),
       horizontalSpace(AppDecoration.spaceSmall),
       const Flexible(
         child: CustomAddressText(AppInfo.donateAddress, width: 340.0),
+      ),
+    ],
+  );
+}
+
+Widget _contactUsBuilder(TextTheme textTheme) {
+  return Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      CustomText(text: "1064@global".tr, style: textTheme.bodyMedium),
+      horizontalSpace(AppDecoration.spaceSmall),
+      Flexible(
+        child: CustomText(
+          text: AppInfo.supportMail,
+          blueLightColor: true,
+          style: textTheme.bodyMedium,
+        ),
+      ),
+    ],
+  );
+}
+
+Widget _agreementBuilder(MainAxisAlignment mainAxisAlignment) {
+  return Row(
+    mainAxisAlignment: mainAxisAlignment,
+    children: [
+      CustomButton(
+        onPressed: () => Get.offNamed(
+          '${AppPages.documents}/user-agreement/terms-of-use',
+        ),
+        text: "1013@global".tr,
+        type: ButtonType.text,
+        width: 130.0,
+      ),
+      CustomButton(
+        onPressed: () => Get.offNamed(
+          '${AppPages.documents}/user-agreement/privacy-policy',
+        ),
+        text: "1014@global".tr,
+        type: ButtonType.text,
+        width: 130.0,
       ),
     ],
   );

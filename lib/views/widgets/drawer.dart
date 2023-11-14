@@ -160,6 +160,14 @@ class CustomDrawer extends GetView<SettingsController> {
             title: Text("1016@global".tr),
           ),
           ListTile(
+            onTap: () => openNewTab(AppInfo.telegramGroup),
+            title: Text("1066@global".tr),
+          ),
+          ListTile(
+            onTap: () => openNewTab(AppInfo.youtube),
+            title: Text("1065@global".tr),
+          ),
+          ListTile(
             onTap: () => openNewTab(AppInfo.github),
             title: Text("1017@global".tr),
           ),

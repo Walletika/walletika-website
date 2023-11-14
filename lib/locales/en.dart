@@ -64,6 +64,9 @@ const Map<String, String> translator = {
   "1061@global": "left",
   "1062@global": "Our Friends & Partners",
   "1063@global": "Team",
+  "1064@global": "Contact us",
+  "1065@global": "Youtube",
+  "1066@global": "Community",
 
   // Warns
   "1000@warns": "Field is required",
