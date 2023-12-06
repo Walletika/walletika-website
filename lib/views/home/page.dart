@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/page.dart';
 import 'community_section.dart';
 import 'main_banner.dart';
+import 'mastercard_section.dart';
 import 'sub_features_section.dart';
 import 'main_section.dart';
 import 'partners_section.dart';
@@ -23,6 +24,7 @@ class HomeView extends StatelessWidget {
       NoDataSection(),
       SecuritySection(),
       USBSection(),
+      MastercardSection(),
       SubFeaturesSection(),
       FeaturesSection(),
       PartnersSection(),

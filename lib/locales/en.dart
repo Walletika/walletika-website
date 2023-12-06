@@ -6,7 +6,7 @@ const Map<String, String> translator = {
   "1003@global": "Documents",
   "1004@global": "Dark / Light Mode",
   "1005@global": "Download App",
-  "1006@global": "Buy \$WTK",
+  "1006@global": "Rounds",
   "1007@global": "Join Channel",
   "1008@global": "Join Community",
   "1009@global": "Company",
@@ -67,6 +67,7 @@ const Map<String, String> translator = {
   "1064@global": "Contact us",
   "1065@global": "Youtube",
   "1066@global": "Community",
+  "1067@global": "Check Roadmap",
 
   // Warns
   "1000@warns": "Field is required",
@@ -116,7 +117,10 @@ const Map<String, String> translator = {
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
       "Walletika is a software platform, we do not provide any financial advice and do not store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
-  "1029@home": "Private Sale is Live Now",
+  "1029@home": "The next round of private sale will begin on December 15",
+  "1030@home": "Walletika Debit Card Coming Soon!",
+  "1031@home":
+      "Earn and spend your crypto anytime and anywhere you find MasterCard as a payment method.",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",
