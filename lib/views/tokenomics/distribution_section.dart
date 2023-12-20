@@ -44,8 +44,7 @@ class TokenDistributionSection extends StatelessWidget {
           items: {
             "1014@tokenomics".tr: 30.0,
             "1011@tokenomics".tr: 35.0,
-            "1012@tokenomics".tr: 2.5,
-            "1003@tokenomics".tr: 2.5,
+            "1012@tokenomics".tr: 5.0,
             "1013@tokenomics".tr: 13.0,
             "1015@tokenomics".tr: 10.0,
             "1002@tokenomics".tr: 7.0,

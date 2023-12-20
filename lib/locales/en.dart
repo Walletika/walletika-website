@@ -143,7 +143,7 @@ const Map<String, String> translator = {
   "1001@tokenomics":
       "WLTK is the secure token for our investors to have great investment opportunities to grow together.",
   "1002@tokenomics": "Marketing",
-  "1003@tokenomics": "SCO Partnership",
+  "1003@tokenomics": "",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
       "The maximum supply is 100,000,000 WLTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
