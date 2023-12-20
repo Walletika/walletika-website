@@ -30,6 +30,10 @@ class _DesktopView extends StatelessWidget {
     const double width = 285.0;
 
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.paddingBig,
+        vertical: 0,
+      ),
       layout: SectionLayout.wrap,
       children: [
         Column(
