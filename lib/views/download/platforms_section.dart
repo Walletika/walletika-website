@@ -108,7 +108,7 @@ Widget _buttonBuilder(PackageModel package) {
   if (package.packageURL != null) {
     onPressed = () => openNewTab(package.packageURL!);
   } else {
-    tooltip = "1007@download".tr;
+    tooltip = "1068@global".tr;
   }
 
   return CustomButton(

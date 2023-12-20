@@ -58,16 +58,17 @@ const Map<String, String> translator = {
   "1055@global": "Request Submitted",
   "1056@global": "Special Sale",
   "1057@global": "Smart Contract Explorer",
-  "1058@global": "\$WTK Explorer",
+  "1058@global": "\$WLTK Explorer",
   "1059@global": "Donate",
   "1060@global": "from now",
   "1061@global": "left",
   "1062@global": "Our Friends & Partners",
   "1063@global": "Team",
-  "1064@global": "Contact us",
+  "1064@global": "Contact",
   "1065@global": "Youtube",
   "1066@global": "Community",
   "1067@global": "Check Roadmap",
+  "1068@global": "Coming Soon",
 
   // Warns
   "1000@warns": "Field is required",
@@ -80,11 +81,11 @@ const Map<String, String> translator = {
       "Choose between a hot and cold wallet to access your funds easily without a private key.",
   "1002@home": "WE DO NOT STORE USERS DATA",
   "1003@home":
-      "We ensure the utmost privacy and security for our users by our unique solution that does not require the storage of user data on our servers or user devices.",
+      "We ensure a high level of privacy and security for our users through our unique solution that does not require storing user data on our servers or user devices.",
   "1004@home": "",
   "1005@home": "Keyless Wallet",
   "1006@home":
-      "You do not need a private key to access your wallet anymore, we provide a decentralized login system instead.",
+      "You do not need a private key to access your wallet anymore, we provide a decentralized login protocol instead.",
   "1007@home": "Two-Factor Authentication",
   "1008@home":
       "We are the first crypto wallet supports decentralized two-factor authentication to confirm transactions, this unique feature ensures unparalleled security anywhere.",
@@ -100,7 +101,7 @@ const Map<String, String> translator = {
       "Enjoy creating and managing unlimited wallets for different blockchain networks in one place.",
   "1016@home": "Multiple Fiat Currencies",
   "1017@home":
-      "Watch the price changes of digital assets against various fiat currencies such as USD, EUR, GBP, and more.",
+      "Track price changes of digital assets against various fiat currencies such as USD, EUR, GBP, and more.",
   "1018@home": "Staking Services",
   "1019@home":
       "Get the most out of your crypto assets by staking for a high annual interest.",
@@ -120,7 +121,7 @@ const Map<String, String> translator = {
   "1029@home": "The next round of private sale will begin on December 15",
   "1030@home": "Walletika Debit Card Coming Soon!",
   "1031@home":
-      "Earn and spend your crypto anytime and anywhere you find MasterCard as a payment method.",
+      "Earn and spend your crypto anytime and anywhere you find MasterCard logo.",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",
@@ -133,40 +134,40 @@ const Map<String, String> translator = {
   "1005@download":
       "Install as a hot wallet on your desktop device or as a cold wallet on your USB drive.",
   "1006@download": "How do you feel about Walletika app?",
-  "1007@download": "The package will be available soon",
+  "1007@download": "",
   "1008@download":
       "We are in beta, please do not deposit real money. Join our group now and ask for a deposit to test the app together.",
 
   // Token
   "1000@tokenomics": "The Major Token of Walletika",
   "1001@tokenomics":
-      "We provide a secure token to our investors for great investment opportunities to grow further together.",
+      "WLTK is the secure token for our investors to have great investment opportunities to grow together.",
   "1002@tokenomics": "Marketing",
   "1003@tokenomics": "SCO Partnership",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
-      "The maximum supply is 100,000,000 WTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
+      "The maximum supply is 100,000,000 WLTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
   "1006@tokenomics": "Recyclable",
   "1007@tokenomics":
-      "Walletika token is recyclable, by collecting it against Walletika's paid services and refinancing it into staking services again.",
+      "Walletika token is recyclable, by collecting it for Walletika's paid services and refunding it into staking protocol again.",
   "1008@tokenomics": "Fully Decentralized",
   "1009@tokenomics":
-      "100% decentralized and transactions cannot be controlled such as freezing wallets or balances.",
+      "Walletika token is 100% decentralized and transactions cannot be controlled such as pausing it or adding wallets to the blacklist.",
   "1010@tokenomics":
-      "The percentages were distributed based on our own vision that would provide the maximum benefit for investors primarily.",
+      "The percentages were distributed based on our own vision that would provide the maximum benefit to our investors primarily.",
   "1011@tokenomics": "Presale",
   "1012@tokenomics": "Private Sale",
   "1013@tokenomics": "CEX and DEX listing",
   "1014@tokenomics": "Staking LP",
   "1015@tokenomics": "Team",
-  "1016@tokenomics": "Max Supply 100,000,000 WTK",
+  "1016@tokenomics": "Max Supply 100,000,000 WLTK",
   "1017@tokenomics":
       "Join our community to be up to date about the sale stages and the latest news.",
   "1018@tokenomics": "How do you feel about Walletika token?",
   "1019@tokenomics":
       "Participate in one of the best opportunities at the cheapest prices!",
-  "1020@tokenomics": "Private Sale x50 per \$1 Hit",
-  "1021@tokenomics": "Presale x10 per \$1 Hit",
+  "1020@tokenomics": "Private Sale Stage",
+  "1021@tokenomics": "Presale Stage",
   "1022@tokenomics":
       "The best opportunities before starting trading on the exchanges!",
   "1023@tokenomics": "How much you can buy?",
