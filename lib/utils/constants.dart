@@ -12,7 +12,7 @@ class AppInfo {
   static const String telegramGroup = 'https://t.me/walletikacommunity';
   static const String github = 'https://github.com/Walletika';
   static const String tokenSmartContract =
-      'https://bscscan.com/address/0x8B26361df494D174e81D0E52110056362ECdD056';
+      'https://bscscan.com/address/0x9eE10d2E9571AecfE5a604aF7fE71B96eBa84b7b';
   static const String homeAPI =
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/home.json';
   static const String topicsAPI =
