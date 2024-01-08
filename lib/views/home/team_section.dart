@@ -145,10 +145,19 @@ Widget _textBuilder({
         maxWidth: 400.0,
         blueLightColor: true,
       ),
-      verticalSpace(),
-      Row(
-        mainAxisSize: MainAxisSize.min,
+      verticalSpace(AppDecoration.spaceBig),
+      Wrap(
+        spacing: AppDecoration.spaceSmall,
+        runSpacing: AppDecoration.spaceSmall,
+        alignment: WrapAlignment.center,
+        runAlignment: WrapAlignment.center,
         children: [
+          CustomButton(
+            onPressed: () => openNewTab(AppInfo.kyc),
+            text: "1069@global".tr,
+            type: ButtonType.outlined,
+            height: AppDecoration.buttonHeight,
+          ),
           if (member.telegram != null)
             CustomButton(
               onPressed: () => openNewTab(member.telegram!),
@@ -178,12 +187,6 @@ Widget _textBuilder({
               standardSize: false,
             ),
         ],
-      ),
-      verticalSpace(AppDecoration.spaceMedium),
-      CustomButton(
-        onPressed: () => openNewTab(AppInfo.kyc),
-        text: "1069@global".tr,
-        type: ButtonType.outlined,
       ),
     ],
   );
