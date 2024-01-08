@@ -63,12 +63,14 @@ const Map<String, String> translator = {
   "1060@global": "from now",
   "1061@global": "left",
   "1062@global": "Our Friends & Partners",
-  "1063@global": "Team",
+  "1063@global": "Meet The Founder",
   "1064@global": "Contact",
   "1065@global": "Youtube",
   "1066@global": "Community",
   "1067@global": "Check Roadmap",
   "1068@global": "Coming Soon",
+  "1069@global": "KYC Certificate",
+  "1070@global": "Audit Certificate",
 
   // Warns
   "1000@warns": "Field is required",

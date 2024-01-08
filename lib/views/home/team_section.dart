@@ -8,7 +8,6 @@ import '../../models/team_member.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
 import '../widgets/button.dart';
-import '../widgets/feature.dart';
 import '../widgets/image.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
@@ -23,6 +22,11 @@ class TeamSection extends GetResponsiveView {
   @override
   Widget? desktop() {
     return _DesktopView();
+  }
+
+  @override
+  Widget? phone() {
+    return _PhoneView();
   }
 }
 
@@ -50,63 +54,141 @@ class _DesktopView extends GetView<HomeController> {
             return const CircularProgressIndicator();
           }
 
-          return Wrap(
-            alignment: WrapAlignment.center,
-            runAlignment: WrapAlignment.center,
-            spacing: AppDecoration.spaceLarge,
-            runSpacing: AppDecoration.spaceLarge,
-            children: members
-                .map((member) => CustomFeature(
-                      width: 350.0,
-                      iconBordered: false,
-                      icon: CustomImage(
-                        url: member.imageURL,
-                        width: 100.0,
-                        height: 100.0,
-                        circled: true,
-                      ),
-                      title: member.name,
-                      description: member.description.translate(
-                        _settingsController.currentLanguage,
-                      ),
-                      body: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          if (member.telegram != null)
-                            CustomButton(
-                              onPressed: () => openNewTab(member.telegram!),
-                              icon: const Icon(LineIcons.telegram),
-                              type: ButtonType.icon,
-                              standardSize: false,
-                            ),
-                          if (member.twitter != null)
-                            CustomButton(
-                              onPressed: () => openNewTab(member.twitter!),
-                              icon: const Icon(LineIcons.twitter),
-                              type: ButtonType.icon,
-                              standardSize: false,
-                            ),
-                          if (member.linkedin != null)
-                            CustomButton(
-                              onPressed: () => openNewTab(member.linkedin!),
-                              icon: const Icon(LineIcons.linkedin),
-                              type: ButtonType.icon,
-                              standardSize: false,
-                            ),
-                          if (member.github != null)
-                            CustomButton(
-                              onPressed: () => openNewTab(member.github!),
-                              icon: const Icon(LineIcons.github),
-                              type: ButtonType.icon,
-                              standardSize: false,
-                            ),
-                        ],
-                      ),
-                    ))
-                .toList(),
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(
+                child: _imageBuilder(AppImages.ownerPhoto),
+              ),
+              horizontalSpace(AppDecoration.spaceLarge),
+              Flexible(
+                child: _textBuilder(
+                  context: context,
+                  member: members.first,
+                  language: _settingsController.currentLanguage,
+                ),
+              ),
+            ],
           );
         }),
       ],
     );
   }
+}
+
+class _PhoneView extends GetView<HomeController> {
+  _PhoneView();
+
+  final SettingsController _settingsController = Get.find<SettingsController>();
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData themeData = Theme.of(context);
+    final TextTheme textTheme = themeData.textTheme;
+
+    return CustomSection(
+      children: [
+        CustomText(
+          text: "1063@global".tr,
+          style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.w900),
+        ),
+        verticalSpace(AppDecoration.spaceLarge),
+        Obx(() {
+          final List<TeamMemberModel>? members = controller.teamMembers;
+
+          if (members == null) {
+            return const CircularProgressIndicator();
+          }
+
+          return Column(
+            children: [
+              _imageBuilder(AppImages.ownerPhoto),
+              verticalSpace(AppDecoration.spaceBig),
+              _textBuilder(
+                context: context,
+                member: members.first,
+                language: _settingsController.currentLanguage,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          );
+        }),
+      ],
+    );
+  }
+}
+
+Widget _textBuilder({
+  required BuildContext context,
+  required TeamMemberModel member,
+  required String language,
+  CrossAxisAlignment? crossAxisAlignment,
+  TextAlign? textAlign,
+}) {
+  final ThemeData themeData = Theme.of(context);
+  final TextTheme textTheme = themeData.textTheme;
+
+  return Column(
+    crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
+    children: [
+      CustomText(
+        text: member.name,
+        textAlign: textAlign ?? TextAlign.start,
+        maxWidth: 400.0,
+        style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+      ),
+      verticalSpace(),
+      CustomText(
+        text: member.description.translate(language),
+        textAlign: textAlign ?? TextAlign.start,
+        maxWidth: 400.0,
+        blueLightColor: true,
+      ),
+      verticalSpace(),
+      Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (member.telegram != null)
+            CustomButton(
+              onPressed: () => openNewTab(member.telegram!),
+              icon: const Icon(LineIcons.telegram),
+              type: ButtonType.icon,
+              standardSize: false,
+            ),
+          if (member.twitter != null)
+            CustomButton(
+              onPressed: () => openNewTab(member.twitter!),
+              icon: const Icon(LineIcons.twitter),
+              type: ButtonType.icon,
+              standardSize: false,
+            ),
+          if (member.linkedin != null)
+            CustomButton(
+              onPressed: () => openNewTab(member.linkedin!),
+              icon: const Icon(LineIcons.linkedin),
+              type: ButtonType.icon,
+              standardSize: false,
+            ),
+          if (member.github != null)
+            CustomButton(
+              onPressed: () => openNewTab(member.github!),
+              icon: const Icon(LineIcons.github),
+              type: ButtonType.icon,
+              standardSize: false,
+            ),
+        ],
+      ),
+      verticalSpace(AppDecoration.spaceMedium),
+      CustomButton(
+        onPressed: () => openNewTab(AppInfo.kyc),
+        text: "1069@global".tr,
+        type: ButtonType.outlined,
+      ),
+    ],
+  );
+}
+
+Widget _imageBuilder(String path) {
+  return CustomImage(path: path, width: 250.0);
 }

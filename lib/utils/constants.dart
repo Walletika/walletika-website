@@ -23,6 +23,8 @@ class AppInfo {
       'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/sale.json';
   static const String whitepaperPDF =
       'https://drive.google.com/file/d/107uPaQFJJaj7y146Rrxn4stDphdM0Az4';
+  static const String kyc =
+      'https://github.com/coinscope-co/kyc/blob/main/wltk/kyc.png';
   static const String donateAddress =
       '0x91C90934Ffab309667D3Ef846E854Ac138060A13';
 }
@@ -101,6 +103,7 @@ class AppImages {
   static const String walletBlockchains =
       'assets/illustrations/wallet_blockchains.png';
   static const String mobileApp = 'assets/illustrations/mobile.png';
+  static const String ownerPhoto = 'assets/illustrations/owner_photo.png';
   static const String desktopApp = 'assets/illustrations/desktop.png';
   static const String searchIllustrations = 'assets/illustrations/search.png';
   static const String usbBackground = 'assets/illustrations/usb.jpeg';
