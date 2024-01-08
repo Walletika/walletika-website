@@ -69,6 +69,7 @@ Widget _textBuilder({
           ? textTheme.displayLarge
           : textTheme.displayMedium)!
       .copyWith(fontWeight: FontWeight.w900);
+  final ColorScheme colorScheme = themeData.colorScheme;
 
   return Column(
     crossAxisAlignment:
@@ -98,12 +99,22 @@ Widget _textBuilder({
             width: 170.0,
             height: 51.0,
           ),
-          CustomButton(
-            onPressed: () => openNewTab(AppInfo.whitepaperPDF),
-            text: "1030@global".tr,
-            type: ButtonType.outlined,
-            width: 170.0,
-            height: 51.0,
+          ConstrainedBox(
+            constraints: const BoxConstraints(minWidth: 170.0, minHeight: 51.0),
+            child: OutlinedButton(
+              onPressed: () => openNewTab(AppInfo.whitepaperPDF),
+              child: Column(
+                children: [
+                  Text("1030@global".tr),
+                  CustomText(
+                    text: "1071@global".tr,
+                    style: textTheme.bodySmall?.copyWith(
+                      color: colorScheme.primary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

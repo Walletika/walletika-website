@@ -69,7 +69,7 @@ class AppDecoration {
   static const double textSectionWidth = 800.0;
   static const double headerHeight = 90.0;
   static const ResponsiveScreenSettings responsiveScreenSettings =
-      ResponsiveScreenSettings(desktopChangePoint: 1024.0);
+      ResponsiveScreenSettings(desktopChangePoint: AppDecoration.pageWidth);
   static const TextOverflow textOverflow = TextOverflow.fade;
 }
 
