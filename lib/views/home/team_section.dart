@@ -87,6 +87,10 @@ class _PhoneView extends GetView<HomeController> {
     final TextTheme textTheme = themeData.textTheme;
 
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.padding,
+        vertical: AppDecoration.paddingLargest,
+      ),
       children: [
         CustomText(
           text: "1063@global".tr,
@@ -147,10 +151,9 @@ Widget _textBuilder({
       ),
       verticalSpace(AppDecoration.spaceBig),
       Wrap(
-        spacing: AppDecoration.spaceSmall,
-        runSpacing: AppDecoration.spaceSmall,
         alignment: WrapAlignment.center,
         runAlignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           CustomButton(
             onPressed: () => openNewTab(AppInfo.kyc),

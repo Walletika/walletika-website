@@ -50,6 +50,10 @@ class _TabletView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.padding,
+        vertical: AppDecoration.paddingLargest,
+      ),
       layout: SectionLayout.wrap,
       children: [
         _textBuilder(context: context, isTablet: true),
