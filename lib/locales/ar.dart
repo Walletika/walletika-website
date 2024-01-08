@@ -57,7 +57,7 @@ const Map<String, String> translator = {
   "1054@global": "الشبكات المقبولة",
   "1055@global": "تم تسجيل الطلب",
   "1056@global": "البيع الخاص",
-  "1057@global": "تصفح العقد الذكي",
+  "1057@global": "العقد الذكي",
   "1058@global": "\$WLTK تصفح",
   "1059@global": "تبرع",
   "1060@global": "بعد",

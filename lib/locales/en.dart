@@ -57,7 +57,7 @@ const Map<String, String> translator = {
   "1054@global": "Accepted Networks",
   "1055@global": "Request Submitted",
   "1056@global": "Special Sale",
-  "1057@global": "Smart Contract Explorer",
+  "1057@global": "Smart Contract",
   "1058@global": "\$WLTK Explorer",
   "1059@global": "Donate",
   "1060@global": "from now",

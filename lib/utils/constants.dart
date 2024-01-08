@@ -25,6 +25,7 @@ class AppInfo {
       'https://drive.google.com/file/d/107uPaQFJJaj7y146Rrxn4stDphdM0Az4';
   static const String kyc =
       'https://github.com/coinscope-co/kyc/blob/main/wltk/kyc.png';
+  static const String audit = 'https://www.cyberscope.io/audits/wltk';
   static const String donateAddress =
       '0x91C90934Ffab309667D3Ef846E854Ac138060A13';
 }

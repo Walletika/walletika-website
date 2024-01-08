@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
-import '../../utils/launch_url.dart';
-import '../widgets/button.dart';
 import '../widgets/pie_chart.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
@@ -32,13 +30,7 @@ class TokenDistributionSection extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        verticalSpace(AppDecoration.spaceBig),
-        CustomButton(
-          onPressed: () => openNewTab(AppInfo.tokenSmartContract),
-          text: "1057@global".tr,
-          width: 300.0,
-        ),
-        verticalSpace(AppDecoration.spaceLarge),
+        verticalSpace(AppDecoration.spaceLargest),
         CustomPieChart(
           spacing: AppDecoration.spaceLargest,
           items: {
