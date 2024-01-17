@@ -8,6 +8,7 @@ import 'main_section.dart';
 import 'presale_section.dart';
 import 'private_sale_section.dart';
 import 'rate_section.dart';
+import 'tokens_lock_section.dart';
 
 class TokenomicsView extends StatelessWidget {
   const TokenomicsView({super.key});
@@ -18,6 +19,7 @@ class TokenomicsView extends StatelessWidget {
       const MainTokenomicsSection(),
       const TokenomicsFeaturesSection(),
       const TokenDistributionSection(),
+      TokensLockSection(),
       PrivateSaleSection(),
       const FollowSaleSection(),
       PresaleSection(),
