@@ -21,11 +21,9 @@ class PrivateSaleSection extends GetView<TokenomicsController> {
     final TextTheme textTheme = themeData.textTheme;
 
     return CustomSection(
-      padding: const EdgeInsets.only(
-        top: AppDecoration.paddingBig,
-        bottom: AppDecoration.paddingBig,
-        left: AppDecoration.padding,
-        right: AppDecoration.padding,
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.padding,
+        vertical: AppDecoration.paddingLargest,
       ),
       children: [
         CustomText(
