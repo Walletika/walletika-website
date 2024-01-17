@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
 import '../widgets/section.dart';
-import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
 class USBSection extends GetResponsiveView {
@@ -73,7 +72,6 @@ Widget _sectionBuilder({
           fontWeight: FontWeight.bold,
         ),
       ),
-      verticalSpace(),
       CustomText(
         text: "1010@home".tr,
         style: textTheme.bodyLarge!.copyWith(color: AppColors.white),
