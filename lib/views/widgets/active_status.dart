@@ -5,18 +5,21 @@ import '../../utils/constants.dart';
 class CustomActiveStatus extends StatelessWidget {
   const CustomActiveStatus({
     required this.isActive,
+    this.customColor,
     this.tooltip,
     super.key,
   });
 
   final bool isActive;
+  final Color? customColor;
   final String? tooltip;
 
   @override
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
-    final Color color =
-        isActive ? AppColors.green : colorScheme.onInverseSurface;
+    final Color color = isActive
+        ? customColor ?? AppColors.green
+        : colorScheme.onInverseSurface;
     final RoundedRectangleBorder shape = RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDecoration.radius),
     );
