@@ -24,7 +24,7 @@ class AppInfo {
   static const String whitepaperPDF =
       'https://drive.google.com/file/d/107uPaQFJJaj7y146Rrxn4stDphdM0Az4';
   static const String kyc =
-      'https://github.com/coinscope-co/kyc/blob/main/wltk/kyc.png';
+      'https://github.com/cyberscope-io/kyc/blob/main/wltk/kyc.png';
   static const String audit = 'https://www.cyberscope.io/audits/wltk';
   static const String donateAddress =
       '0x91C90934Ffab309667D3Ef846E854Ac138060A13';
@@ -126,5 +126,6 @@ class AppPages {
   static const String download = '/download';
   static const String token = '/token';
   static const String tokenomics = '/tokenomics';
+  static const String presale = '/presale';
   static const String documents = '/documents';
 }

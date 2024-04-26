@@ -41,8 +41,15 @@ class SettingsController extends GetxController {
       binding: () => TokenomicsBinding(),
     ),
     PageModel(
-      visible: true,
+      visible: false,
       name: AppPages.tokenomics,
+      text: "1002@global",
+      widget: () => const TokenomicsView(),
+      binding: () => TokenomicsBinding(),
+    ),
+    PageModel(
+      visible: true,
+      name: AppPages.presale,
       text: "1002@global",
       widget: () => const TokenomicsView(),
       binding: () => TokenomicsBinding(),

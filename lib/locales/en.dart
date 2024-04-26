@@ -2,11 +2,11 @@ const Map<String, String> translator = {
   // Global
   "1000@global": "Home",
   "1001@global": "Download",
-  "1002@global": "Tokenomics",
+  "1002@global": "Presale",
   "1003@global": "Documents",
   "1004@global": "Dark / Light Mode",
   "1005@global": "Download App",
-  "1006@global": "Rounds",
+  "1006@global": "Buy \$WLTK",
   "1007@global": "Join Channel",
   "1008@global": "Join Community",
   "1009@global": "Company",
@@ -54,7 +54,7 @@ const Map<String, String> translator = {
   "1051@global": "Copied",
   "1052@global": "Order Amount",
   "1053@global": "Order Cost",
-  "1054@global": "Accepted Networks",
+  "1054@global": "Networks",
   "1055@global": "Request Submitted",
   "1056@global": "Special Sale",
   "1057@global": "Smart Contract",
@@ -70,9 +70,13 @@ const Map<String, String> translator = {
   "1067@global": "Check Roadmap",
   "1068@global": "Coming Soon",
   "1069@global": "KYC Certificate",
-  "1070@global": "Audit Certificate",
+  "1070@global": "Audit Report",
   "1071@global": "Includes Roadmap",
   "1072@global": "Check Details",
+  "1073@global": "Days",
+  "1074@global": "Hours",
+  "1075@global": "Minutes",
+  "1076@global": "Seconds",
 
   // Warns
   "1000@warns": "Field is required",
@@ -122,7 +126,7 @@ const Map<String, String> translator = {
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
       "Walletika is a software platform, we do not provide any financial advice and do not store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
-  "1029@home": "Private sale Coming January 20, 2024",
+  "1029@home": "Presale begins on May 7, 2024",
   "1030@home": "Walletika Debit Card Coming Soon!",
   "1031@home":
       "Earn and spend your crypto anytime and anywhere you find MasterCard logo.",
@@ -179,14 +183,26 @@ const Map<String, String> translator = {
   "1025@tokenomics": "instead of",
   "1026@tokenomics": "from the exchange!",
   "1027@tokenomics":
-      "*You'll receive your tokens on the same deposit address ( Do not deposit from the exchange ).",
+      "*Do not deposit from the exchange, You'll receive your tokens in a few minutes on the same deposit address.",
   "1028@tokenomics": "Make a deposit",
   "1029@tokenomics": "to following address",
   "1030@tokenomics":
-      "We thank you for your participation and support, we invite you to join our community and follow our social media accounts to stay informed of the latest news.",
+      "Thank you for your participation and support, we invite you to join our community and follow our social media accounts to stay up to date with the latest news.",
   "1031@tokenomics": "Team Wallet is Locked",
   "1032@tokenomics":
       "100% of team tokens are locked, 30% vesting annually for 4 years.",
+  "1033@tokenomics": "Why Should I Buy Now?",
+  "1034@tokenomics": "Receive your tokens immediately",
+  "1035@tokenomics": "Staking is live now, +30% APR",
+  "1036@tokenomics": "Listing price \$0.15",
+  "1037@tokenomics":
+      "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
+  "1038@tokenomics": "50% Buyback for +\$100k buyers",
+  "1039@tokenomics": "KYC and Audited by Cyberscope",
+  "1040@tokenomics": "100% of Team wallet is locked",
+  "1041@tokenomics": "Sale Starts In",
+  "1042@tokenomics": "Sale Ends In",
+  "1043@tokenomics": "Sale Ended",
 
   // Documents
   "1000@docs": "Walletika Documents",

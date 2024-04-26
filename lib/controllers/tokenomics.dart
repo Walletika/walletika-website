@@ -27,6 +27,10 @@ class TokenomicsController extends GetxController {
   List<RoundModel>? get presale => _presale.value;
 
   // Setter methods
+  void refetch() {
+    _fetch();
+  }
+
   Future<void> _fetch() async {
     await fetchMap(AppInfo.saleAPI).then((result) {
       _privateSale.value = result["privateSale"]

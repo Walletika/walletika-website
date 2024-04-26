@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/settings.dart';
 import '../../controllers/tokenomics.dart';
 import '../../models/round.dart';
 import '../../utils/constants.dart';
-import '../widgets/round.dart';
+import '../widgets/sale_round.dart';
+import '../widgets/active_status.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
 class PresaleSection extends GetView<TokenomicsController> {
-  PresaleSection({super.key});
-
-  final SettingsController _settingsController = Get.find<SettingsController>();
+  const PresaleSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
     final TextTheme textTheme = themeData.textTheme;
+    final ColorScheme colorScheme = themeData.colorScheme;
 
     return CustomSection(
-      padding: const EdgeInsets.only(
-        top: AppDecoration.paddingBig,
-        bottom: AppDecoration.paddingLargest,
-        left: AppDecoration.padding,
-        right: AppDecoration.padding,
-      ),
       children: [
         CustomText(
           text: "1021@tokenomics".tr,
@@ -40,28 +33,64 @@ class PresaleSection extends GetView<TokenomicsController> {
           style: textTheme.headlineSmall,
         ),
         verticalSpace(AppDecoration.spaceLarge),
-        Obx(() {
-          final List<RoundModel>? rounds = controller.presale;
+        Wrap(
+          spacing: AppDecoration.paddingBig,
+          runSpacing: AppDecoration.paddingBig,
+          alignment: WrapAlignment.center,
+          runAlignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            SizedBox(
+              width: 400.0,
+              child: Column(
+                children: [
+                  CustomText(
+                    text: "1033@tokenomics".tr,
+                    style: textTheme.headlineSmall!.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  verticalSpace(),
+                  for (final String text in [
+                    "1034@tokenomics",
+                    "1035@tokenomics",
+                    "1036@tokenomics",
+                    "1037@tokenomics",
+                    "1038@tokenomics",
+                    "1039@tokenomics",
+                    "1040@tokenomics"
+                  ]) ...[
+                    Row(
+                      children: [
+                        CustomActiveStatus(
+                          isActive: true,
+                          customColor: colorScheme.primary,
+                        ),
+                        horizontalSpace(),
+                        Flexible(child: CustomText(text: text.tr)),
+                      ],
+                    ),
+                    verticalSpace(AppDecoration.spaceMedium)
+                  ],
+                ],
+              ),
+            ),
+            Obx(() {
+              final List<RoundModel>? rounds = controller.presale;
 
-          if (rounds == null) {
-            return const Center(child: CircularProgressIndicator());
-          }
+              if (rounds == null) {
+                return const Center(child: CircularProgressIndicator());
+              }
 
-          return Wrap(
-            spacing: AppDecoration.spaceLarge,
-            runSpacing: AppDecoration.spaceLarge,
-            children: [
-              for (int index = 0; index < rounds.length; index++)
-                CustomRound(
-                  index: index,
-                  model: rounds[index],
-                  locale: _settingsController.currentLanguage,
-                  acceptedCoins: controller.acceptedCoins,
-                  acceptedNetworks: controller.acceptedNetworks,
-                ),
-            ],
-          );
-        }),
+              return CustomSaleRound(
+                model: rounds.first,
+                acceptedCoins: controller.acceptedCoins,
+                acceptedNetworks: controller.acceptedNetworks,
+                refetch: controller.refetch,
+              );
+            }),
+          ],
+        ),
       ],
     );
   }
