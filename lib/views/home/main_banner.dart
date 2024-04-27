@@ -39,7 +39,7 @@ class _DesktopView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const CustomActiveStatus(isActive: false),
+            const CustomActiveStatus(isActive: true),
             horizontalSpace(),
             Flexible(
               child: CustomText(

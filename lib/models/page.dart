@@ -8,6 +8,7 @@ class PageModel {
     required this.text,
     required this.widget,
     this.binding,
+    this.isNew = false,
   });
 
   final bool visible;
@@ -15,4 +16,5 @@ class PageModel {
   final String text;
   final Widget Function() widget;
   final Bindings Function()? binding;
+  final bool isNew;
 }

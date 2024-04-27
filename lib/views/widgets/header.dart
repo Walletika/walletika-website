@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../controllers/settings.dart';
 import '../../models/page.dart';
 import '../../utils/constants.dart';
+import 'active_status.dart';
 import 'button.dart';
 import 'image.dart';
 import 'page.dart';
@@ -39,6 +40,7 @@ class _DesktopView extends GetView<SettingsController> {
           CustomButton(
             onPressed: () => Get.offNamed(page.name),
             text: page.text.tr,
+            icon: page.isNew ? const CustomActiveStatus(isActive: true) : null,
             type: ButtonType.text,
             standardSize: false,
           ),

@@ -5,6 +5,7 @@ import '../../controllers/settings.dart';
 import '../../models/page.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
+import 'active_status.dart';
 import 'image.dart';
 import 'spacer.dart';
 
@@ -65,6 +66,8 @@ class CustomDrawer extends GetView<SettingsController> {
             ListTile(
               onTap: () => Get.offNamed(page.name),
               title: Text(page.text.tr),
+              trailing:
+                  page.isNew ? const CustomActiveStatus(isActive: true) : null,
             ),
           ListTile(
             title: Text(

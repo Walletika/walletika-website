@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
   final AlignmentGeometry? textAlignment;
   final ButtonType type;
   final bool standardSize;
-  final Icon? icon;
+  final Widget? icon;
   final double? width;
   final double? height;
   final String? imagePath;

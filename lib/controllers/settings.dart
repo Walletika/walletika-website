@@ -53,6 +53,7 @@ class SettingsController extends GetxController {
       text: "1002@global",
       widget: () => const TokenomicsView(),
       binding: () => TokenomicsBinding(),
+      isNew: true,
     ),
     PageModel(
       visible: true,
