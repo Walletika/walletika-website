@@ -87,26 +87,26 @@ const Map<String, String> translator = {
   "1000@home": "Best Secure Crypto Wallet",
   "1001@home":
       "Choose between a hot and cold wallet to access your funds easily without a private key.",
-  "1002@home": "WE DO NOT STORE USERS DATA",
+  "1002@home": "Your Data Never Store Anywhere!",
   "1003@home":
-      "We ensure a high level of privacy and security for our users through our unique solution that does not require storing user data on our servers or user devices.",
+      "We provide the highest level of privacy and security to our users thanks to our unique solutions that don't require storing user data on our servers or even user devices.",
   "1004@home": "",
   "1005@home": "Keyless Wallet",
   "1006@home":
-      "You do not need a private key to access your wallet anymore, we provide a decentralized login protocol instead.",
+      "You don't need a private key to access your wallet anymore, we provide a decentralized login protocol instead.",
   "1007@home": "Two-Factor Authentication",
   "1008@home":
-      "We are the first crypto wallet supports decentralized two-factor authentication to confirm transactions, this unique feature ensures unparalleled security anywhere.",
+      "We're the first crypto wallet supports decentralized 2FA protocol to confirm transactions, this unique feature ensures unparalleled security anywhere.",
   "1009@home": "Keep Your Funds Safe",
   "1010@home":
       "Turn your USB drive into a cold wallet, offline and away from hackers.",
   "1011@home": "Powerful features to access a wide range of digital assets",
   "1012@home": "Multiple Blockchains",
   "1013@home":
-      "Enjoy +20 different blockchain networks that give you free access to a wide range of digital assets.",
+      "+20 Different blockchain networks that give you free access to a wide range of digital assets.",
   "1014@home": "Multiple Wallets",
   "1015@home":
-      "Enjoy creating and managing unlimited wallets for different blockchain networks in one place.",
+      "Create and manage unlimited wallets for different blockchain networks in one place.",
   "1016@home": "Multiple Fiat Currencies",
   "1017@home":
       "Track price changes of digital assets against various fiat currencies such as USD, EUR, GBP, and more.",
@@ -125,11 +125,11 @@ const Map<String, String> translator = {
   "1026@home": "© 2023 Walletika Ltd. All rights reserved.",
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
-      "Walletika is a software platform, we do not provide any financial advice and do not store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
+      "Walletika is a software platform, we don't provide any financial advice and don't store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
   "1029@home": "Presale Starts on May 7, 2024",
-  "1030@home": "Walletika Debit Card Coming Soon!",
+  "1030@home": "Walletika Debit Card!",
   "1031@home":
-      "Earn and spend your crypto anytime and anywhere you find MasterCard logo.",
+      "Spend your crypto as cash easily anytime and everywhere via ATMs.",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",
@@ -144,7 +144,7 @@ const Map<String, String> translator = {
   "1006@download": "How do you feel about Walletika app?",
   "1007@download": "",
   "1008@download":
-      "We are in beta, please do not deposit real money. Join our group now and ask for a deposit to test the app together.",
+      "We are in beta, please don't deposit real money. Join our group now and ask for a deposit to test the app together.",
 
   // Token
   "1000@tokenomics": "The Major Token of Walletika",
@@ -160,7 +160,7 @@ const Map<String, String> translator = {
       "Walletika token is recyclable, by collecting it for Walletika's paid services and refunding it into staking protocol again.",
   "1008@tokenomics": "Fully Decentralized",
   "1009@tokenomics":
-      "Walletika token is 100% decentralized and transactions cannot be controlled such as pausing it or adding wallets to the blacklist.",
+      "Walletika token is 100% decentralized and transactions can't be controlled such as pausing it or adding wallets to the blacklist.",
   "1010@tokenomics":
       "The percentages were distributed based on our own vision that would provide the maximum benefit to our investors primarily.",
   "1011@tokenomics": "Presale",
@@ -183,7 +183,7 @@ const Map<String, String> translator = {
   "1025@tokenomics": "instead of",
   "1026@tokenomics": "from the exchange!",
   "1027@tokenomics":
-      "*Do not deposit from the exchange, You'll receive your tokens in a few minutes on the same deposit address.",
+      "*Don't deposit from the exchange, You'll receive your tokens in a few minutes on the same deposit address.",
   "1028@tokenomics": "Make a deposit",
   "1029@tokenomics": "to following address",
   "1030@tokenomics":
@@ -209,5 +209,5 @@ const Map<String, String> translator = {
   "1001@docs": "How can we help you?",
   "1002@docs": "What do you think of this article?",
   "1003@docs":
-      "If you cannot find useful search results, please contact us to help you, we may consider writing an article on your topic.",
+      "If you can't find useful search results, please contact us to help you, we may consider writing an article on your topic.",
 };
