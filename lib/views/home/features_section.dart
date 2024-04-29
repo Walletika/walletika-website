@@ -134,6 +134,7 @@ Widget _textBuilder({
 }) {
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
+  final ColorScheme colorScheme = themeData.colorScheme;
 
   return Column(
     crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
@@ -142,14 +143,24 @@ Widget _textBuilder({
         text: title,
         textAlign: textAlign ?? TextAlign.start,
         maxWidth: 400.0,
-        style: textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),
+        style: textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.bold),
       ),
       verticalSpace(),
       CustomText(
         text: description,
         textAlign: textAlign ?? TextAlign.start,
         maxWidth: 400.0,
+        style: textTheme.titleLarge,
         blueLightColor: true,
+      ),
+      verticalSpace(AppDecoration.spaceBig),
+      SizedBox(
+        width: 100.0,
+        height: 7.0,
+        child: Material(
+          color: colorScheme.primary,
+          borderRadius: BorderRadius.circular(AppDecoration.radiusSmall),
+        ),
       ),
     ],
   );

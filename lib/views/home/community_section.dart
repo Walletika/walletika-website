@@ -98,7 +98,7 @@ Widget _textBuilder({
         textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: textWidth,
         blueLightColor: true,
-        style: textTheme.bodyLarge,
+        style: textTheme.titleLarge,
       ),
       verticalSpace(AppDecoration.spaceLarge),
       Row(

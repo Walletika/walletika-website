@@ -86,7 +86,7 @@ CustomSection _sectionBuilder({
             text: "1003@home".tr,
             textAlign: textAlign ?? TextAlign.start,
             maxWidth: 600.0,
-            style: textTheme.bodyLarge!.copyWith(
+            style: textTheme.titleLarge!.copyWith(
               color: colorScheme.onPrimary,
               fontWeight: FontWeight.w300,
             ),

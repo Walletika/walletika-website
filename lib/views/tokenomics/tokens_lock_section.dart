@@ -77,7 +77,7 @@ Widget _sectionBuilder({
       ),
       CustomText(
         text: "1032@tokenomics".tr,
-        style: textTheme.bodyLarge!.copyWith(color: AppColors.white),
+        style: textTheme.titleLarge!.copyWith(color: AppColors.white),
       ),
       verticalSpace(AppDecoration.spaceMedium),
       CustomButton(

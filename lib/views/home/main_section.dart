@@ -90,6 +90,7 @@ Widget _textBuilder({
         text: "1001@home".tr,
         textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: 360.0,
+        style: textTheme.titleLarge,
         blueLightColor: true,
       ),
       verticalSpace(AppDecoration.spaceLarge),

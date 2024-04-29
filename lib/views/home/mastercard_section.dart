@@ -34,7 +34,7 @@ class _DesktopView extends StatelessWidget {
     return CustomSection(
       layout: SectionLayout.row,
       children: [
-        _textBuilder(context: context, textWidth: 420.0),
+        _textBuilder(context: context, textWidth: 425.0),
         const Flexible(
           child: CustomImage(path: AppImages.cardsIllustrations),
         ),
@@ -86,7 +86,7 @@ Widget _textBuilder({
         textAlign: isTablet ? TextAlign.center : TextAlign.start,
         maxWidth: textWidth,
         blueLightColor: true,
-        style: textTheme.bodyLarge,
+        style: textTheme.titleLarge,
       ),
       verticalSpace(AppDecoration.spaceLarge),
       CustomButton(

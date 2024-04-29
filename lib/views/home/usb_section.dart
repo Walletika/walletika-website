@@ -74,7 +74,7 @@ Widget _sectionBuilder({
       ),
       CustomText(
         text: "1010@home".tr,
-        style: textTheme.bodyLarge!.copyWith(color: AppColors.white),
+        style: textTheme.titleLarge!.copyWith(color: AppColors.white),
       ),
     ],
   );
