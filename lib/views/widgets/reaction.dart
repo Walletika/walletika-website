@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -88,6 +89,12 @@ class _CustomReactionState extends State<CustomReaction> {
         _currentReaction = null;
       } else {
         _currentReaction = reaction;
+        FirebaseAnalytics.instance.logEvent(
+          name: "Reactions",
+          parameters: {
+            widget.title: reaction.name,
+          },
+        );
       }
     });
   }

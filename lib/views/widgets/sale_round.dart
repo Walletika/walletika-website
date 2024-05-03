@@ -1,5 +1,6 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:decimal/decimal.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 import 'package:get/get.dart';
@@ -200,6 +201,11 @@ class CustomSaleRound extends StatelessWidget {
   }
 
   void _onBuyDeposit() {
+    FirebaseAnalytics.instance.logEvent(
+      name: "Presales",
+      parameters: {"actions": "Buy Clicked"},
+    );
+
     customAwesomeDialog(
       body: _PaymentForm(
         coins: acceptedCoins,
@@ -210,6 +216,11 @@ class CustomSaleRound extends StatelessWidget {
   }
 
   void _onBuyCheckout(String amount, String saleAmount) {
+    FirebaseAnalytics.instance.logEvent(
+      name: "Presales",
+      parameters: {"actions": "Checkout"},
+    );
+
     final ThemeData themeData = Theme.of(Get.context!);
     final TextTheme textTheme = themeData.textTheme;
 
@@ -261,6 +272,11 @@ class CustomSaleRound extends StatelessWidget {
   }
 
   void _onBuyConfirm() {
+    FirebaseAnalytics.instance.logEvent(
+      name: "Presales",
+      parameters: {"actions": "Completed"},
+    );
+
     customAwesomeDialog(
       dialogType: DialogType.success,
       title: "1055@global".tr,

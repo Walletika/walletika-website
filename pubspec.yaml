@@ -41,6 +41,8 @@ dependencies:
   url_launcher: ^6.1.11
   markdown: ^7.1.0
   intl: ^0.18.0
+  firebase_core: ^2.27.0
+  firebase_analytics: ^10.8.9
 
   # Fixed version
   # device_preview: 1.1.0

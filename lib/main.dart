@@ -2,19 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:firebase_core/firebase_core.dart';
 // import 'package:flutter/foundation.dart';
 // import 'package:device_preview/device_preview.dart';
 
 import 'controllers/dependencies.dart';
 import 'controllers/settings.dart';
+import 'firebase_options.dart';
 import 'locales/locales.dart';
 import 'utils/constants.dart';
 import 'views/widgets/theme.dart';
 
-void main() {
+void main() async {
   setUrlStrategy(PathUrlStrategy());
 
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   InitialBinding().dependencies();
 
