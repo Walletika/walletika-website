@@ -191,7 +191,7 @@ const Map<String, String> translator = {
       "100% من عملات الفريق مقفلة، ويتم استحقاق 30% منها سنويًا لمدة 4 سنوات.",
   "1033@tokenomics": "لماذا يجب أن أشتري الآن؟",
   "1034@tokenomics": "استلم العملات الخاصة بك فورا",
-  "1035@tokenomics": "استكينج بمعدل +30% فائدة السنوية متاح الآن",
+  "1035@tokenomics": "استيكنج متاح الآن لكسب المزيد من المكافآت",
   "1036@tokenomics": "سعر الادراج 0.15 دولار",
   "1037@tokenomics":
       "الإدراج في أفضل البورصات ByBit, OKX, GateIO, KuCoin, BitMart, Bitget, Pancakeswap",
@@ -201,6 +201,9 @@ const Map<String, String> translator = {
   "1041@tokenomics": "يبدأ البيع بعد",
   "1042@tokenomics": "ينتهي البيع بعد",
   "1043@tokenomics": "انتهى البيع",
+  "1044@tokenomics": "+%50 عائد",
+  "1045@tokenomics":
+      "كن بين أوائل المالكين الذين يحصلون على أكبر قدر من المكافآت.",
 
   // Documents
   "1000@docs": "وثائق Walletika",

@@ -193,7 +193,7 @@ const Map<String, String> translator = {
       "100% of team tokens are locked, 30% vesting annually for 4 years.",
   "1033@tokenomics": "Why Should I Buy Now?",
   "1034@tokenomics": "Receive your tokens immediately",
-  "1035@tokenomics": "Staking is live now, +30% APR",
+  "1035@tokenomics": "Staking is live now to earn more rewards",
   "1036@tokenomics": "Listing price \$0.15",
   "1037@tokenomics":
       "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
@@ -203,6 +203,9 @@ const Map<String, String> translator = {
   "1041@tokenomics": "Sale Starts In",
   "1042@tokenomics": "Sale Ends In",
   "1043@tokenomics": "Sale Ended",
+  "1044@tokenomics": "+50% APR",
+  "1045@tokenomics":
+      "Be among the first holders to get as much as of staking rewards.",
 
   // Documents
   "1000@docs": "Walletika Documents",

@@ -10,7 +10,8 @@ import '../../models/round.dart';
 import '../../utils/constants.dart';
 import '../../utils/digit_format.dart';
 import '../../utils/launch_url.dart';
-import '../../utils/time_calculator.dart';
+// import '../../utils/time_calculator.dart';
+import 'active_status.dart';
 import 'address.dart';
 import 'amount_field.dart';
 import 'awesome_dialog.dart';
@@ -107,16 +108,16 @@ class CustomSaleRound extends StatelessWidget {
             ),
           ),
           verticalSpace(AppDecoration.spaceMedium),
-          _infoBuilder(
-            themeData: themeData,
-            name: "1033@global".tr,
-            value: '${timeDisplay(time: model.startTime)} UTC',
-          ),
-          _infoBuilder(
-            themeData: themeData,
-            name: "1034@global".tr,
-            value: '${timeDisplay(time: model.endTime)} UTC',
-          ),
+          // _infoBuilder(
+          //   themeData: themeData,
+          //   name: "1033@global".tr,
+          //   value: '${timeDisplay(time: model.startTime)} UTC',
+          // ),
+          // _infoBuilder(
+          //   themeData: themeData,
+          //   name: "1034@global".tr,
+          //   value: '${timeDisplay(time: model.endTime)} UTC',
+          // ),
           _infoBuilder(
             themeData: themeData,
             name: "1035@global".tr,
@@ -156,6 +157,29 @@ class CustomSaleRound extends StatelessWidget {
             ),
           ),
           verticalSpace(AppDecoration.spaceBig),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CustomActiveStatus(isActive: true),
+              horizontalSpace(),
+              CustomText(
+                text: "1044@tokenomics".tr,
+                textAlign: TextAlign.center,
+                style: textTheme.titleLarge!.copyWith(
+                  color: AppColors.green,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          verticalSpace(AppDecoration.spaceSmall),
+          CustomText(
+            text: "1045@tokenomics".tr,
+            textAlign: TextAlign.center,
+            style: textTheme.bodyMedium!.copyWith(color: AppColors.green),
+            maxWidth: AppDecoration.widgetWidth,
+          ),
+          verticalSpace(AppDecoration.spaceBig),
           Center(
             child: CustomButton(
               onPressed: isLive
@@ -167,6 +191,7 @@ class CustomSaleRound extends StatelessWidget {
                   : null,
               text: isLive ? "1037@global".tr : tagText,
               type: ButtonType.filled,
+              width: AppDecoration.widgetWidth,
             ),
           ),
         ],
