@@ -206,6 +206,19 @@ const Map<String, String> translator = {
   "1044@tokenomics": "+50% APR",
   "1045@tokenomics":
       "Be among the first holders to get as much as of staking rewards.",
+  "1046@tokenomics": "How to Buy \$WLTK?",
+  "1047@tokenomics": "1- Start Buy",
+  "1048@tokenomics":
+      "Click on the “Buy Now” button situated at the bottom of the presale box above. Click on it to proceed.",
+  "1049@tokenomics": "2- Specify Amount",
+  "1050@tokenomics":
+      "A purchase widget will appear. From here, choose the stablecoin of your preference and input the amount you wish to purchase. Once done, click on the “Checkout” button.",
+  "1051@tokenomics": "3- Complete Checkout",
+  "1052@tokenomics":
+      "You will be presented with the order details, which include the payable amount, accepted networks, and the deposit address. Proceed to your wallet and transfer the specified amount to the provided deposit address. After completing the transfer, click on the “Confirm” button.",
+  "1053@tokenomics": "4- Token Receipt",
+  "1054@tokenomics":
+      "Upon successful completion of Step 3, your tokens will be transferred to the same deposit address within a few minutes.",
 
   // Documents
   "1000@docs": "Walletika Documents",

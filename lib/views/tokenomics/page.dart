@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/page.dart';
+import 'buy_steps_section.dart';
 import 'distribution_section.dart';
 import 'features_section.dart';
 // import 'follow_section.dart';
@@ -17,9 +18,10 @@ class TokenomicsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPage([
       const MainTokenomicsSection(),
-      const TokenomicsFeaturesSection(),
       const PresaleSection(),
+      BuyStepsSection(),
       const TokenDistributionSection(),
+      const TokenomicsFeaturesSection(),
       TokensLockSection(),
       // PrivateSaleSection(),
       // const FollowSaleSection(),

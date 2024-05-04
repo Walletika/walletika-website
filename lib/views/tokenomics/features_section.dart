@@ -14,11 +14,9 @@ class TokenomicsFeaturesSection extends StatelessWidget {
     const double width = 300.0;
 
     return CustomSection(
-      padding: const EdgeInsets.only(
-        top: 100.0,
-        bottom: AppDecoration.paddingBig,
-        right: AppDecoration.padding,
-        left: AppDecoration.padding,
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.padding,
+        vertical: AppDecoration.paddingLargest,
       ),
       layout: SectionLayout.wrap,
       children: [
