@@ -18,7 +18,7 @@ class TokenomicsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPage([
       const MainTokenomicsSection(),
-      const PresaleSection(),
+      PresaleSection(),
       BuyStepsSection(),
       const TokenDistributionSection(),
       const TokenomicsFeaturesSection(),

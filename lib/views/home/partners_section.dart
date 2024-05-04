@@ -79,8 +79,9 @@ Widget _sectionBuilder({
       verticalSpace(AppDecoration.spaceLarge),
       Obx(() {
         final List<PartnerModel>? partners = controller.partners;
+        final List<PartnerModel>? exchanges = controller.exchanges;
 
-        if (partners == null) {
+        if (partners == null || exchanges == null) {
           return const CircularProgressIndicator();
         }
 
@@ -93,7 +94,7 @@ Widget _sectionBuilder({
             pauseAutoPlayOnManualNavigate: false,
             viewportFraction: viewportFraction,
           ),
-          items: partners.map((partner) {
+          items: [...partners, ...exchanges].map((partner) {
             return Column(
               children: [
                 CustomImage(

@@ -9,6 +9,7 @@ class HomeController extends GetxController {
   // States
   final Rxn<List<TeamMemberModel>> _teamMembers = Rxn<List<TeamMemberModel>>();
   final Rxn<List<PartnerModel>> _partners = Rxn<List<PartnerModel>>();
+  final Rxn<List<PartnerModel>> _exchanges = Rxn<List<PartnerModel>>();
 
   // Events methods
   @override
@@ -22,6 +23,8 @@ class HomeController extends GetxController {
 
   List<PartnerModel>? get partners => _partners.value;
 
+  List<PartnerModel>? get exchanges => _exchanges.value;
+
   // Setter methods
   Future<void> _fetch() async {
     await fetchMap(AppInfo.homeAPI).then((result) {
@@ -31,6 +34,11 @@ class HomeController extends GetxController {
           .toList();
 
       _partners.value = result["partners"]
+          .map((e) => PartnerModel.fromJson(e))
+          .cast<PartnerModel>()
+          .toList();
+
+      _exchanges.value = result["exchanges"]
           .map((e) => PartnerModel.fromJson(e))
           .cast<PartnerModel>()
           .toList();

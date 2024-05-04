@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../controllers/home.dart';
 import '../../controllers/tokenomics.dart';
+import '../../models/partner.dart';
 import '../../models/round.dart';
 import '../../utils/constants.dart';
+import '../widgets/image.dart';
 import '../widgets/sale_round.dart';
 import '../widgets/active_status.dart';
 import '../widgets/section.dart';
@@ -11,7 +14,9 @@ import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
 class PresaleSection extends GetView<TokenomicsController> {
-  const PresaleSection({super.key});
+  PresaleSection({super.key});
+
+  final HomeController _homeController = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -55,10 +60,10 @@ class PresaleSection extends GetView<TokenomicsController> {
                     "1034@tokenomics",
                     "1035@tokenomics",
                     "1036@tokenomics",
-                    "1037@tokenomics",
                     "1038@tokenomics",
                     "1039@tokenomics",
-                    "1040@tokenomics"
+                    "1040@tokenomics",
+                    "1037@tokenomics",
                   ]) ...[
                     Row(
                       children: [
@@ -72,6 +77,27 @@ class PresaleSection extends GetView<TokenomicsController> {
                     ),
                     verticalSpace(AppDecoration.spaceMedium)
                   ],
+                  Obx(() {
+                    final List<PartnerModel>? exchanges =
+                        _homeController.exchanges;
+
+                    if (exchanges == null) {
+                      return const CircularProgressIndicator();
+                    }
+
+                    return Wrap(
+                      spacing: AppDecoration.space,
+                      runSpacing: AppDecoration.space,
+                      children: [
+                        for (final PartnerModel exchange in exchanges)
+                          CustomImage(
+                            url: exchange.imageURL,
+                            circled: true,
+                            width: 40.0,
+                          ),
+                      ],
+                    );
+                  }),
                 ],
               ),
             ),
