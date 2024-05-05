@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 
 import '../models/round.dart';
@@ -17,8 +19,13 @@ class TokenomicsController extends GetxController {
   // Events methods
   @override
   void onInit() {
+    // Run once initialized
+    _timerCallback();
+
+    // Rerun every 60 sec
+    Timer.periodic(const Duration(seconds: 60), _timerCallback);
+
     super.onInit();
-    _fetch();
   }
 
   // Getter methods
@@ -28,15 +35,15 @@ class TokenomicsController extends GetxController {
 
   // Setter methods
   void refetch() {
-    _fetch();
+    _timerCallback();
   }
 
-  Future<void> _fetch() async {
+  Future<void> _timerCallback([Timer? timer]) async {
     await fetchMap(AppInfo.saleAPI).then((result) {
-      _privateSale.value = result["privateSale"]
-          .map((e) => RoundModel.fromJson(e))
-          .cast<RoundModel>()
-          .toList();
+      // _privateSale.value = result["privateSale"]
+      //     .map((e) => RoundModel.fromJson(e))
+      //     .cast<RoundModel>()
+      //     .toList();
 
       _presale.value = result["presale"]
           .map((e) => RoundModel.fromJson(e))

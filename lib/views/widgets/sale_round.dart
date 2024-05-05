@@ -21,6 +21,7 @@ import 'qr_image.dart';
 import 'spacer.dart';
 import 'tag_text.dart';
 import 'text.dart';
+import 'text_field.dart';
 
 class CustomSaleRound extends StatelessWidget {
   const CustomSaleRound({
@@ -42,27 +43,21 @@ class CustomSaleRound extends StatelessWidget {
     final TextTheme textTheme = themeData.textTheme;
     final ColorScheme colorScheme = themeData.colorScheme;
 
-    final DateTime now = DateTime.now().toUtc();
-    bool isUpcoming = false;
-    bool isLive = false;
-
     final String tagText;
     final String title;
     final Color tagFontColor;
     final Color tagBackgroundColor;
 
-    if (!model.isCompleted && now.isBefore(model.startTime)) {
+    if (model.isUpcoming) {
       tagText = "1039@global".tr;
       title = "1041@tokenomics".tr;
       tagFontColor = AppColors.purple;
       tagBackgroundColor = AppColors.purpleAccent;
-      isUpcoming = true;
-    } else if (!model.isCompleted && now.isBefore(model.endTime)) {
+    } else if (model.isLive) {
       tagText = "1040@global".tr;
-      title = "1042@tokenomics".tr;
+      title = model.isLastChance ? "1042@tokenomics".tr : "1055@tokenomics".tr;
       tagFontColor = AppColors.green;
       tagBackgroundColor = AppColors.green;
-      isLive = true;
     } else {
       tagText = model.isCompleted ? "1042@global".tr : "1041@global".tr;
       title = "1043@tokenomics".tr;
@@ -75,22 +70,23 @@ class CustomSaleRound extends StatelessWidget {
       icon: const Icon(LineIcons.coins, size: AppDecoration.iconBigSize),
       body: Column(
         children: [
-          Stack(
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: CustomText(text: title),
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: CustomTagText(
-                  text: tagText,
-                  fontColor: tagFontColor,
-                  backgroundColor: tagBackgroundColor,
-                ),
-              ),
-            ],
+          Align(
+            alignment: Alignment.centerRight,
+            child: CustomTagText(
+              text: tagText,
+              fontColor: tagFontColor,
+              backgroundColor: tagBackgroundColor,
+            ),
           ),
+          CustomText(text: title),
+          if (model.isLive) ...[
+            CustomText(
+              text: model.isLastChance
+                  ? "1057@tokenomics".tr
+                  : '${"1056@tokenomics".tr} ${'${model.nextPrice} ${model.priceSymbol}'}',
+              style: textTheme.bodyLarge!.copyWith(color: colorScheme.primary),
+            ),
+          ],
           verticalSpace(),
           Directionality(
             textDirection: TextDirection.ltr,
@@ -103,7 +99,7 @@ class CustomSaleRound extends StatelessWidget {
               hoursDescription: "1074@global".tr,
               minutesDescription: "1075@global".tr,
               secondsDescription: "1076@global".tr,
-              endTime: isUpcoming ? model.startTime : model.endTime,
+              endTime: model.isUpcoming ? model.startTime : model.endTime,
               onEnd: refetch.call,
             ),
           ),
@@ -126,7 +122,7 @@ class CustomSaleRound extends StatelessWidget {
           _infoBuilder(
             themeData: themeData,
             name: "1036@global".tr,
-            value: '${model.price} ${model.priceSymbol}',
+            value: '${model.currentPrice} ${model.priceSymbol}',
           ),
           verticalSpace(AppDecoration.spaceMedium),
           _infoBuilder(
@@ -182,14 +178,14 @@ class CustomSaleRound extends StatelessWidget {
           verticalSpace(AppDecoration.spaceBig),
           Center(
             child: CustomButton(
-              onPressed: isLive
+              onPressed: model.isLive
                   ? model.url != null
                       ? () => openNewTab(model.url!)
                       : model.address != null
                           ? _onBuyDeposit
                           : null
                   : null,
-              text: isLive ? "1037@global".tr : tagText,
+              text: model.isLive ? "1037@global".tr : tagText,
               type: ButtonType.filled,
               width: AppDecoration.widgetWidth,
             ),
@@ -249,6 +245,9 @@ class CustomSaleRound extends StatelessWidget {
     final ThemeData themeData = Theme.of(Get.context!);
     final TextTheme textTheme = themeData.textTheme;
 
+    final GlobalKey<FormState> formController = GlobalKey<FormState>();
+    final TextEditingController txController = TextEditingController();
+
     customAwesomeDialog(
       body: Column(
         children: [
@@ -289,10 +288,42 @@ class CustomSaleRound extends StatelessWidget {
           verticalSpace(AppDecoration.spaceMedium),
           const LinearProgressIndicator(backgroundColor: AppColors.transparent),
           verticalSpace(AppDecoration.spaceMedium),
+          Form(
+            key: formController,
+            child: CustomTextField(
+              controller: txController,
+              placeholderText: "1058@tokenomics".tr,
+              maxLength: 66,
+              validator: (text) {
+                if (text != null) {
+                  if (text.length != 66 || !text.startsWith('0x')) {
+                    return "1059@tokenomics".tr;
+                  }
+                }
+
+                return null;
+              },
+            ),
+          ),
+          verticalSpace(AppDecoration.spaceMedium),
+          Center(
+            child: SizedBox(
+              width: AppDecoration.widgetWidth,
+              child: CustomButton(
+                onPressed: () {
+                  if (formController.currentState!.validate()) {
+                    Get.back();
+                    _onBuyConfirm();
+                  }
+                },
+                text: "1050@global".tr,
+                type: ButtonType.filled,
+              ),
+            ),
+          ),
+          verticalSpace(AppDecoration.spaceMedium)
         ],
       ),
-      btnOkText: "1050@global".tr,
-      btnOkOnPress: _onBuyConfirm,
     ).show();
   }
 
@@ -424,7 +455,7 @@ class _PaymentFormState extends State<_PaymentForm> {
 
     setState(() {
       saleAmount =
-          '${convertToIntFormat(amount ~/ widget.model.price)} ${widget.model.tokenSymbol}';
+          '${convertToIntFormat(amount ~/ widget.model.currentPrice)} ${widget.model.tokenSymbol}';
       exchangeAmount =
           '${convertToIntFormat(amount ~/ 0.3)} ${widget.model.tokenSymbol}';
     });

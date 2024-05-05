@@ -219,6 +219,11 @@ const Map<String, String> translator = {
   "1053@tokenomics": "4- Token Receipt",
   "1054@tokenomics":
       "Upon successful completion of Step 3, your tokens will be transferred to the same deposit address within a few minutes.",
+  "1055@tokenomics": "Buy Before Price Raise",
+  "1056@tokenomics": "The Next Price is",
+  "1057@tokenomics": "Last Chance Before Listing",
+  "1058@tokenomics": "TX Hash",
+  "1059@tokenomics": "TX Invalied",
 
   // Documents
   "1000@docs": "Walletika Documents",
