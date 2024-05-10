@@ -50,7 +50,7 @@ class _DesktopView extends StatelessWidget {
           ],
         ),
         CustomButton(
-          onPressed: () => Get.offNamed(AppPages.tokenomics),
+          onPressed: () => Get.offNamed(AppPages.presale),
           text: "1006@global".tr,
           type: ButtonType.outlined,
           width: 120.0,

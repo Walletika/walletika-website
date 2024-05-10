@@ -126,7 +126,7 @@ const Map<String, String> translator = {
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
       "Walletika is a software platform, we don't provide any financial advice and don't store our users data. We always strive to provide the highest level of security that ensures data protection and we are not responsible for any damages resulting from misuse. You are fully and solely responsible for evaluating your investments, and any investment in blockchain assets involves the risk of loss of part or all of your investment. Walletika users are responsible for protecting their access information. If any of your access information is lost, you may not be able to access your wallet again.",
-  "1029@home": "Presale Starts on May 7, 2024",
+  "1029@home": "Presale is Live Now",
   "1030@home": "Walletika Debit Card!",
   "1031@home":
       "Spend your crypto as cash easily anytime and everywhere via ATMs.",
@@ -197,7 +197,7 @@ const Map<String, String> translator = {
   "1036@tokenomics": "Listing price \$0.15",
   "1037@tokenomics":
       "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
-  "1038@tokenomics": "50% Buyback for +\$100k buyers",
+  "1038@tokenomics": "20% Buyback for +\$100k buyers",
   "1039@tokenomics": "KYC and Audited by Cyberscope",
   "1040@tokenomics": "100% of Team wallet is locked",
   "1041@tokenomics": "Sale Starts In",
@@ -219,7 +219,7 @@ const Map<String, String> translator = {
   "1053@tokenomics": "4- Token Receipt",
   "1054@tokenomics":
       "Upon successful completion of Step 3, your tokens will be transferred to the same deposit address within a few minutes.",
-  "1055@tokenomics": "Buy Before Price Raise",
+  "1055@tokenomics": "Buy Before The Price Rises",
   "1056@tokenomics": "The Next Price is",
   "1057@tokenomics": "Last Chance Before Listing",
   "1058@tokenomics": "TX Hash",
