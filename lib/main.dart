@@ -11,8 +11,6 @@ import 'controllers/settings.dart';
 import 'firebase_options.dart';
 import 'locales/locales.dart';
 import 'utils/constants.dart';
-import 'views/home/page.dart';
-import 'views/splash/page.dart';
 import 'views/widgets/theme.dart';
 
 void main() async {
@@ -28,7 +26,7 @@ void main() async {
 
   timeago.setLocaleMessages('ar', timeago.ArMessages());
 
-  runApp(AppLauncher());
+  runApp(const AppLauncher());
   // runApp(
   //   DevicePreview(
   //     enabled: !kReleaseMode,
@@ -38,8 +36,7 @@ void main() async {
 }
 
 class AppLauncher extends GetView<SettingsController> {
-  AppLauncher({super.key});
-  final Future _initialization = Future.delayed(const Duration(seconds: 1));
+  const AppLauncher({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,17 +49,8 @@ class AppLauncher extends GetView<SettingsController> {
       locale: controller.locale,
       translations: AppTranslator(),
       defaultTransition: Transition.fadeIn,
+      initialRoute: controller.initialPage,
       getPages: controller.getPages,
-      home: FutureBuilder(
-        future: _initialization,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const SplashView();
-          } else {
-            return const HomeView();
-          }
-        },
-      ),
     );
   }
 }
