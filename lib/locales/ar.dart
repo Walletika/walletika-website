@@ -220,7 +220,7 @@ const Map<String, String> translator = {
   "1055@tokenomics": "قم بالشراء قبل رفع الأسعار",
   "1056@tokenomics": "السعر التالي هو",
   "1057@tokenomics": "الفرصة الأخيرة قبل الإدراج",
-  "1058@tokenomics": "عنوان المعاملة",
+  "1058@tokenomics": "قم بلصق (0x) عنوان المعاملة",
   "1059@tokenomics": "عنوان غير صالح",
 
   // Documents

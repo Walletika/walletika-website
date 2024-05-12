@@ -222,7 +222,7 @@ const Map<String, String> translator = {
   "1055@tokenomics": "Buy Before The Price Rises",
   "1056@tokenomics": "The Next Price is",
   "1057@tokenomics": "Last Chance Before Listing",
-  "1058@tokenomics": "TX Hash",
+  "1058@tokenomics": "Paste (0x) TX Hash",
   "1059@tokenomics": "TX Invalied",
 
   // Documents

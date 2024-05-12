@@ -304,12 +304,6 @@ class CustomSaleRound extends StatelessWidget {
 
                 return null;
               },
-              onEditingComplete: () {
-                if (formController.currentState!.validate()) {
-                  Get.back();
-                  _onBuyConfirm();
-                }
-              },
             ),
           ),
           verticalSpace(AppDecoration.spaceMedium),
