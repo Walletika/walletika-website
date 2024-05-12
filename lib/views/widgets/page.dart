@@ -46,6 +46,7 @@ class CustomPage extends GetView<SettingsController> {
           ),
         ),
       ),
+      resizeToAvoidBottomInset: false,
       floatingActionButton: Obx(() {
         if (!controller.scrollable) return zeroSpace();
 

@@ -291,6 +291,7 @@ class CustomSaleRound extends StatelessWidget {
           Form(
             key: formController,
             child: CustomTextField(
+              keyboardType: TextInputType.none,
               controller: txController,
               placeholderText: "1058@tokenomics".tr,
               maxLength: 66,
@@ -302,6 +303,12 @@ class CustomSaleRound extends StatelessWidget {
                 }
 
                 return null;
+              },
+              onEditingComplete: () {
+                if (formController.currentState!.validate()) {
+                  Get.back();
+                  _onBuyConfirm();
+                }
               },
             ),
           ),
@@ -402,6 +409,7 @@ class _PaymentFormState extends State<_PaymentForm> {
                   controller: amountController,
                   balance: Decimal.fromInt(widget.model.availableTokensCost),
                   symbol: selectedCoin,
+                  onEditingComplete: _onPressed,
                 ),
               ),
             ),
