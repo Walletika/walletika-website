@@ -70,14 +70,30 @@ class CustomSaleRound extends StatelessWidget {
       icon: const Icon(LineIcons.coins, size: AppDecoration.iconBigSize),
       body: Column(
         children: [
-          Align(
-            alignment: Alignment.centerRight,
-            child: CustomTagText(
-              text: tagText,
-              fontColor: tagFontColor,
-              backgroundColor: tagBackgroundColor,
-            ),
+          Row(
+            children: [
+              CustomTagText(
+                onPressed: () => openNewTab(AppInfo.kyc),
+                text: "1077@global".tr,
+                fontColor: AppColors.purple,
+                backgroundColor: AppColors.purpleAccent,
+              ),
+              horizontalSpace(),
+              CustomTagText(
+                onPressed: () => openNewTab(AppInfo.audit),
+                text: "1078@global".tr,
+                fontColor: AppColors.orange,
+                backgroundColor: AppColors.orange,
+              ),
+              const Spacer(),
+              CustomTagText(
+                text: tagText,
+                fontColor: tagFontColor,
+                backgroundColor: tagBackgroundColor,
+              ),
+            ],
           ),
+          verticalSpace(AppDecoration.spaceMedium),
           CustomText(text: title),
           if (model.isLive) ...[
             CustomText(

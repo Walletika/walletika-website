@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/constants.dart';
+import 'clickable_widget.dart';
 
 class CustomTagText extends StatelessWidget {
   const CustomTagText({
     required this.text,
     required this.fontColor,
     required this.backgroundColor,
+    this.onPressed,
     this.fontSize,
     this.padding,
     super.key,
@@ -17,12 +19,13 @@ class CustomTagText extends StatelessWidget {
   final Color backgroundColor;
   final double? fontSize;
   final EdgeInsetsGeometry? padding;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     final TextTheme textTheme = Theme.of(context).textTheme;
 
-    return Container(
+    Widget widget = Container(
       padding: padding ?? const EdgeInsets.all(AppDecoration.paddingSmall),
       decoration: BoxDecoration(
         color: backgroundColor.withOpacity(0.2),
@@ -39,5 +42,14 @@ class CustomTagText extends StatelessWidget {
         textAlign: TextAlign.center,
       ),
     );
+
+    if (onPressed != null) {
+      widget = CustomClickableWidget(
+        onTap: onPressed,
+        child: widget,
+      );
+    }
+
+    return widget;
   }
 }

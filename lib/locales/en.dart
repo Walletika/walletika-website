@@ -77,6 +77,8 @@ const Map<String, String> translator = {
   "1074@global": "Hours",
   "1075@global": "Minutes",
   "1076@global": "Seconds",
+  "1077@global": "KYC",
+  "1078@global": "Audit",
 
   // Warns
   "1000@warns": "Field is required",
