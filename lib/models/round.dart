@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class RoundModel {
   RoundModel({
     required this.startTime,
@@ -8,7 +10,7 @@ class RoundModel {
     this.tokenSymbol = 'WLTK',
     this.priceSymbol = 'USD',
     this.url,
-    this.address,
+    this.addresses,
     required List<Map<String, dynamic>> offers,
   }) {
     for (int index = 0; index < offers.length; index++) {
@@ -36,7 +38,7 @@ class RoundModel {
   final String tokenSymbol;
   final String priceSymbol;
   final String? url;
-  final String? address;
+  final List<String>? addresses;
 
   late DateTime endTime;
   late double currentPrice;
@@ -65,6 +67,10 @@ class RoundModel {
 
   DateTime get currentUTCTime => DateTime.now().toUtc();
 
+  String? get address {
+    return addresses?[Random().nextInt(addresses!.length)];
+  }
+
   factory RoundModel.fromJson(Map<String, dynamic> json) => RoundModel(
         startTime: DateTime.fromMillisecondsSinceEpoch(
           json["startTime"] as int,
@@ -80,7 +86,7 @@ class RoundModel {
         tokenSymbol: (json["tokenSymbol"] ?? 'WLTK') as String,
         priceSymbol: (json["priceSymbol"] ?? 'USD') as String,
         url: json["url"],
-        address: json["address"],
+        addresses: json["addresses"].cast<String>(),
         offers: json["offers"].cast<Map<String, dynamic>>(),
       );
 }
