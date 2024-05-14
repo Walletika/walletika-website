@@ -217,7 +217,7 @@ const Map<String, String> translator = {
       "A purchase widget will appear. From here, choose the stablecoin of your preference and input the amount you wish to purchase. Once done, click on the “Checkout” button.",
   "1051@tokenomics": "3- Complete Checkout",
   "1052@tokenomics":
-      "You will be presented with the order details, which include the payable amount, accepted networks, and the deposit address. Proceed to your wallet and transfer the specified amount to the provided deposit address. After completing the transfer, click on the “Confirm” button.",
+      "You will be presented with the order details, which include the payable amount, accepted networks, and the deposit address. Proceed to your wallet and transfer the specified amount to the provided deposit address. After the transfer is completed, copy and paste the TXHash of the transaction into the entry to confirm, and click on the “Confirm” button.",
   "1053@tokenomics": "4- Token Receipt",
   "1054@tokenomics":
       "Upon successful completion of Step 3, your tokens will be transferred to the same deposit address within a few minutes.",

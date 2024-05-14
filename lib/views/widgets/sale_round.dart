@@ -260,6 +260,7 @@ class CustomSaleRound extends StatelessWidget {
 
     final ThemeData themeData = Theme.of(Get.context!);
     final TextTheme textTheme = themeData.textTheme;
+    final String despositAddress = model.address!;
 
     final GlobalKey<FormState> formController = GlobalKey<FormState>();
     final TextEditingController txController = TextEditingController();
@@ -298,9 +299,9 @@ class CustomSaleRound extends StatelessWidget {
             text: '${"1028@tokenomics".tr} $amount ${"1029@tokenomics".tr}',
             textAlign: TextAlign.center,
           ),
-          CustomAddressText(model.address!),
+          CustomAddressText(despositAddress),
           verticalSpace(AppDecoration.spaceMedium),
-          CustomQRImage(data: model.address!),
+          CustomQRImage(data: despositAddress),
           verticalSpace(AppDecoration.spaceMedium),
           const LinearProgressIndicator(backgroundColor: AppColors.transparent),
           verticalSpace(AppDecoration.spaceMedium),
@@ -354,7 +355,8 @@ class CustomSaleRound extends StatelessWidget {
       dialogType: DialogType.success,
       title: "1055@global".tr,
       desc: "1030@tokenomics".tr,
-      btnOkText: "1044@global".tr,
+      btnOkText: "1008@global".tr,
+      btnOkOnPress: () => openNewTab(AppInfo.telegramGroup),
     ).show();
   }
 }
