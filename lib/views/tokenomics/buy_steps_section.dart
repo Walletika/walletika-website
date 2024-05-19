@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
+import '../../utils/launch_url.dart';
+import '../widgets/button.dart';
 import '../widgets/feature.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
@@ -49,6 +51,12 @@ class _DesktopView extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            ),
+            verticalSpace(AppDecoration.spaceBig),
+            CustomButton(
+              onPressed: () => openNewTab(AppInfo.howToBuy),
+              text: "1079@global".tr,
+              width: AppDecoration.widgetWidth,
             ),
             verticalSpace(AppDecoration.spaceMedium),
           ],

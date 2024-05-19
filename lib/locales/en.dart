@@ -79,6 +79,7 @@ const Map<String, String> translator = {
   "1076@global": "Seconds",
   "1077@global": "KYC",
   "1078@global": "Audit",
+  "1079@global": "Watch The Video",
 
   // Warns
   "1000@warns": "Field is required",

@@ -79,6 +79,7 @@ const Map<String, String> translator = {
   "1076@global": "ثوان",
   "1077@global": "الهوية",
   "1078@global": "التدقيق",
+  "1079@global": "شاهد الفيديو",
 
   // Warns
   "1000@warns": "الحقل مطلوب",
