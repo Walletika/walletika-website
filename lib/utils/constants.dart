@@ -115,6 +115,10 @@ class AppImages {
       'assets/illustrations/telegram.png';
   static const String pageNotFoundIllustrations =
       'assets/illustrations/page_not_found.png';
+  static const String androidPackage =
+      'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/google_store.png';
+  static const String windowsPackage =
+      'https://raw.githubusercontent.com/Walletika/walletika-web-fetch/main/images/windows_package.png';
 }
 
 class AppLanguages {

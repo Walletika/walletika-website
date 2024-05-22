@@ -100,7 +100,15 @@ Widget _textBuilder({
         children: [
           CustomButton(
             onPressed: () => Get.offNamed(AppPages.download),
-            text: "1005@global".tr,
+            imageURL: AppImages.androidPackage,
+            type: ButtonType.image,
+            width: 170.0,
+            height: 51.0,
+          ),
+          CustomButton(
+            onPressed: () => Get.offNamed(AppPages.download),
+            imageURL: AppImages.windowsPackage,
+            type: ButtonType.image,
             width: 170.0,
             height: 51.0,
           ),
