@@ -124,7 +124,7 @@ const Map<String, String> translator = {
       "Send and receive +10,000 cryptocurrency assets easily and securely at anytime, anywhere.",
   "1024@home": "Stay Connect With US On Telegram",
   "1025@home":
-      "Join our Telegram channel to keep up with the latest updates and interact with one of our developers.",
+      "Join our Telegram community to keep up with the latest updates and interact with our team.",
   "1026@home": "© 2023 Walletika Ltd. All rights reserved.",
   "1027@home": "Walletika was founded by Mahmoud Khalid.",
   "1028@home":
@@ -145,9 +145,10 @@ const Map<String, String> translator = {
   "1005@download":
       "Install as a hot wallet on your desktop device or as a cold wallet on your USB drive.",
   "1006@download": "How do you feel about Walletika app?",
-  "1007@download": "",
+  "1007@download": "Install The Latest Version",
   "1008@download":
       "We are in beta, please don't deposit real money. Join our group now and ask for a deposit to test the app together.",
+  "1009@download": "Current Release: v1.5.0",
 
   // Token
   "1000@tokenomics": "The Major Token of Walletika",

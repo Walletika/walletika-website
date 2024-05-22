@@ -4,6 +4,7 @@ import '../widgets/page.dart';
 import 'platforms_section.dart';
 import 'main_section.dart';
 import 'rate_section.dart';
+import 'version_section.dart';
 
 class DownloadView extends StatelessWidget {
   const DownloadView({super.key});
@@ -12,6 +13,7 @@ class DownloadView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPage(const [
       MainDownloadSection(),
+      VersionSection(),
       PlatformsSection(),
       RateSection(),
     ]);
