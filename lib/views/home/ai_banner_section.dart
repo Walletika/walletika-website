@@ -52,42 +52,46 @@ Widget _sectionBuilder({
   final ThemeData themeData = Theme.of(context);
   final TextTheme textTheme = themeData.textTheme;
 
-  return CustomSection(
-    height: 550.0,
-    borderRadius: borderRadius,
-    mainAxisAlignment: MainAxisAlignment.end,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    padding: const EdgeInsets.symmetric(
-      horizontal: AppDecoration.paddingBig,
-      vertical: AppDecoration.paddingLarge,
-    ),
-    image: const DecorationImage(
-      image: ExactAssetImage(AppImages.aiBackground),
-      fit: BoxFit.cover,
-      filterQuality: FilterQuality.medium,
-    ),
-    children: [
-      CustomText(
-        text: "1032@home".tr,
-        style: textTheme.displaySmall!.copyWith(
-          color: AppColors.white,
-          fontWeight: FontWeight.bold,
+  return Directionality(
+    textDirection: TextDirection.ltr,
+    child: CustomSection(
+      height: 450.0,
+      borderRadius: borderRadius,
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.paddingBig,
+        vertical: AppDecoration.paddingLarge,
+      ),
+      image: const DecorationImage(
+        image: ExactAssetImage(AppImages.aiBackground),
+        fit: BoxFit.cover,
+        filterQuality: FilterQuality.medium,
+      ),
+      children: [
+        CustomText(
+          text: "1032@home".tr,
+          style: textTheme.displaySmall!.copyWith(
+            color: AppColors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-      ),
-      verticalSpace(),
-      CustomText(
-        text: "1033@home".tr,
-        style: textTheme.titleLarge!.copyWith(color: AppColors.white),
-        maxWidth: AppDecoration.pageWidth,
-      ),
-      verticalSpace(AppDecoration.spaceBig),
-      CustomButton(
-        onPressed: () =>
-            Get.offNamed('${AppPages.documents}${AppPages.aiArticle}'),
-        width: 170.0,
-        height: 51.0,
-        text: "1080@global".tr,
-      ),
-    ],
+        verticalSpace(),
+        CustomText(
+          text: "1033@home".tr,
+          style: textTheme.titleLarge!.copyWith(color: AppColors.white),
+          maxWidth: 580.0,
+        ),
+        verticalSpace(AppDecoration.spaceBig),
+        CustomButton(
+          onPressed: () => Get.offNamed(
+            '${AppPages.documents}${AppPages.aiArticle}',
+          ),
+          width: 170.0,
+          height: 51.0,
+          text: "1080@global".tr,
+        ),
+      ],
+    ),
   );
 }
