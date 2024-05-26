@@ -132,8 +132,17 @@ class CustomDrawer extends GetView<SettingsController> {
             title: Text("1031@global".tr),
           ),
           ListTile(
+            onTap: () =>
+                Get.offNamed('${AppPages.documents}${AppPages.aiArticle}'),
+            title: Text("1082@global".tr),
+          ),
+          ListTile(
             onTap: () => openNewTab(AppInfo.whitepaperPDF),
             title: Text("1030@global".tr),
+          ),
+          ListTile(
+            onTap: () => openNewTab(AppInfo.whitepaperPDF),
+            title: Text("1081@global".tr),
           ),
           ListTile(
             onTap: () => openNewTab(AppInfo.tokenSmartContract),

@@ -81,6 +81,8 @@ const Map<String, String> translator = {
   "1078@global": "التدقيق",
   "1079@global": "شاهد الفيديو",
   "1080@global": "اقرأ المزيد",
+  "1081@global": "خارطة الطريق",
+  "1082@global": "Walletika AI",
 
   // Warns
   "1000@warns": "الحقل مطلوب",
