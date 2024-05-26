@@ -5,6 +5,7 @@ import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
 import '../widgets/button.dart';
 import '../widgets/image.dart';
+import '../widgets/multiple_transition.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
@@ -79,11 +80,23 @@ Widget _textBuilder({
     crossAxisAlignment:
         isTablet ? CrossAxisAlignment.center : CrossAxisAlignment.start,
     children: [
-      CustomText(
-        text: "1000@home".tr,
-        textAlign: isTablet ? TextAlign.center : TextAlign.start,
-        maxWidth: 360.0,
-        style: titleStyle,
+      CustomMultipleTransition(
+        children: [
+          CustomText(
+            key: const ValueKey<int>(1),
+            text: "1000@home".tr,
+            textAlign: isTablet ? TextAlign.center : TextAlign.start,
+            maxWidth: 360.0,
+            style: titleStyle,
+          ),
+          CustomText(
+            key: const ValueKey<int>(2),
+            text: "1004@home".tr,
+            textAlign: isTablet ? TextAlign.center : TextAlign.start,
+            maxWidth: 360.0,
+            style: titleStyle,
+          ),
+        ],
       ),
       verticalSpace(AppDecoration.spaceMedium),
       CustomText(

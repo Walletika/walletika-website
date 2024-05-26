@@ -83,7 +83,7 @@ Widget _sectionBuilder({
       verticalSpace(AppDecoration.spaceBig),
       CustomButton(
         onPressed: () =>
-            Get.offNamed('${AppPages.documents}/${AppPages.aiArticle}'),
+            Get.offNamed('${AppPages.documents}${AppPages.aiArticle}'),
         width: 170.0,
         height: 51.0,
         text: "1080@global".tr,
