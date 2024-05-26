@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/page.dart';
+import 'ai_banner_section.dart';
 import 'community_section.dart';
 import 'main_banner.dart';
 import 'mastercard_section.dart';
@@ -21,7 +22,8 @@ class HomeView extends StatelessWidget {
     return CustomPage([
       MainBannerSection(),
       MainSection(),
-      NoDataSection(),
+      AIBannerSection(),
+      const NoDataSection(),
       SecuritySection(),
       USBSection(),
       MastercardSection(),

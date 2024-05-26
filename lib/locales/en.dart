@@ -80,6 +80,7 @@ const Map<String, String> translator = {
   "1077@global": "KYC",
   "1078@global": "Audit",
   "1079@global": "Watch The Video",
+  "1080@global": "Read More",
 
   // Warns
   "1000@warns": "Field is required",
@@ -87,13 +88,13 @@ const Map<String, String> translator = {
   "1002@warns": "Amount exceeds",
 
   // Home
-  "1000@home": "Best Secure Crypto Wallet",
+  "1000@home": "Most Secure Crypto Wallet",
   "1001@home":
       "Choose between a hot and cold wallet to access your funds easily without a private key.",
   "1002@home": "Your Data Never Store Anywhere!",
   "1003@home":
       "We provide the highest level of privacy and security to our users thanks to our unique solutions that don't require storing user data on our servers or even user devices.",
-  "1004@home": "",
+  "1004@home": "The First AI Crypto Wallet",
   "1005@home": "Keyless Wallet",
   "1006@home":
       "You don't need a private key to access your wallet anymore, we provide a decentralized login protocol instead.",
@@ -133,6 +134,9 @@ const Map<String, String> translator = {
   "1030@home": "Walletika Debit Card!",
   "1031@home":
       "Spend your crypto as cash easily anytime and everywhere via ATMs.",
+  "1032@home": "Walletika AI Integration",
+  "1033@home":
+      "Experience enhanced security, smart investment insights, personalized assistance, and seamless performance with AI-powered Walletika – your ultimate crypto wallet.",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",

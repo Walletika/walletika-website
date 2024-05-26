@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
+import '../widgets/button.dart';
 import '../widgets/section.dart';
 import '../widgets/spacer.dart';
 import '../widgets/text.dart';
 
-class USBSection extends GetResponsiveView {
-  USBSection({
+class AIBannerSection extends GetResponsiveView {
+  AIBannerSection({
     super.settings = AppDecoration.responsiveScreenSettings,
     super.key,
   });
@@ -52,7 +53,7 @@ Widget _sectionBuilder({
   final TextTheme textTheme = themeData.textTheme;
 
   return CustomSection(
-    height: AppDecoration.sectionHeight,
+    height: 550.0,
     borderRadius: borderRadius,
     mainAxisAlignment: MainAxisAlignment.end,
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,13 +62,13 @@ Widget _sectionBuilder({
       vertical: AppDecoration.paddingLarge,
     ),
     image: const DecorationImage(
-      image: ExactAssetImage(AppImages.usbBackground),
+      image: ExactAssetImage(AppImages.aiBackground),
       fit: BoxFit.cover,
       filterQuality: FilterQuality.medium,
     ),
     children: [
       CustomText(
-        text: "1009@home".tr,
+        text: "1032@home".tr,
         style: textTheme.displaySmall!.copyWith(
           color: AppColors.white,
           fontWeight: FontWeight.bold,
@@ -75,8 +76,17 @@ Widget _sectionBuilder({
       ),
       verticalSpace(),
       CustomText(
-        text: "1010@home".tr,
+        text: "1033@home".tr,
         style: textTheme.titleLarge!.copyWith(color: AppColors.white),
+        maxWidth: AppDecoration.pageWidth,
+      ),
+      verticalSpace(AppDecoration.spaceBig),
+      CustomButton(
+        onPressed: () =>
+            Get.offNamed('${AppPages.documents}/${AppPages.aiArticle}'),
+        width: 170.0,
+        height: 51.0,
+        text: "1080@global".tr,
       ),
     ],
   );
