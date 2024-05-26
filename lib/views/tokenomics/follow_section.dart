@@ -20,7 +20,7 @@ class FollowSaleSection extends StatelessWidget {
     return CustomSection(
       padding: const EdgeInsets.only(
         top: AppDecoration.padding,
-        bottom: AppDecoration.paddingLargest,
+        bottom: AppDecoration.padding,
         left: AppDecoration.paddingBig,
         right: AppDecoration.paddingBig,
       ),

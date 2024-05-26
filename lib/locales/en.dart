@@ -159,7 +159,7 @@ const Map<String, String> translator = {
   "1001@tokenomics":
       "WLTK is the secure token for our investors to have great investment opportunities to grow together.",
   "1002@tokenomics": "Marketing",
-  "1003@tokenomics": "",
+  "1003@tokenomics": "Don't Miss The 100x Chance!",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
       "The maximum supply is 100,000,000 WLTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
@@ -217,16 +217,16 @@ const Map<String, String> translator = {
   "1046@tokenomics": "How to Buy \$WLTK?",
   "1047@tokenomics": "1- Start Buy",
   "1048@tokenomics":
-      "Click on the “Buy Now” button situated at the bottom of the presale box above. Click on it to proceed.",
+      "First, click on the “Buy Now” button located below the presale box above. Click on it to proceed.",
   "1049@tokenomics": "2- Specify Amount",
   "1050@tokenomics":
-      "A purchase widget will appear. From here, choose the stablecoin of your preference and input the amount you wish to purchase. Once done, click on the “Checkout” button.",
+      "The purchase interface will appear. From here, select your preferred stablecoin and enter the amount you wish to buy. Once you're done, click the “Checkout” button.",
   "1051@tokenomics": "3- Complete Checkout",
   "1052@tokenomics":
-      "You will be presented with the order details, which include the payable amount, accepted networks, and the deposit address. Proceed to your wallet and transfer the specified amount to the provided deposit address. After the transfer is completed, copy and paste the TXHash of the transaction into the entry to confirm, and click on the “Confirm” button.",
+      "The order details will appear, which include the amount due, accepted networks, and the deposit address. Go to your wallet app and deposit the required amount to the provided deposit address. After completing the deposit, copy and paste the transaction hash (TXHash) into the input field for confirmation, then click the “Confirm” button.",
   "1053@tokenomics": "4- Token Receipt",
   "1054@tokenomics":
-      "Upon successful completion of Step 3, your tokens will be transferred to the same deposit address within a few minutes.",
+      "Once you successfully complete step 3, your tokens will be transferred to the same deposit address within a few minutes.",
   "1055@tokenomics": "Buy Before The Price Rises",
   "1056@tokenomics": "The Next Price is",
   "1057@tokenomics": "Last Chance Before Listing",

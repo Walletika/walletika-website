@@ -31,10 +31,6 @@ class _DesktopView extends StatelessWidget {
     const double width = 225.0;
 
     return CustomSection(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppDecoration.paddingBig,
-        vertical: 0,
-      ),
       wrapSpacing: AppDecoration.spaceMedium,
       wrapCrossAlignment: WrapCrossAlignment.start,
       layout: SectionLayout.wrap,

@@ -110,6 +110,7 @@ class AppImages {
   static const String searchIllustrations = 'assets/illustrations/search.png';
   static const String usbBackground = 'assets/illustrations/usb.jpeg';
   static const String aiBackground = 'assets/illustrations/ai.jpg';
+  static const String pricesBackground = 'assets/illustrations/prices.png';
   static const String lockerBackground = 'assets/illustrations/locker.jpg';
   static const String cardsIllustrations = 'assets/illustrations/cards.png';
   static const String telegramIllustrations =

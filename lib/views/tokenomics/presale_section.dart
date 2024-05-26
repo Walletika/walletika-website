@@ -25,6 +25,10 @@ class PresaleSection extends GetView<TokenomicsController> {
     final ColorScheme colorScheme = themeData.colorScheme;
 
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.padding,
+        vertical: AppDecoration.paddingLargest,
+      ),
       children: [
         CustomText(
           text: "1021@tokenomics".tr,

@@ -8,6 +8,7 @@ import 'follow_section.dart';
 import 'main_section.dart';
 import 'presale_section.dart';
 // import 'private_sale_section.dart';
+import 'prices_section.dart';
 import 'rate_section.dart';
 import 'tokens_lock_section.dart';
 
@@ -19,8 +20,9 @@ class TokenomicsView extends StatelessWidget {
     return CustomPage([
       const MainTokenomicsSection(),
       PresaleSection(),
-      const FollowSaleSection(),
+      PricesSection(),
       BuyStepsSection(),
+      const FollowSaleSection(),
       const TokenDistributionSection(),
       const TokenomicsFeaturesSection(),
       TokensLockSection(),
