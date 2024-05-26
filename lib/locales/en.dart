@@ -183,7 +183,7 @@ const Map<String, String> translator = {
   "1019@tokenomics":
       "Participate in one of the best opportunities at the cheapest prices!",
   "1020@tokenomics": "Private Sale Stage",
-  "1021@tokenomics": "Presale Stage",
+  "1021@tokenomics": "The Biggest Presale 2024",
   "1022@tokenomics":
       "The best opportunities before starting trading on the exchanges!",
   "1023@tokenomics": "How much you can buy?",

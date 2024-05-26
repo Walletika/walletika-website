@@ -182,7 +182,7 @@ const Map<String, String> translator = {
   "1018@tokenomics": "ما هو شعورك تجاه Walletika توكن؟",
   "1019@tokenomics": "شارك في واحدة من أفضل الفرص بأرخص الأسعار!",
   "1020@tokenomics": "مرحلة البيع الخاص",
-  "1021@tokenomics": "مرحلة ماقبل البيع",
+  "1021@tokenomics": "أكبر عرض مسبق لعام 2024",
   "1022@tokenomics": "أفضل فرصة قبل بدء التداول في البورصات!",
   "1023@tokenomics": "كم يمكنك شراء؟",
   "1024@tokenomics": "سوف تشتري",
