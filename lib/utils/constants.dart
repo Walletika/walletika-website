@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class AppInfo {
   static const String name = 'Walletika';
   static const String officialPublisher = 'Walletika Team';
-  static const String titlePage = 'Walletika - Best Secure Crypto Wallet';
+  static const String titlePage = 'Walletika - Most Secure Crypto Wallet';
   static const String supportMail = 'support@walletika.io';
   static const String youtube = 'https://youtube.com/@walletika';
   static const String twitter = 'https://twitter.com/Walletikaapp';
