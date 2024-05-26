@@ -6,6 +6,7 @@ import '../../models/page.dart';
 import '../../utils/constants.dart';
 import '../../utils/launch_url.dart';
 import 'active_status.dart';
+import 'clickable_widget.dart';
 import 'image.dart';
 import 'spacer.dart';
 
@@ -26,11 +27,14 @@ class CustomDrawer extends GetView<SettingsController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const CustomImage(
-                  padding: EdgeInsets.only(left: AppDecoration.spaceBig),
-                  path: AppImages.logo,
-                  width: 40.0,
-                  height: 40.0,
+                CustomClickableWidget(
+                  onTap: () => Get.offNamed(AppPages.home),
+                  child: const CustomImage(
+                    padding: EdgeInsets.only(left: AppDecoration.spaceBig),
+                    path: AppImages.logo,
+                    width: 40.0,
+                    height: 40.0,
+                  ),
                 ),
                 const SizedBox(
                   height: AppDecoration.buttonHeightLarge,
