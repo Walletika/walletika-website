@@ -202,7 +202,7 @@ const Map<String, String> translator = {
   "1033@tokenomics": "لماذا يجب أن أشتري الآن؟",
   "1034@tokenomics": "استلم العملات الخاصة بك فورا",
   "1035@tokenomics": "استيكنج متاح الآن لكسب المزيد من المكافآت",
-  "1036@tokenomics": "سعر الادراج 0.15 دولار",
+  "1036@tokenomics": "سعر الادراج 0.20 دولار",
   "1037@tokenomics":
       "الإدراج في أفضل البورصات ByBit, OKX, GateIO, KuCoin, BitMart, Bitget, Pancakeswap",
   "1038@tokenomics": "استرداد 20% على الاستثمار بأكثر من 100 الف دولار",

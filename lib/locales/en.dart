@@ -204,7 +204,7 @@ const Map<String, String> translator = {
   "1033@tokenomics": "Why Should I Buy Now?",
   "1034@tokenomics": "Receive your tokens immediately",
   "1035@tokenomics": "Staking is live now to earn more rewards",
-  "1036@tokenomics": "Listing price \$0.15",
+  "1036@tokenomics": "Listing price \$0.20",
   "1037@tokenomics":
       "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
   "1038@tokenomics": "20% Buyback for +\$100k buyers",

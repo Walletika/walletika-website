@@ -378,7 +378,7 @@ class _PaymentFormState extends State<_PaymentForm> {
       saleAmount =
           '${convertToIntFormat(amount ~/ widget.model.price)} ${widget.model.tokenSymbol}';
       exchangeAmount =
-          '${convertToIntFormat(amount ~/ 0.3)} ${widget.model.tokenSymbol}';
+          '${convertToIntFormat(amount ~/ 0.2)} ${widget.model.tokenSymbol}';
     });
   }
 
