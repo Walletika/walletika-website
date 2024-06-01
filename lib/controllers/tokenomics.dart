@@ -10,7 +10,6 @@ class TokenomicsController extends GetxController {
   // States
   final Rxn<List<RoundModel>> _privateSale = Rxn<List<RoundModel>>();
   final Rxn<List<RoundModel>> _presale = Rxn<List<RoundModel>>();
-  final List<String> acceptedCoins = ['usdt', 'usdc'];
   final List<String> acceptedNetworks = [
     'Ethereum (ERC20)',
     'BNB Smart Chain (BEP20)',

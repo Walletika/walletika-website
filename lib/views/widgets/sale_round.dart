@@ -10,7 +10,6 @@ import '../../models/round.dart';
 import '../../utils/constants.dart';
 import '../../utils/digit_format.dart';
 import '../../utils/launch_url.dart';
-// import '../../utils/time_calculator.dart';
 import 'active_status.dart';
 import 'address.dart';
 import 'amount_field.dart';
@@ -26,14 +25,12 @@ import 'text_field.dart';
 class CustomSaleRound extends StatelessWidget {
   const CustomSaleRound({
     required this.model,
-    required this.acceptedCoins,
     required this.acceptedNetworks,
     required this.refetch,
     super.key,
   });
 
   final RoundModel model;
-  final List<String> acceptedCoins;
   final List<String> acceptedNetworks;
   final void Function() refetch;
 
@@ -245,7 +242,6 @@ class CustomSaleRound extends StatelessWidget {
 
     customAwesomeDialog(
       body: _PaymentForm(
-        coins: acceptedCoins,
         model: model,
         onPressed: _onBuyCheckout,
       ),
@@ -363,12 +359,10 @@ class CustomSaleRound extends StatelessWidget {
 
 class _PaymentForm extends StatefulWidget {
   const _PaymentForm({
-    required this.coins,
     required this.model,
     required this.onPressed,
   });
 
-  final List<String> coins;
   final RoundModel model;
   final void Function(String amount, String saleAmount) onPressed;
 
@@ -377,7 +371,7 @@ class _PaymentForm extends StatefulWidget {
 }
 
 class _PaymentFormState extends State<_PaymentForm> {
-  late String selectedCoin = widget.coins.first;
+  late String selectedCoin = widget.model.coins.keys.first;
   late String saleAmount = '0 ${widget.model.tokenSymbol}';
   late String exchangeAmount = '0 ${widget.model.tokenSymbol}';
 
@@ -437,7 +431,7 @@ class _PaymentFormState extends State<_PaymentForm> {
               underline: zeroSpace(),
               value: selectedCoin,
               onChanged: _onChangedDropdown,
-              items: widget.coins
+              items: widget.model.coins.keys
                   .map((e) => DropdownMenuItem(
                         value: e,
                         child: Text(e.toUpperCase()),
@@ -472,17 +466,27 @@ class _PaymentFormState extends State<_PaymentForm> {
 
   void _onChangedField() {
     final double amount = double.tryParse(amountController.text) ?? 0;
+    final int receiveAmount = widget.model.receiveAmount(
+      amount: amount,
+      symbol: selectedCoin,
+    );
+    final int receiveAmountExchange = widget.model.exchangeAmount(
+      amount: amount,
+      symbol: selectedCoin,
+    );
 
     setState(() {
       saleAmount =
-          '${convertToIntFormat(amount ~/ widget.model.currentPrice)} ${widget.model.tokenSymbol}';
+          '${convertToIntFormat(receiveAmount)} ${widget.model.tokenSymbol}';
       exchangeAmount =
-          '${convertToIntFormat(amount ~/ 0.2)} ${widget.model.tokenSymbol}';
+          '${convertToIntFormat(receiveAmountExchange)} ${widget.model.tokenSymbol}';
     });
   }
 
   void _onChangedDropdown(String? value) {
     if (value == null) return;
+
+    amountController.clear();
 
     setState(() {
       selectedCoin = value;

@@ -114,7 +114,6 @@ class PresaleSection extends GetView<TokenomicsController> {
 
               return CustomSaleRound(
                 model: rounds.first,
-                acceptedCoins: controller.acceptedCoins,
                 acceptedNetworks: controller.acceptedNetworks,
                 refetch: controller.refetch,
               );

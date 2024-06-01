@@ -3,14 +3,14 @@ import 'dart:math';
 class RoundModel {
   RoundModel({
     required this.startTime,
-    // required this.endTime,
     required this.tokens,
     required this.sold,
     required this.price,
     this.tokenSymbol = 'WLTK',
     this.priceSymbol = 'USD',
     this.url,
-    this.addresses,
+    required this.coins,
+    required this.addresses,
     required List<Map<String, dynamic>> offers,
   }) {
     for (int index = 0; index < offers.length; index++) {
@@ -31,14 +31,14 @@ class RoundModel {
   }
 
   final DateTime startTime;
-  // final DateTime endTime;
   final int tokens;
   final int sold;
   final double price;
   final String tokenSymbol;
   final String priceSymbol;
   final String? url;
-  final List<String>? addresses;
+  final Map<String, int> coins;
+  final List<String> addresses;
 
   late DateTime endTime;
   late double currentPrice;
@@ -68,7 +68,17 @@ class RoundModel {
   DateTime get currentUTCTime => DateTime.now().toUtc();
 
   String? get address {
-    return addresses?[Random().nextInt(addresses!.length)];
+    return addresses[Random().nextInt(addresses.length)];
+  }
+
+  int receiveAmount({required double amount, required String symbol}) {
+    final double price = currentPrice / coins[symbol]!;
+    return amount ~/ price;
+  }
+
+  int exchangeAmount({required double amount, required String symbol}) {
+    final double price = 0.2 / coins[symbol]!;
+    return amount ~/ price;
   }
 
   factory RoundModel.fromJson(Map<String, dynamic> json) => RoundModel(
@@ -76,10 +86,6 @@ class RoundModel {
           json["startTime"] as int,
           isUtc: true,
         ),
-        // endTime: DateTime.fromMillisecondsSinceEpoch(
-        //   json["endTime"] as int,
-        //   isUtc: true,
-        // ),
         tokens: json["tokens"] as int,
         sold: json["sold"] as int,
         price: json["price"] as double,
@@ -88,5 +94,6 @@ class RoundModel {
         url: json["url"],
         addresses: json["addresses"].cast<String>(),
         offers: json["offers"].cast<Map<String, dynamic>>(),
+        coins: json["coins"].cast<String, int>(),
       );
 }
