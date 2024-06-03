@@ -193,7 +193,7 @@ const Map<String, String> translator = {
   "1025@tokenomics": "instead of",
   "1026@tokenomics": "from the exchange!",
   "1027@tokenomics":
-      "*Don't deposit from the exchange, You'll receive your tokens in a few minutes on the same deposit address.",
+      "*Don't deposit from the exchange, You'll receive your tokens in a few minutes on the same deposit address on BNB Smart Chain network.",
   "1028@tokenomics": "Make a deposit",
   "1029@tokenomics": "to following address",
   "1030@tokenomics":
@@ -228,7 +228,7 @@ const Map<String, String> translator = {
       "The order details will appear, which include the amount due, accepted networks, and the deposit address. Go to your wallet app and deposit the required amount to the provided deposit address. After completing the deposit, copy and paste the transaction hash (TXHash) into the input field for confirmation, then click the “Confirm” button.",
   "1053@tokenomics": "4- Token Receipt",
   "1054@tokenomics":
-      "Once you successfully complete step 3, your tokens will be transferred to the same deposit address within a few minutes.",
+      "Once you successfully complete step 3, your tokens will be transferred to the same deposit address within a few minutes on BNB Smart Chain network.",
   "1055@tokenomics": "Buy Before The Price Rises",
   "1056@tokenomics": "The Next Price is",
   "1057@tokenomics": "Last Chance Before Listing",
