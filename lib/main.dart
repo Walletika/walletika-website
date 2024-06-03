@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -26,7 +27,7 @@ void main() async {
 
   timeago.setLocaleMessages('ar', timeago.ArMessages());
 
-  runApp(const AppLauncher());
+  runApp(AppLauncher());
   // runApp(
   //   DevicePreview(
   //     enabled: !kReleaseMode,
@@ -36,7 +37,15 @@ void main() async {
 }
 
 class AppLauncher extends GetView<SettingsController> {
-  const AppLauncher({super.key});
+  AppLauncher({super.key}) {
+    final referralID = Uri.base.queryParameters['id'];
+
+    if (referralID != null) {
+      FirebaseAnalytics.instance.logEvent(name: "Referral", parameters: {
+        "referrals": referralID,
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
