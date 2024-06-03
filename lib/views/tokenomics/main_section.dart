@@ -30,13 +30,13 @@ class MainTokenomicsSection extends StatelessWidget {
       backgroundColor: colorScheme.secondary,
       children: [
         CustomText(
-          text: "1000@tokenomics".tr,
+          text: "1021@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.displayMedium!.copyWith(fontWeight: FontWeight.bold),
         ),
         verticalSpace(),
         CustomText(
-          text: "1001@tokenomics".tr,
+          text: "1022@tokenomics".tr,
           textAlign: TextAlign.center,
           style: textTheme.headlineSmall,
         ),

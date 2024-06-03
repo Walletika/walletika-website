@@ -23,7 +23,7 @@ class TokenomicsView extends StatelessWidget {
       BuyStepsSection(),
       const FollowSaleSection(),
       const TokenDistributionSection(),
-      const TokenomicsFeaturesSection(),
+      TokenomicsFeaturesSection(),
       TokensLockSection(),
       const TokenomicsRateSection(),
     ]);

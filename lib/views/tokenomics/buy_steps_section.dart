@@ -19,6 +19,11 @@ class BuyStepsSection extends GetResponsiveView {
   Widget? desktop() {
     return const _DesktopView();
   }
+
+  @override
+  Widget? phone() {
+    return const _PhoneView();
+  }
 }
 
 class _DesktopView extends StatelessWidget {
@@ -26,58 +31,80 @@ class _DesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData themeData = Theme.of(context);
-    final TextTheme textTheme = themeData.textTheme;
-    const double width = 225.0;
-
-    return CustomSection(
-      wrapSpacing: AppDecoration.spaceMedium,
-      wrapCrossAlignment: WrapCrossAlignment.start,
-      layout: SectionLayout.wrap,
-      children: [
-        Column(
-          children: [
-            SizedBox(
-              width: AppDecoration.textSectionWidth,
-              child: CustomText(
-                text: "1046@tokenomics".tr,
-                textAlign: TextAlign.center,
-                maxWidth: 900.0,
-                style: textTheme.headlineLarge!.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            verticalSpace(AppDecoration.spaceBig),
-            CustomButton(
-              onPressed: () => openNewTab(AppInfo.howToBuy),
-              text: "1079@global".tr,
-              width: AppDecoration.widgetWidth,
-            ),
-            verticalSpace(AppDecoration.spaceMedium),
-          ],
-        ),
-        CustomFeature(
-          title: "1047@tokenomics".tr,
-          description: "1048@tokenomics".tr,
-          width: width,
-        ),
-        CustomFeature(
-          title: "1049@tokenomics".tr,
-          description: "1050@tokenomics".tr,
-          width: width,
-        ),
-        CustomFeature(
-          title: "1051@tokenomics".tr,
-          description: "1052@tokenomics".tr,
-          width: width,
-        ),
-        CustomFeature(
-          title: "1053@tokenomics".tr,
-          description: "1054@tokenomics".tr,
-          width: width,
-        ),
-      ],
+    return _sectionBuilder(
+      context: context,
+      isPhone: false,
     );
   }
+}
+
+class _PhoneView extends StatelessWidget {
+  const _PhoneView();
+
+  @override
+  Widget build(BuildContext context) {
+    return _sectionBuilder(
+      context: context,
+      isPhone: true,
+    );
+  }
+}
+
+Widget _sectionBuilder({
+  required BuildContext context,
+  required bool isPhone,
+}) {
+  final ThemeData themeData = Theme.of(context);
+  final TextTheme textTheme = themeData.textTheme;
+  final double? width = isPhone ? null : 225.0;
+
+  return CustomSection(
+    wrapSpacing: AppDecoration.spaceMedium,
+    wrapCrossAlignment: WrapCrossAlignment.start,
+    layout: SectionLayout.wrap,
+    children: [
+      Column(
+        children: [
+          SizedBox(
+            width: AppDecoration.textSectionWidth,
+            child: CustomText(
+              text: "1046@tokenomics".tr,
+              textAlign: TextAlign.center,
+              maxWidth: 900.0,
+              style: textTheme.headlineLarge!.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          verticalSpace(AppDecoration.spaceBig),
+          CustomButton(
+            onPressed: () => openNewTab(AppInfo.howToBuy),
+            text: "1079@global".tr,
+            width: AppDecoration.widgetWidth,
+          ),
+          verticalSpace(AppDecoration.spaceMedium),
+        ],
+      ),
+      CustomFeature(
+        title: "1047@tokenomics".tr,
+        description: "1048@tokenomics".tr,
+        width: width,
+      ),
+      CustomFeature(
+        title: "1049@tokenomics".tr,
+        description: "1050@tokenomics".tr,
+        width: width,
+      ),
+      CustomFeature(
+        title: "1051@tokenomics".tr,
+        description: "1052@tokenomics".tr,
+        width: width,
+      ),
+      CustomFeature(
+        title: "1053@tokenomics".tr,
+        description: "1054@tokenomics".tr,
+        width: width,
+      ),
+    ],
+  );
 }

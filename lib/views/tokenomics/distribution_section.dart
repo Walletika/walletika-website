@@ -16,6 +16,10 @@ class TokenDistributionSection extends StatelessWidget {
     final TextTheme textTheme = themeData.textTheme;
 
     return CustomSection(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppDecoration.paddingBig,
+        vertical: AppDecoration.padding,
+      ),
       children: [
         CustomText(
           text: "1010@tokenomics".tr,

@@ -161,7 +161,7 @@ const Map<String, String> translator = {
   "1001@tokenomics":
       "WLTK is the secure token for our investors to have great investment opportunities to grow together.",
   "1002@tokenomics": "Marketing",
-  "1003@tokenomics": "Don't Miss The 100x Chance!",
+  "1003@tokenomics": "Your Chance to Make 100x in 2024!",
   "1004@tokenomics": "Limited Supply",
   "1005@tokenomics":
       "The maximum supply is 100,000,000 WLTK, which ensures no inflation, and makes it a low-risk token, strong and trusted by everyone.",
@@ -202,14 +202,14 @@ const Map<String, String> translator = {
   "1032@tokenomics":
       "100% of team tokens are locked, 30% vesting annually for 4 years.",
   "1033@tokenomics": "Why Should I Buy Now?",
-  "1034@tokenomics": "Receive your tokens immediately",
-  "1035@tokenomics": "Staking is live now to earn more rewards",
+  "1034@tokenomics": "Buy and receive now",
+  "1035@tokenomics": "Stake to earn more while presale is live",
   "1036@tokenomics": "Listing price \$0.20",
   "1037@tokenomics":
       "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
   "1038@tokenomics": "20% Buyback for +\$100k buyers",
   "1039@tokenomics": "KYC and Audited by Cyberscope",
-  "1040@tokenomics": "100% of Team wallet is locked",
+  "1040@tokenomics": "100% of team tokens are locked for 4 years",
   "1041@tokenomics": "Sale Starts In",
   "1042@tokenomics": "Sale Ends In",
   "1043@tokenomics": "Sale Ended",
@@ -234,6 +234,10 @@ const Map<String, String> translator = {
   "1057@tokenomics": "Last Chance Before Listing",
   "1058@tokenomics": "Paste (0x) TX Hash",
   "1059@tokenomics": "TX Invalied",
+  "1060@tokenomics": "How is \$WLTK Secure?",
+  "1061@tokenomics": "Smart contract is verified on BSCScan",
+  "1062@tokenomics":
+      "Get ready with early investors for the next altcoin season, don't miss it.",
 
   // Documents
   "1000@docs": "Walletika Documents",

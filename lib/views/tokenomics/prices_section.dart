@@ -55,17 +55,30 @@ Widget _sectionBuilder({
 
   return CustomSection(
     borderRadius: borderRadius,
-    mainAxisAlignment: MainAxisAlignment.center,
     padding: const EdgeInsets.all(AppDecoration.paddingBig),
     backgroundColor: colorScheme.secondary,
+    layout: SectionLayout.wrap,
+    wrapSpacing: 0,
+    wrapCrossAlignment: WrapCrossAlignment.start,
     children: [
-      const CustomImage(path: AppImages.pricesBackground, height: 300.0),
-      verticalSpace(),
-      CustomText(
-        text: "1003@tokenomics".tr,
-        textAlign: TextAlign.center,
-        style: textTheme.displaySmall!.copyWith(fontWeight: FontWeight.bold),
+      Column(
+        children: [
+          CustomText(
+            text: "1003@tokenomics".tr,
+            maxWidth: 400.0,
+            style: textTheme.displayMedium!.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          verticalSpace(),
+          CustomText(
+            text: "1062@tokenomics".tr,
+            maxWidth: 400.0,
+            style: textTheme.headlineSmall,
+          ),
+        ],
       ),
+      const CustomImage(path: AppImages.pricesBackground, height: 300.0),
     ],
   );
 }
