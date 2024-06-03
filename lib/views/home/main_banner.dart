@@ -26,6 +26,7 @@ class _DesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
+    final TextTheme textTheme = themeData.textTheme;
     final ColorScheme colorScheme = themeData.colorScheme;
 
     return CustomSection(
@@ -45,6 +46,7 @@ class _DesktopView extends StatelessWidget {
               child: CustomText(
                 text: "1029@home".tr,
                 textAlign: TextAlign.center,
+                style: textTheme.titleMedium,
               ),
             ),
           ],
