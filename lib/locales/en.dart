@@ -83,6 +83,7 @@ const Map<String, String> translator = {
   "1080@global": "Read More",
   "1081@global": "Roadmap",
   "1082@global": "Walletika AI",
+  "1083@global": "Airdrop",
 
   // Warns
   "1000@warns": "Field is required",
@@ -200,7 +201,7 @@ const Map<String, String> translator = {
       "Thank you for your participation and support, we invite you to join our community and follow our social media accounts to stay up to date with the latest news.",
   "1031@tokenomics": "Team Wallet is Locked",
   "1032@tokenomics":
-      "100% of team tokens are locked, 30% vesting annually for 4 years.",
+      "100% of team tokens locked, 30% vesting annually for 4 years.",
   "1033@tokenomics": "Why Should I Buy Now?",
   "1034@tokenomics": "Buy and receive now",
   "1035@tokenomics": "Stake to earn more while presale is live",
@@ -209,7 +210,7 @@ const Map<String, String> translator = {
       "Listing on top exchanges ByBit, OKX, GateIO, KuCoin, BitMart, Bitget and Pancakeswap",
   "1038@tokenomics": "20% Buyback for +\$100k buyers",
   "1039@tokenomics": "KYC and Audited by Cyberscope",
-  "1040@tokenomics": "100% of team tokens are locked for 4 years",
+  "1040@tokenomics": "100% of team tokens locked for 4 years",
   "1041@tokenomics": "Sale Starts In",
   "1042@tokenomics": "Sale Ends In",
   "1043@tokenomics": "Sale Ended",
@@ -238,6 +239,8 @@ const Map<String, String> translator = {
   "1061@tokenomics": "Smart contract is verified on BSCScan",
   "1062@tokenomics":
       "Get ready with early investors for the next altcoin season, don't miss it.",
+  "1063@tokenomics": "Very low market cap of \$8.5M",
+  "1064@tokenomics": "Limited supply with no mint function",
 
   // Documents
   "1000@docs": "Walletika Documents",

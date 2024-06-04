@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class AppInfo {
   static const String name = 'Walletika';
   static const String officialPublisher = 'Walletika Team';
-  static const String titlePage = 'Walletika - Most Secure Crypto Wallet';
+  static const String titlePage = 'Walletika - AI & Secure Crypto Wallet';
   static const String supportMail = 'support@walletika.io';
   static const String youtube = 'https://youtube.com/@walletika';
   static const String twitter = 'https://twitter.com/Walletikaapp';
@@ -25,6 +25,8 @@ class AppInfo {
       'https://drive.google.com/file/d/107uPaQFJJaj7y146Rrxn4stDphdM0Az4';
   static const String kyc =
       'https://github.com/cyberscope-io/kyc/blob/main/wltk/kyc.png';
+  static const String airdrop =
+      'https://x.com/WalletikaApp/status/1786719235084886490';
   static const String audit = 'https://www.cyberscope.io/audits/wltk';
   static const String howToBuy = 'https://www.youtube.com/watch?v=QIbPD88NEFs';
   static const String donateAddress =

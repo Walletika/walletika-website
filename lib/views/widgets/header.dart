@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
 
 import '../../controllers/settings.dart';
 import '../../models/page.dart';
 import '../../utils/constants.dart';
+import '../../utils/launch_url.dart';
 import 'active_status.dart';
 import 'button.dart';
 import 'clickable_widget.dart';
@@ -94,6 +96,11 @@ Widget _appBarBuilder({required BuildContext context, List<Widget>? actions}) {
       ]),
       actions: [
         ...?actions,
+        IconButton(
+          icon: const Icon(LineIcons.gift),
+          tooltip: "1083@global".tr,
+          onPressed: () => openNewTab(AppInfo.airdrop),
+        ),
         IconButton(
           icon: const Icon(Icons.menu),
           tooltip: "1032@global".tr,

@@ -83,6 +83,7 @@ const Map<String, String> translator = {
   "1080@global": "اقرأ المزيد",
   "1081@global": "خارطة الطريق",
   "1082@global": "Walletika AI",
+  "1083@global": "اسقاط جوي",
 
   // Warns
   "1000@warns": "الحقل مطلوب",
@@ -236,6 +237,8 @@ const Map<String, String> translator = {
   "1061@tokenomics": "تم التحقق من العقد الذكي على BSCScan",
   "1062@tokenomics":
       "استعد مع المستثمرين الأوائل لموسم العملات البديلة القادم، فلا تفوته.",
+  "1063@tokenomics": "قيمة سوقية منخفضة جدًا \$8.5 مليون دولار",
+  "1064@tokenomics": "العرض محدود ولا يمكن طباعة رموز جديده",
 
   // Documents
   "1000@docs": "وثائق Walletika",

@@ -48,7 +48,7 @@ class PresaleSection extends GetView<TokenomicsController> {
               for (final String text in [
                 "1039@tokenomics",
                 "1061@tokenomics",
-                "1016@tokenomics",
+                "1064@tokenomics",
                 "1040@tokenomics",
               ]) ...[
                 Row(
@@ -76,6 +76,7 @@ class PresaleSection extends GetView<TokenomicsController> {
                 "1035@tokenomics",
                 "1038@tokenomics",
                 "1036@tokenomics",
+                "1063@tokenomics",
                 "1037@tokenomics",
               ]) ...[
                 Row(
