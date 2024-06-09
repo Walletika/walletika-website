@@ -58,7 +58,7 @@ Widget _sectionBuilder({
 
   return CustomSection(
     padding: const EdgeInsets.symmetric(
-      horizontal: AppDecoration.paddingBig,
+      horizontal: AppDecoration.padding,
       vertical: AppDecoration.paddingLarge,
     ),
     borderRadius: borderRadius,
@@ -82,8 +82,8 @@ Widget _sectionBuilder({
       ),
       verticalSpace(AppDecoration.spaceBig),
       Wrap(
-        spacing: AppDecoration.spaceMedium,
-        runSpacing: AppDecoration.spaceMedium,
+        spacing: AppDecoration.space,
+        runSpacing: AppDecoration.space,
         children: [
           CustomButton(
             onPressed: () => Get.offNamed(AppPages.presale),

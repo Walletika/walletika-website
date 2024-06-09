@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/page.dart';
 import 'ai_banner_section.dart';
 import 'community_section.dart';
+import 'main_banner_section.dart';
 import 'presale_section.dart';
 import 'mastercard_section.dart';
 import 'sub_features_section.dart';
@@ -20,6 +21,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPage([
+      MainBannerSection(),
       MainSection(),
       AIBannerSection(),
       PresaleSection(),
