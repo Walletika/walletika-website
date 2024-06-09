@@ -54,6 +54,7 @@ class SettingsController extends GetxController {
       widget: () => const TokenomicsView(),
       binding: () => TokenomicsBinding(),
       isNew: true,
+      isPinned: true,
     ),
     PageModel(
       visible: true,

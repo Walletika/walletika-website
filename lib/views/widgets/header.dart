@@ -47,12 +47,6 @@ class _DesktopView extends GetView<SettingsController> {
             type: ButtonType.text,
             standardSize: false,
           ),
-        horizontalSpace(),
-        const SizedBox(
-          height: AppDecoration.buttonHeight,
-          child: VerticalDivider(),
-        ),
-        horizontalSpace(),
       ],
     );
   }
@@ -63,7 +57,21 @@ class _PhoneView extends GetView<SettingsController> {
 
   @override
   Widget build(BuildContext context) {
-    return _appBarBuilder(context: context);
+    return _appBarBuilder(
+      context: context,
+      actions: [
+        for (final PageModel page in controller.pages)
+          if (page.isPinned)
+            CustomButton(
+              onPressed: () => Get.offNamed(page.name),
+              text: page.text.tr,
+              icon:
+                  page.isNew ? const CustomActiveStatus(isActive: true) : null,
+              type: ButtonType.text,
+              standardSize: false,
+            ),
+      ],
+    );
   }
 }
 
@@ -96,6 +104,12 @@ Widget _appBarBuilder({required BuildContext context, List<Widget>? actions}) {
       ]),
       actions: [
         ...?actions,
+        horizontalSpace(),
+        const SizedBox(
+          height: AppDecoration.buttonHeight,
+          child: VerticalDivider(),
+        ),
+        horizontalSpace(),
         IconButton(
           icon: const Icon(LineIcons.gift),
           tooltip: "1083@global".tr,

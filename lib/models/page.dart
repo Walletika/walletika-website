@@ -9,6 +9,7 @@ class PageModel {
     required this.widget,
     this.binding,
     this.isNew = false,
+    this.isPinned = false,
   });
 
   final bool visible;
@@ -17,4 +18,5 @@ class PageModel {
   final Widget Function() widget;
   final Bindings Function()? binding;
   final bool isNew;
+  final bool isPinned;
 }
