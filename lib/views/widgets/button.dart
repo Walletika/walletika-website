@@ -19,6 +19,7 @@ class CustomButton extends StatelessWidget {
     this.imagePath,
     this.imageURL,
     this.tooltip,
+    this.style,
     super.key,
   });
 
@@ -33,6 +34,7 @@ class CustomButton extends StatelessWidget {
   final String? imagePath;
   final String? imageURL;
   final String? tooltip;
+  final ButtonStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class CustomButton extends StatelessWidget {
         widget = _imageButton();
         break;
       case ButtonType.icon:
-        widget = IconButton(onPressed: onPressed, icon: icon!);
+        widget = IconButton(onPressed: onPressed, icon: icon!, style: style);
         break;
     }
 
@@ -83,26 +85,30 @@ class CustomButton extends StatelessWidget {
 
   ElevatedButton _elevatedButton() {
     return icon != null
-        ? ElevatedButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
-        : ElevatedButton(onPressed: onPressed, child: _text());
+        ? ElevatedButton.icon(
+            onPressed: onPressed, label: _text(), icon: icon!, style: style)
+        : ElevatedButton(onPressed: onPressed, style: style, child: _text());
   }
 
   FilledButton _filledButton() {
     return icon != null
-        ? FilledButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
-        : FilledButton(onPressed: onPressed, child: _text());
+        ? FilledButton.icon(
+            onPressed: onPressed, label: _text(), icon: icon!, style: style)
+        : FilledButton(onPressed: onPressed, style: style, child: _text());
   }
 
   OutlinedButton _outlinedButton() {
     return icon != null
-        ? OutlinedButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
-        : OutlinedButton(onPressed: onPressed, child: _text());
+        ? OutlinedButton.icon(
+            onPressed: onPressed, label: _text(), icon: icon!, style: style)
+        : OutlinedButton(onPressed: onPressed, style: style, child: _text());
   }
 
   TextButton _textButton() {
     return icon != null
-        ? TextButton.icon(onPressed: onPressed, label: _text(), icon: icon!)
-        : TextButton(onPressed: onPressed, child: _text());
+        ? TextButton.icon(
+            onPressed: onPressed, label: _text(), icon: icon!, style: style)
+        : TextButton(onPressed: onPressed, style: style, child: _text());
   }
 
   Widget _imageButton() {
