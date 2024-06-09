@@ -31,7 +31,9 @@ class _DesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return _sectionBuilder(
       context: context,
-      borderRadius: BorderRadius.circular(AppDecoration.radiusBig),
+      borderRadius: const BorderRadius.vertical(
+        top: Radius.circular(AppDecoration.radiusBig),
+      ),
     );
   }
 }
