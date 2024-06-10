@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:get/get.dart';
 
 import '../models/partner.dart';
@@ -10,6 +11,8 @@ class HomeController extends GetxController {
   final Rxn<List<TeamMemberModel>> _teamMembers = Rxn<List<TeamMemberModel>>();
   final Rxn<List<PartnerModel>> _partners = Rxn<List<PartnerModel>>();
   final Rxn<List<PartnerModel>> _exchanges = Rxn<List<PartnerModel>>();
+
+  String? _referralID;
 
   // Events methods
   @override
@@ -25,8 +28,20 @@ class HomeController extends GetxController {
 
   List<PartnerModel>? get exchanges => _exchanges.value;
 
+  String? get referralID => _referralID;
+
   // Setter methods
   Future<void> _fetch() async {
+    final String? id = Uri.base.queryParameters['id'];
+
+    if (id != null && id.isNotEmpty) {
+      _referralID = id;
+      FirebaseAnalytics.instance.logEvent(
+        name: "Referral",
+        parameters: {"referrals": _referralID},
+      );
+    }
+
     await fetchMap(AppInfo.homeAPI).then((result) {
       _teamMembers.value = result["teamMembers"]
           .map((e) => TeamMemberModel.fromJson(e))

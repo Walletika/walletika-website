@@ -126,6 +126,7 @@ class PresaleSection extends GetView<TokenomicsController> {
             model: rounds.first,
             acceptedNetworks: controller.acceptedNetworks,
             refetch: controller.refetch,
+            referralID: _homeController.referralID,
           );
         }),
       ],

@@ -27,12 +27,14 @@ class CustomSaleRound extends StatelessWidget {
     required this.model,
     required this.acceptedNetworks,
     required this.refetch,
+    required this.referralID,
     super.key,
   });
 
   final RoundModel model;
   final List<String> acceptedNetworks;
   final void Function() refetch;
+  final String? referralID;
 
   @override
   Widget build(BuildContext context) {
@@ -344,7 +346,10 @@ class CustomSaleRound extends StatelessWidget {
   void _onBuyConfirm() {
     FirebaseAnalytics.instance.logEvent(
       name: "Presales",
-      parameters: {"actions": "Completed"},
+      parameters: {
+        "actions": "Completed",
+        if (referralID != null) "referrals": referralID,
+      },
     );
 
     customAwesomeDialog(
