@@ -115,6 +115,7 @@ class AppImages {
   static const String pricesBackground = 'assets/illustrations/prices.png';
   static const String lockerBackground = 'assets/illustrations/locker.jpg';
   static const String cardsIllustrations = 'assets/illustrations/cards.png';
+  static const String airdropIllustrations = 'assets/illustrations/airdrop.png';
   static const String telegramIllustrations =
       'assets/illustrations/telegram.png';
   static const String pageNotFoundIllustrations =

@@ -83,7 +83,7 @@ const Map<String, String> translator = {
   "1080@global": "Read More",
   "1081@global": "Roadmap",
   "1082@global": "Walletika AI",
-  "1083@global": "Airdrop",
+  "1083@global": "Participate Now",
 
   // Warns
   "1000@warns": "Field is required",
@@ -141,6 +141,9 @@ const Map<String, String> translator = {
   "1033@home":
       "Experience enhanced security, smart investment insights, personalized assistance, and seamless performance with AI-powered Walletika – your ultimate crypto wallet.",
   "1034@home": "Presale is LIVE!",
+  "1035@home": "Walletika Airdrop",
+  "1036@home":
+      "You have a great chance to be among the 10,000 winners of Walletika's airdrop.",
 
   // Download
   "1000@download": "The Most Secure Crypto Wallet",

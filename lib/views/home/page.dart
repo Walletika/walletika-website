@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/page.dart';
 import 'ai_banner_section.dart';
+import 'airdrop_section.dart';
 import 'community_section.dart';
 import 'main_banner_section.dart';
 import 'presale_section.dart';
@@ -31,6 +32,7 @@ class HomeView extends StatelessWidget {
       MastercardSection(),
       SubFeaturesSection(),
       FeaturesSection(),
+      AirdropSection(),
       PartnersSection(),
       TeamSection(),
       CommunitySection(),
